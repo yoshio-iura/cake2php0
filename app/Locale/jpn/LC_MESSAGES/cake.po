@@ -1,0 +1,42 @@
+msgid "New %s"
+msgstr "新規 %s"
+
+msgid "Edit %s"
+msgstr "修正 %s"
+
+msgid "Actions"
+msgstr "操作メニュー"
+
+msgid "Delete"
+msgstr "削除"
+
+msgid "List"
+msgstr "一覧"
+
+msgid "List %s"
+msgstr "一覧 %s"
+
+msgid "View"
+msgstr "表示"
+
+msgid "Edit"
+msgstr "修正"
+
+msgid "View %s"
+msgstr "詳細 %s"
+
+msgid "Delete %s"
+msgstr "削除 %s"
+
+msgid "Submit"
+msgstr "実行"
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
