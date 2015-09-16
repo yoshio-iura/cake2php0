@@ -33,12 +33,17 @@ class TorihikisakiMrFixture extends CakeTestFixture {
 		'siiresaki_ｆｌｇ' => array('type' => 'boolean', 'null' => true, 'default' => null),
 		'siiresaki_oya_torihikisaki_mr_id' => array('type' => 'integer', 'null' => true, 'default' => null),
 		'kokyaku_flg' => array('type' => 'boolean', 'null' => true, 'default' => null),
-		'seikyuu_torihikisaki_mr_id' => array('type' => 'boolean', 'null' => true, 'default' => null),
+		'seikyuu_torihikisaki_mr_id' => array('type' => 'integer', 'null' => true, 'default' => null),
 		'shukkasaki_flg' => array('type' => 'boolean', 'null' => true, 'default' => null),
 		'kokyaku_oya_torihikisaki_mr_id' => array('type' => 'integer', 'null' => true, 'default' => null),
 		'shain_flg' => array('type' => 'boolean', 'null' => true, 'default' => null),
 		'shain_kazku_daihyou_torihikisaki_mr_id' => array('type' => 'integer', 'null' => true, 'default' => null),
 		'bikou' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 250),
+		'torihikisaki_bunrui1_kbn_id' => array('type' => 'integer', 'null' => true, 'default' => null),
+		'torihikisaki_bunrui2_kbn_id' => array('type' => 'integer', 'null' => true, 'default' => null),
+		'torihikisaki_bunrui3_kbn_id' => array('type' => 'integer', 'null' => true, 'default' => null),
+		'torihikisaki_bunrui4_kbn_id' => array('type' => 'integer', 'null' => true, 'default' => null),
+		'torihikisaki_bunrui5_kbn_id' => array('type' => 'integer', 'null' => true, 'default' => null),
 		'kaisi_nitiji' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'id_moto' => array('type' => 'integer', 'null' => true, 'default' => null),
 		'kinsi_flg' => array('type' => 'boolean', 'null' => true, 'default' => null),
@@ -48,7 +53,7 @@ class TorihikisakiMrFixture extends CakeTestFixture {
 		'kousin_user_id' => array('type' => 'integer', 'null' => true, 'default' => null),
 		'updated' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'indexes' => array(
-			
+			'PRIMARY' => array('unique' => true, 'column' => 'id')
 		),
 		'tableParameters' => array()
 	);
@@ -62,8 +67,8 @@ class TorihikisakiMrFixture extends CakeTestFixture {
 		array(
 			'id' => 1,
 			'code' => 'Lorem ',
-			'kaisi_bi' => '2015-09-14 05:05:50',
-			'shuuryou_bi' => '2015-09-14 05:05:50',
+			'kaisi_bi' => '2015-09-16 04:19:44',
+			'shuuryou_bi' => '2015-09-16 04:19:44',
 			'name' => 'Lorem ipsum dolor sit amet',
 			'mei_kana' => 'Lorem ipsum dolor sit amet',
 			'tantou_bumon' => 'Lorem ipsum dolor sit amet',
@@ -89,14 +94,19 @@ class TorihikisakiMrFixture extends CakeTestFixture {
 			'shain_flg' => 1,
 			'shain_kazku_daihyou_torihikisaki_mr_id' => 1,
 			'bikou' => 'Lorem ipsum dolor sit amet',
-			'kaisi_nitiji' => '2015-09-14 05:05:50',
+			'torihikisaki_bunrui1_kbn_id' => 1,
+			'torihikisaki_bunrui2_kbn_id' => 1,
+			'torihikisaki_bunrui3_kbn_id' => 1,
+			'torihikisaki_bunrui4_kbn_id' => 1,
+			'torihikisaki_bunrui5_kbn_id' => 1,
+			'kaisi_nitiji' => '2015-09-16 04:19:44',
 			'id_moto' => 1,
 			'kinsi_flg' => 1,
-			'shuuryou_nitiji' => '2015-09-14 05:05:50',
+			'shuuryou_nitiji' => '2015-09-16 04:19:44',
 			'sakusei_user_id' => 1,
-			'created' => '2015-09-14 05:05:50',
+			'created' => '2015-09-16 04:19:44',
 			'kousin_user_id' => 1,
-			'updated' => '2015-09-14 05:05:50'
+			'updated' => '2015-09-16 04:19:44'
 		),
 	);
 
