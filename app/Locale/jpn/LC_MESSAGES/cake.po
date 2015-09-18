@@ -31,6 +31,21 @@ msgstr "削除 %s"
 msgid "Submit"
 msgstr "実行"
 
+msgid "The %1$s has been %2$s"
+msgstr "%1$s の情報を %2$s しました。"
+
+msgid "saved"
+msgstr "登録"
+
+msgid "The %1$s with id: %2$s has been deleted."
+msgstr "この %1$s の id: %2$s の情報を削除しました。"
+
+msgid ""
+msgstr ""
+
+msgid ""
+msgstr ""
+
 msgid ""
 msgstr ""
 

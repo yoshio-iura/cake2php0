@@ -43,9 +43,9 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 					echo $loginUser['username'].':'.$loginUser['name'].' さん ';
 					echo $this->Html->link(__('logout'), array('controller' => 'users', 'action' => 'logout'));
 				}
-				echo $this->Session->flash();
-				echo $this->Session->flash('auth');
-//				echo $this->Flash->render('auth');
+				echo $this->Session->flash();		//復活20150917iura//削除20150917m.s.
+				echo $this->Session->flash('auth');	//復活20150917iura//削除20150917m.s.
+			//	echo $this->Flash->render('auth');
 			?></p>
 		</div>
 		<div id="content">

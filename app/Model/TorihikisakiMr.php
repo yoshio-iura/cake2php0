@@ -3,6 +3,7 @@ App::uses('AppModel', 'Model');
 /**
  * TorihikisakiMr Model
  *
+ * @property KeishouKbn $KeishouKbn
  * @property ShuugyouBiMr $ShuugyouBiMr
  * @property User $User
  * @property GroupOyaTorihikisakiMr $GroupOyaTorihikisakiMr
@@ -16,6 +17,9 @@ App::uses('AppModel', 'Model');
  * @property TorihikisakiBunrui4Kbn $TorihikisakiBunrui4Kbn
  * @property TorihikisakiBunrui5Kbn $TorihikisakiBunrui5Kbn
  * @property BumonMr $BumonMr
+ * @property HinmokuMr $HinmokuMr
+ * @property SeikyuusakiMr $SeikyuusakiMr
+ * @property SiiresakiMr $SiiresakiMr
  * @property User $User
  */
 class TorihikisakiMr extends AppModel {
@@ -36,9 +40,16 @@ class TorihikisakiMr extends AppModel {
  * @var array
  */
 	public $belongsTo = array(
-		'ShuugyouBiMr' => array(
-			'className' => 'ShuugyouBiMr',
-			'foreignKey' => 'shuugyou_bi_mr_id',
+		'KeishouKbn' => array(
+			'className' => 'KeishouKbn',
+			'foreignKey' => 'keishou_kbn_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'ShuugyouPatternMr' => array(
+			'className' => 'ShuugyouPatternMr',
+			'foreignKey' => 'shuugyou_pattern_mr_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
@@ -130,6 +141,45 @@ class TorihikisakiMr extends AppModel {
 	public $hasMany = array(
 		'BumonMr' => array(
 			'className' => 'BumonMr',
+			'foreignKey' => 'torihikisaki_mr_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		),
+		'HinmokuMr' => array(
+			'className' => 'HinmokuMr',
+			'foreignKey' => 'torihikisaki_mr_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		),
+		'SeikyuusakiMr' => array(
+			'className' => 'SeikyuusakiMr',
+			'foreignKey' => 'torihikisaki_mr_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		),
+		'SiiresakiMr' => array(
+			'className' => 'SiiresakiMr',
 			'foreignKey' => 'torihikisaki_mr_id',
 			'dependent' => false,
 			'conditions' => '',

@@ -1,3 +1,9 @@
+msgid "Username or password is incorrect"
+msgstr "ユーザーIDとパスワードを正しく入力して下さい。"
+
+msgid "The user has been saved."
+msgstr "ユーザーの情報を登録しました。"
+
 msgid "Bom Mrs"
 msgstr "BOM表"
 

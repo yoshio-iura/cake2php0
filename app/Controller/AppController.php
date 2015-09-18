@@ -38,11 +38,12 @@ class AppController extends Controller {
 			'loginAction' => array('controller' => 'users', 'action' => 'login', 'admin'=>true),	// ログインページのパス
 			'loginRedirect' => array('controller' => 'users', 'action' => 'index'),		// ログイン後のページを指定
 			'logoutRedirect' => array('controller' => 'users', 'action' => 'login'),	// ログアウト後の移動先
-			'authError' => 'あなたのユーザーIDとパスワードを入力して下さい。',			//未ログイン時のメッセージ
+			'authError' => 'ログインして使用して下さい。',		//復活20150917iura//削除20150917s.m.//未ログイン時のメッセージ
 		)
 	); //認証でここまで追加
 
 	function beforeFilter() {
+		$this->Auth->allow('login', 'logout');//追加20150917s.m.
 		$this->set('loginUser', $this->Auth->user());
 		return parent::beforeFilter();
 	}
