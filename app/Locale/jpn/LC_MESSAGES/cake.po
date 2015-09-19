@@ -1,6 +1,9 @@
 msgid "New %s"
 msgstr "新規 %s"
 
+msgid "Add %s"
+msgstr "新規 %s"
+
 msgid "Edit %s"
 msgstr "修正 %s"
 

@@ -33,6 +33,13 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
+
+		//日付入力protocalendar用以下５行
+		echo $this->Html->css('simple'); 
+		echo $this->Html->script('prototype'); 
+		echo $this->Html->script('effects'); 
+		echo $this->Html->script('protocalendar'); 
+		echo $this->Html->script('lang_ja');  
 	?>
 </head>
 <body>
@@ -40,7 +47,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		<div id="header">
 			<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
 			<p><?php if ($loginUser) {
-					echo $loginUser['username'].':'.$loginUser['name'].' さん ';
+					echo $loginUser['username'].':'.$loginUser['name'].' さん';
 					echo $this->Html->link(__('logout'), array('controller' => 'users', 'action' => 'logout'));
 				}
 				echo $this->Session->flash();		//復活20150917iura//削除20150917m.s.
