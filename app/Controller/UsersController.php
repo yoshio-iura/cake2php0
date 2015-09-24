@@ -149,4 +149,36 @@ class UsersController extends AppController {
 		}
 		return $this->redirect(array('action' => 'index'));
 	}
+
+	public function popup() {
+ //リクエストがPOSTで送られたデータが空白で無ければ
+   if($this->request->is('post') && $this->request->data['User']['search'] != ''){
+      //Formの値を取得
+      $search = $this->request->data['User']['search'];
+       //検索文字を空白（全角又は半角）で区切って配列$keywordsに代入
+       $keywords = preg_split('/  |\\s/',$search);
+      //配列$keywordsの数だけ繰り返して検索条件を$conditionsに代入
+      foreach($keywords as $keyword){
+          $conditions[] = "User.name like '%$keyword%'";
+      }
+      //POSTされたデータを曖昧検索
+   /*   $data=$this->User->find('all',array(
+         'conditions' => $conditions
+      ));
+     $this->set('users',$data);
+   */
+   }else{
+     //POST以外の場合
+     //一覧表示
+   /*  $data=$this->Post->find('all');
+     $this->set('users',$data);
+   */
+     $conditions='';
+   }
+ 
+		$this->layout = 'popup';
+		$this->Paginator->settings = array('limit' => 10);
+		$this->User->recursive = 0;
+		$this->set('users', $this->Paginator->paginate($conditions));
+	}
 }
