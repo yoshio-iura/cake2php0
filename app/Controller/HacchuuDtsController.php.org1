@@ -1,0 +1,118 @@
+<?php
+App::uses('AppController', 'Controller');
+/**
+ * HacchuuDts Controller
+ *
+ * @property HacchuuDt $HacchuuDt
+ * @property PaginatorComponent $Paginator
+ * @property FlashComponent $Flash
+ * @property SessionComponent $Session
+ */
+class HacchuuDtsController extends AppController {
+
+/**
+ * Components
+ *
+ * @var array
+ */
+	public $components = array('Paginator', 'Flash', 'Session');
+
+/**
+ * index method
+ *
+ * @return void
+ */
+	public function index() {
+		$this->HacchuuDt->recursive = 0;
+		$this->set('hacchuuDts', $this->Paginator->paginate());
+	}
+
+/**
+ * view method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
+	public function view($id = null) {
+		if (!$this->HacchuuDt->exists($id)) {
+			throw new NotFoundException(__('Invalid hacchuu dt'));
+		}
+		$options = array('conditions' => array('HacchuuDt.' . $this->HacchuuDt->primaryKey => $id));
+		$this->set('hacchuuDt', $this->HacchuuDt->find('first', $options));
+	}
+
+/**
+ * add method
+ *
+ * @return void
+ */
+	public function add() {
+		if ($this->request->is('post')) {
+			$this->HacchuuDt->create();
+			if ($this->HacchuuDt->save($this->request->data)) {
+				$this->Session->setFlash(__('The hacchuu dt has been saved.'), 'default', array('class' => 'flash_failure'));
+				return $this->redirect(array('action' => 'index'));
+			} else {
+				$this->Flash->error(__('The hacchuu dt could not be saved. Please, try again.'));
+			}
+		}
+		$torihikisakiMrs = $this->HacchuuDt->TorihikisakiMr->find('list');
+		$users = $this->HacchuuDt->User->find('list');
+		$bumonMrs = $this->HacchuuDt->BumonMr->find('list');
+		$juchuuDts = $this->HacchuuDt->JuchuuDt->find('list');
+		$bashoTanaSoukoMrs = $this->HacchuuDt->BashoTanaSoukoMr->find('list');
+		$this->set(compact('torihikisakiMrs', 'users', 'bumonMrs', 'juchuuDts', 'bashoTanaSoukoMrs'));
+	}
+
+/**
+ * edit method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
+	public function edit($id = null) {
+		if (!$this->HacchuuDt->exists($id)) {
+			throw new NotFoundException(__('Invalid hacchuu dt'));
+		}
+		if ($this->request->is(array('post', 'put'))) {
+			if ($this->HacchuuDt->save($this->request->data)) {
+				$this->Flash->success(__('The hacchuu dt has been saved.'));
+				return $this->redirect(array('action' => 'index'));
+			} else {
+				$this->Flash->error(__('The hacchuu dt could not be saved. Please, try again.'));
+			}
+		} else {
+			$options = array('conditions' => array('HacchuuDt.' . $this->HacchuuDt->primaryKey => $id));
+			$this->request->data = $this->HacchuuDt->find('first', $options);
+		}
+		$torihikisakiMrs = $this->HacchuuDt->TorihikisakiMr->find('list');
+		$users = $this->HacchuuDt->User->find('list');
+		$bumonMrs = $this->HacchuuDt->BumonMr->find('list');
+		$juchuuDts = $this->HacchuuDt->JuchuuDt->find('list');
+		$bashoTanaSoukoMrs = $this->HacchuuDt->BashoTanaSoukoMr->find('list');
+		$this->set(compact('torihikisakiMrs', 'users', 'bumonMrs', 'juchuuDts', 'bashoTanaSoukoMrs'));
+	}
+
+/**
+ * delete method
+ *
+ * @throws NotFoundException
+ * @param string $id
+ * @return void
+ */
+	public function delete($id = null) {
+		$this->HacchuuDt->id = $id;
+		if (!$this->HacchuuDt->exists()) {
+			throw new NotFoundException(__('Invalid hacchuu dt'));
+		}
+		$this->request->allowMethod('post', 'delete');
+		if ($this->HacchuuDt->delete()) {
+			$this->Flash->success(__('The hacchuu dt has been deleted.'));
+		} else {
+			$this->Flash->error(__('The hacchuu dt could not be deleted. Please, try again.'));
+		}
+		return $this->redirect(array('action' => 'index'));
+	}
+}
