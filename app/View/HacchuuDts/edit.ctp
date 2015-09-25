@@ -115,7 +115,7 @@
 <!-- jQueryとprototype.jsを共存させる方法 http://select.rash.jp/jquery/760/ -->
 <!-- 1:prototype.jsを読み込む \app\View\Layouts\default.ctp のHEADで読み込んである -->
 <!-- 2：prototypeを動かすための記述を書き込む  -->
-	<-- 日付選択ボックス -->
+	<!-- 日付選択ボックス -->
 <script type="text/javascript">
 	InputCalendar.createOnLoaded('HacchuuDtBi', {format: 'yyyy-mm-dd', lang:'ja'});
 	InputCalendar.createOnLoaded('HacchuuDtNouki', {format: 'yyyy-mm-dd', lang:'ja'});
