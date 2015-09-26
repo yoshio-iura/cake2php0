@@ -4,1121 +4,479 @@ msgstr "ユーザーIDとパスワードを正しく入力して下さい。"
 msgid "The user has been saved."
 msgstr "ユーザーの情報を登録しました。"
 
-msgid "Bom Mrs"
-msgstr "BOM表"
-
-msgid "Bom Mr"
-msgstr "BOM"
-
-msgid "Hinmoku Mr"
-msgstr "品目コード "
-
-msgid "Ko Hinmoku Mr"
-msgstr "子品目コード"
-
-msgid "Kaisi Bi"
-msgstr "適用開始日 "
-
-msgid "Shuuryou Bi"
-msgstr "適用終了日"
-
-msgid "Kijun Ryou"
-msgstr "基準量"
-
-msgid "Hituyou Ryou"
-msgstr "必要量"
-
-msgid "Budomari Ritu"
-msgstr "歩留率"
-
-msgid "Koujun"
-msgstr "工順"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
 msgid ""
 msgstr ""
 
-msgid "Order Jhs"
-msgstr "オーダ情報表"
-
-msgid "Order Jh"
-msgstr "オーダ情報"
-
-msgid "Hinmoku Mr"
-msgstr "品目コード "
-
-msgid "Chakushu Yotei Bi"
-msgstr "着手予定日"
-
-msgid "Siyou Kanou Yotei Bi"
-msgstr "使用可能予定日"
-
-msgid "Yuukou Kigen"
-msgstr "有効期限"
-
-msgid "Keikaku Suu"
-msgstr "計画数量"
-
-msgid "Basho Mr"
-msgstr "場所コード "
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Kansei Kensa Kekka Dts"
-msgstr "完成検査結果データ表"
-
-msgid "Kansei Kensa Kekka Dt"
-msgstr "完成検査結果データ"
-
-msgid "Ketten Mr"
-msgstr "欠点コード "
-
-msgid "Suu"
-msgstr "数量"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Kansei Jisseki Dts"
-msgstr "完成実績データ表"
-
-msgid "Kansei Jisseki Dt"
-msgstr "完成実績データ"
-
-msgid "Sagyou Siji Dt"
-msgstr "作業指示番号 "
-
-msgid "Hinmoku Mr"
-msgstr "品目コード "
-
-msgid "Lot No"
-msgstr "ロットNO"
-
-msgid "Bi"
-msgstr "完成日"
-
-msgid "Suu"
-msgstr "完成数量"
-
-msgid "Ryouhin Suu"
-msgstr "良品数"
-
-msgid "Furyou Suu"
-msgstr "不良数"
-
-msgid "Bikou"
-msgstr "完成実績備考"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Kansei Jisseki Shouhi Dts"
-msgstr "完成実績消費データ表"
-
-msgid "Kansei Jisseki Shouhi Dt"
-msgstr "完成実績消費データ"
-
-msgid "Kansei Jisseki Dt"
-msgstr "完成実績番号 "
-
-msgid "Bi"
-msgstr "消費日"
-
-msgid "Basho Mr"
-msgstr "場所コード "
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Kansei Jisseki Shouhi Meisai Dts"
-msgstr "完成実績消費明細データ表"
-
-msgid "Kansei Jisseki Shouhi Meisai Dt"
-msgstr "完成実績消費明細データ"
-
-msgid "Kansei Jisseki Shouhi Dt"
-msgstr "消費番号 "
-
-msgid "Hinmoku Mr"
-msgstr "品目コード "
-
-msgid "Suu"
-msgstr "消費数量"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Ketten Mrs"
-msgstr "欠点マスタ表"
-
-msgid "Ketten Mr"
-msgstr "欠点マスタ"
-
-msgid "Name"
-msgstr "欠点内容"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Kensa Koumoku Mrs"
-msgstr "検査項目マスタ表"
-
-msgid "Kensa Koumoku Mr"
-msgstr "検査項目マスタ"
-
-msgid "Name"
-msgstr "検査項目名"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Kensa Koumoku Jisseki Dts"
-msgstr "検査項目実績データ表"
-
-msgid "Kensa Koumoku Jisseki Dt"
-msgstr "検査項目実績データ"
-
-msgid "Ukeire Kensa Dt"
-msgstr "受入検査番号 "
-
-msgid "Kensa Kaisuu"
-msgstr "検査回数"
-
-msgid "Lot No"
-msgstr "ロットNO"
-
-msgid "Hinmoku Mr"
-msgstr "品目コード "
-
-msgid "Tekiyou Kaisi Bi"
-msgstr "適用開始日 "
-
-msgid "Junjo"
-msgstr "検査順序"
-
-msgid "Kensa Koumoku Mr"
-msgstr "検査項目コード "
-
-msgid "Teiryou Kikakuti Jougen"
-msgstr "定量規格値上限"
-
-msgid "Teiryou Kikakuti Kagen"
-msgstr "定量規格値下限"
-
-msgid "Teisei Kikaku Ti"
-msgstr "定性規格値"
-
-msgid "Teiryou Kensa Ti"
-msgstr "定量検査値"
-
-msgid "Teisei Kensa Ti"
-msgstr "定性検査値"
+msgid "User"
+msgstr "担当者マスタ"
 
 msgid "Bumon Mr"
-msgstr "検査部門コード "
+msgstr "部門マスタ"
 
-msgid "Kaisi Bi"
-msgstr "検査開始日 "
+msgid "Thema Mr"
+msgstr "テーママスタ"
 
-msgid "Shuuryou Bi"
-msgstr "検査終了日"
+msgid "Shokushu Kbn"
+msgstr "職種区分"
 
-msgid "Kono Tantousha Mr"
-msgstr "検査者コード"
-
-msgid "Hantei Kekka Kubun Mr"
-msgstr "判定結果区分"
-
-msgid "Bikou"
-msgstr "備考"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid "Nyuuka Ukeire Dt"
-msgstr "入荷番号 "
-
-msgid ""
-msgstr ""
-
-msgid "Kenshuu Dts"
-msgstr "検収データ表"
-
-msgid "Kenshuu Dt"
-msgstr "検収データ"
-
-msgid "Ukeire Kensa Dt"
-msgstr "受入検査番号 "
-
-msgid "Hacchuu Dt"
-msgstr "発注番号 "
-
-msgid "Hacchuu Meisai Dt"
-msgstr "発注行番号 "
-
-msgid "Bi"
-msgstr "検収日"
-
-msgid "Kono Tantousha Mr"
-msgstr "検収担当者コード"
+msgid "Shounin Kengen Mr"
+msgstr "承認権限マスタ"
 
 msgid "Torihikisaki Mr"
-msgstr "取引先コード "
+msgstr "住所録取引先マスタ"
 
-msgid "Hinmoku Mr"
-msgstr "品目コード "
+msgid "Keishou Kbn"
+msgstr "敬称区分"
 
-msgid "Shokuti Hinmoku Kubun Mr"
-msgstr "諸口品目区分"
+msgid "Torihikisaki Bunrui1 Kbn"
+msgstr "取引先分類区分1"
 
-msgid "Suu"
-msgstr "検収数"
+msgid "Torihikisaki Bunrui2 Kbn"
+msgstr "取引先分類区分2"
 
-msgid "Tanka"
-msgstr "検収単価"
+msgid "Torihikisaki Bunrui3 Kbn"
+msgstr "取引先分類区分3"
 
-msgid "Kingaku"
-msgstr "検収金額"
+msgid "Torihikisaki Bunrui4 Kbn"
+msgstr "取引先分類区分4"
 
-msgid "Shouhizei Kingaku"
-msgstr "検収消費税金額"
+msgid "Torihikisaki Bunrui5 Kbn"
+msgstr "取引先分類区分5"
 
-msgid "Bikou"
-msgstr "検収備考"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid "Nyuuka Ukeire Dt"
-msgstr "入荷番号 "
-
-msgid ""
-msgstr ""
-
-msgid "Kenshuu Henpin Dts"
-msgstr "検収返品表"
-
-msgid "Kenshuu Henpin Dt"
-msgstr "検収返品"
-
-msgid "Hacchuu Dt"
-msgstr "発注番号 "
-
-msgid "Hacchuu Meisai Dt"
-msgstr "発注行番号 "
-
-msgid "Bi"
-msgstr "検収返品日"
-
-msgid "Hinmoku Mr"
-msgstr "品目コード "
-
-msgid "Shokuti Hinmoku Kubun Mr"
-msgstr "諸口品目区分"
-
-msgid "Suu"
-msgstr "検収返品数量"
-
-msgid "Tanka"
-msgstr "検収返品単価"
-
-msgid "Kingaku"
-msgstr "検収返品金額"
-
-msgid "Shouhizei Kingaku"
-msgstr "検収返品消費税金額"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Kousuu Jisseki Dts"
-msgstr "工数実績データ表"
-
-msgid "Kousuu Jisseki Dt"
-msgstr "工数実績データ"
-
-msgid "Sagyou Siji Dt"
-msgstr "作業指示番号 "
-
-msgid "Hinmoku Mr"
-msgstr "品目コード "
-
-msgid "Koujun"
-msgstr "工順 "
-
-msgid "Koutei Mr"
-msgstr "工程コード"
-
-msgid "Bumon Mr"
-msgstr "部門コード "
-
-msgid "Kono Tantousha Mr"
-msgstr "担当者コード "
-
-msgid "Bi"
-msgstr "作業日"
-
-msgid "Kousuu"
-msgstr "工数"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid "Kaisi Bi"
-msgstr "適用開始日 "
-
-msgid ""
-msgstr ""
-
-msgid "Koutei Mrs"
-msgstr "工程マスタ表"
-
-msgid "Koutei Mr"
-msgstr "工程マスタ"
-
-msgid "Name"
-msgstr "工程名"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Koutei Jhs"
-msgstr "工程表表"
-
-msgid "Koutei Jh"
-msgstr "工程表"
-
-msgid "Hinmoku Mr"
-msgstr "品目コード "
-
-msgid "Kaisi Bi"
-msgstr "適用開始日 "
-
-msgid "Koujun"
-msgstr "工順"
-
-msgid "Koutei Mr"
-msgstr "工程コード "
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Zaiko Jhs"
-msgstr "在庫情報表"
-
-msgid "Zaiko Jh"
-msgstr "在庫情報"
-
-msgid "Basho Mr"
-msgstr "場所コード "
-
-msgid "Hinmoku Mr"
-msgstr "品目コード "
-
-msgid "Kaisi Bi"
-msgstr "適用開始日 "
-
-msgid "Suu"
-msgstr "在庫数"
-
-msgid "Goukaku Suu"
-msgstr "合格数"
-
-msgid "Furyou Suu"
-msgstr "不良数"
-
-msgid "Mikensa Suu"
-msgstr "未検査数"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Zaiko Chousei Dts"
-msgstr "在庫調整データ表"
-
-msgid "Zaiko Chousei Dt"
-msgstr "在庫調整データ"
-
-msgid "Hinmoku Mr"
-msgstr "品目コード "
-
-msgid "Kaisi Bi"
-msgstr "適用開始日 "
-
-msgid "Basho Mr"
-msgstr "場所コード "
-
-msgid "Bi"
-msgstr "調整日"
-
-msgid "Kono Tantousha Mr"
-msgstr "調整担当者コード"
-
-msgid "Suu"
-msgstr "調整数"
-
-msgid "Zaiko Chousei Riyuu Mr"
-msgstr "理由コード"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Sagyou Siji Dts"
-msgstr "作業指示データ表"
-
-msgid "Sagyou Siji Dt"
-msgstr "作業指示データ"
-
-msgid "Order Jh"
-msgstr "オーダ番号"
-
-msgid "Sagyou Siji Bi"
-msgstr "作業指示日"
-
-msgid "Hinmoku Mr"
-msgstr "品目コード "
-
-msgid "Lot No"
-msgstr "ロットNO"
-
-msgid "Suu"
-msgstr "作業指示数"
-
-msgid "Basho Mr"
-msgstr "場所コード "
-
-msgid "Kaisi Yotei Bi"
-msgstr "開始予定日"
-
-msgid "Kansei Yotei Bi"
-msgstr "完成予定日"
-
-msgid "Kansei Zumi Suu"
-msgstr "完成済み数"
-
-msgid "Sou Ryouhin Suu"
-msgstr "総良品数"
-
-msgid "Sou Furyou Suu"
-msgstr "総不良数"
-
-msgid "Kanryou Flg"
-msgstr "完了フラグ"
-
-msgid "Bikou"
-msgstr "備考"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Sagyou Siji Meisai Dts"
-msgstr "作業指示明細データ表"
-
-msgid "Sagyou Siji Meisai Dt"
-msgstr "作業指示明細データ"
-
-msgid "Koujun"
-msgstr "工順"
-
-msgid "Koutei Mr"
-msgstr "工程コード "
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid "Hinmoku Mr"
-msgstr "品目コード "
-
-msgid ""
-msgstr ""
-
-msgid "Sagyou Jikan Mrs"
-msgstr "作業時間マスタ表"
-
-msgid "Sagyou Jikan Mr"
-msgstr "作業時間マスタ"
-
-msgid "Name"
-msgstr "作業時間名"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Sikyuu Dts"
-msgstr "支給データ表"
-
-msgid "Sikyuu Dt"
-msgstr "支給データ"
-
-msgid "Hacchuu Dt"
-msgstr "発注番号 "
-
-msgid "Hacchuu Gyou Bangou"
-msgstr "発注行番号 "
-
-msgid "Torihikisaki Mr"
-msgstr "取引先コード "
-
-msgid "Bi"
-msgstr "支給日"
-
-msgid "Kono Tantousha Mr"
-msgstr "支給担当者コード"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid "Hinmoku Mr"
-msgstr "品目コード "
-
-msgid ""
-msgstr ""
-
-msgid "Sikyuu Meisai Dts"
-msgstr "支給明細データ表"
-
-msgid "Sikyuu Meisai Dt"
-msgstr "支給明細データ"
-
-msgid "Sikyuu Dt"
-msgstr "支給番号 "
-
-msgid "Hinmoku Mr"
-msgstr "品目コード "
-
-msgid "Suu"
-msgstr "支給数"
-
-msgid "Tanka"
-msgstr "支給単価"
-
-msgid "Kingaku"
-msgstr "支給金額"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid "Hacchuu Dt"
-msgstr "発注番号 "
-
-msgid "Hacchuu Meisai Dt"
-msgstr "発注行番号 "
-
-msgid ""
-msgstr ""
-
-msgid "Sigen Bumon Mrs"
-msgstr "資源_部門表"
-
-msgid "Sigen Bumon Mr"
-msgstr "資源_部門"
-
-msgid "Bumon Mr"
-msgstr "部門コード "
-
-msgid "Sigen Mr"
-msgstr "資源コード "
-
-msgid "Kaisi Bi"
-msgstr "適用開始日 "
-
-msgid "Shuuryou Bi"
-msgstr "適用終了日"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid "Tantousha Mr"
-msgstr "更新者"
-
-msgid ""
-msgstr ""
-
-msgid "Sigen Mrs"
-msgstr "資源マスタ表"
-
-msgid "Sigen Mr"
-msgstr "資源マスタ"
-
-msgid "Kaisi Bi"
-msgstr "適用開始日"
-
-msgid "Shuuryou Bi"
-msgstr "適用終了日"
-
-msgid "Name"
-msgstr "資源名"
+msgid "Shuugyou Pattern Mr"
+msgstr "就業日パターンマスタ"
 
 msgid "Shuugyou Bi Mr"
-msgstr "就業日パターンコード "
+msgstr "就業日マスタ"
 
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Torihikisaki Mrs"
-msgstr "取引先マスタ表"
-
-msgid "Torihikisaki Mr"
-msgstr "取引先マスタ"
-
-msgid "Code"
-msgstr "コード"
-
-msgid "Kaisi Bi"
-msgstr "適用開始日"
-
-msgid "Shuuryou Bi"
-msgstr "適用終了日"
-
-msgid "Name"
-msgstr "取引先名"
-
-msgid "Mei Kana"
-msgstr "取引先名カナ"
-
-msgid "Tantou Bumon"
-msgstr "取引先担当部門"
-
-msgid "Tantousha Mei"
-msgstr "取引先担当者名"
-
-msgid "Yuubin Bangou"
-msgstr "郵便番号"
-
-msgid "Todoufukenn"
-msgstr "都道府県"
-
-msgid "Juusho1"
-msgstr "住所１"
-
-msgid "Juusho2"
-msgstr "住所２"
-
-msgid "Juusho3"
-msgstr "住所３"
-
-msgid "Tel"
-msgstr "TEL"
-
-msgid "Fax"
-msgstr "FAX"
-
-msgid "Shuugyou Bi Mr"
-msgstr "就業日パターンコード "
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Ukeire Kensa Dts"
-msgstr "受入検査データ表"
-
-msgid "Ukeire Kensa Dt"
-msgstr "受入検査データ"
-
-msgid "Kensa Kaisuu"
-msgstr "検査回数"
-
-msgid "Lot No"
-msgstr "ロットNO"
-
-msgid "Nyuuka Ukeire Dt"
-msgstr "入荷番号 "
-
-msgid "Hacchuu Dt"
-msgstr "発注番号 "
-
-msgid "Hacchuu Meisai Dt"
-msgstr "発注行番号 "
-
-msgid "Bi"
-msgstr "受入検査日"
-
-msgid "Kono Tantousha Mr"
-msgstr "受入検査担当者コード"
-
-msgid "Hinmoku Mr"
-msgstr "品目コード "
-
-msgid "Shokuti Hinmoku Kubun Mr"
-msgstr "諸口品目区分"
-
-msgid "Ryouhin Suu"
-msgstr "良品数"
-
-msgid "Furyou Suu"
-msgstr "不良数"
-
-msgid "Bikou"
-msgstr "受入検査備考"
-
-msgid "Kensa Houhou Kubun Mr"
-msgstr "検査方法区分"
-
-msgid "Kensa Joukyou Kubun Mr"
-msgstr "検査状況区分"
-
-msgid "Nyuuka Suu"
-msgstr "入荷数"
-
-msgid "Torihikisaki Mr"
-msgstr "仕入先コード"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Ukeire Kensa Kekka Dts"
-msgstr "受入検査結果データ表"
-
-msgid "Ukeire Kensa Kekka Dt"
-msgstr "受入検査結果データ"
-
-msgid "Ukeire Kensa Dt"
-msgstr "受入検査番号 "
-
-msgid "Ketten Mr"
-msgstr "欠点コード "
-
-msgid "Suu"
-msgstr "数量"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Ukeire Kensa Jisseki Dts"
-msgstr "受入検査実績データ表"
-
-msgid "Ukeire Kensa Jisseki Dt"
-msgstr "受入検査実績データ"
-
-msgid "Ukeire Kensa Kekka Dt"
-msgstr "受入検査番号 "
-
-msgid "Kaisuu"
-msgstr "検査回数"
-
-msgid "Nukitori Suu"
-msgstr "抜取数"
-
-msgid "Hikiotosi Flg"
-msgstr "引落フラグ"
-
-msgid "Hikiotosi Suu"
-msgstr "引落数"
-
-msgid "Hantei Kekka Kubun Mr"
-msgstr "判定結果区分"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid "Hinmoku Mr"
-msgstr "品目コード "
-
-msgid "Nyuuka Ukeire Dt"
-msgstr "入荷番号 "
-
-msgid ""
-msgstr ""
-
-msgid "Shuugyou Jikan Mrs"
-msgstr "就業時間マスタ表"
+msgid "Shuugyou Kbn"
+msgstr "就業区分"
 
 msgid "Shuugyou Jikan Mr"
 msgstr "就業時間マスタ"
 
-msgid "Name"
-msgstr "シフト名"
+msgid "Shuugyou Shubetu Kbn"
+msgstr "就業種別区分"
+
+msgid "Seikyuusaki Mr"
+msgstr "請求先マスタ"
+
+msgid "Siiresaki Mr"
+msgstr "仕入先マスタ"
+
+msgid "Kake Genkin Kbn"
+msgstr "掛現金区分"
+
+msgid "Simebi Kbn"
+msgstr "締日区分"
+
+msgid "Siharai Tuki Kbn"
+msgstr "支払月区分"
+
+msgid "Siharai Houhou Kbn"
+msgstr "支払方法区分"
+
+msgid "Furikomi Futan Kbn"
+msgstr "振込負担区分"
+
+msgid "Kouza Mr"
+msgstr "口座マスタ"
+
+msgid "Yokin Shurui Kbn"
+msgstr "預金種類区分"
+
+msgid "Kouza Kankei Kbn"
+msgstr "自社口座との関係"
+
+msgid "Furikomi Houhou Kbn"
+msgstr "振込方法区分"
+
+msgid "Hinmoku Mr"
+msgstr "品目マスタ"
+
+msgid "Hinmoku Kbn"
+msgstr "品目区分"
+
+msgid "Hinmoku Bunrui1 Kbn"
+msgstr "品目分類区分1"
+
+msgid "Hinmoku Bunrui2 Kbn"
+msgstr "品目分類区分2"
+
+msgid "Hinmoku Bunrui3 Kbn"
+msgstr "品目分類区分3"
+
+msgid "Hinmoku Bunrui4 Kbn"
+msgstr "品目分類区分4"
+
+msgid "Hinmoku Bunrui5 Kbn"
+msgstr "品目分類区分5"
+
+msgid "Daigae Hinmoku Mr"
+msgstr "代替商品"
+
+msgid "Basho Tana Souko Mr"
+msgstr "場所棚倉庫マスタ"
+
+msgid "Souko Kbn"
+msgstr "倉庫区分"
+
+msgid "Tanni Mr"
+msgstr "単位マスタ"
+
+msgid "Kazei Kbn"
+msgstr "課税区分"
+
+msgid "Juhacchuu Dt"
+msgstr "受発注データ"
+
+msgid "Juhacchuu Meisai Dt"
+msgstr "受発注明細データ"
+
+msgid "Sikyuu Meisai Dt"
+msgstr "支給明細データ"
+
+msgid "Siire Dt"
+msgstr "仕入データ"
+
+msgid "Siire Meisai Dt"
+msgstr "仕入データ明細"
+
+msgid "Journal Dt"
+msgstr "ジャーナルデータ"
+
+msgid "Journal Kbn"
+msgstr "ジャーナル区分"
+
+msgid "Journal Dai Kbn"
+msgstr "ジャーナル大区分"
+
+msgid "Data Id Table Mr"
+msgstr "データIDテーブル"
+
+msgid "Zaiko Dt"
+msgstr "在庫データ"
+
+msgid "Shoyuusha Kbn"
+msgstr "所有者区分"
+
+msgid "Hinsitu Kbn"
+msgstr "品質区分"
+
+msgid ""
+msgstr ""
+
+msgid "Users"
+msgstr "担当者マスタ表"
+
+msgid "Bumon Mrs"
+msgstr "部門マスタ表"
+
+msgid "Thema Mrs"
+msgstr "テーママスタ表"
+
+msgid "Shokushu Kbns"
+msgstr "職種区分表"
+
+msgid "Shounin Kengen Mrs"
+msgstr "承認権限マスタ表"
+
+msgid "Torihikisaki Mrs"
+msgstr "住所録取引先マスタ表"
+
+msgid "Keishou Kbns"
+msgstr "敬称区分表"
+
+msgid "Torihikisaki Bunrui1 Kbns"
+msgstr "取引先分類区分1表"
+
+msgid "Torihikisaki Bunrui2 Kbns"
+msgstr "取引先分類区分2表"
+
+msgid "Torihikisaki Bunrui3 Kbns"
+msgstr "取引先分類区分3表"
+
+msgid "Torihikisaki Bunrui4 Kbns"
+msgstr "取引先分類区分4表"
+
+msgid "Torihikisaki Bunrui5 Kbns"
+msgstr "取引先分類区分5表"
+
+msgid "Shuugyou Pattern Mrs"
+msgstr "就業日パターンマスタ表"
+
+msgid "Shuugyou Bi Mrs"
+msgstr "就業日マスタ表"
+
+msgid "Shuugyou Kbns"
+msgstr "就業区分表"
+
+msgid "Shuugyou Jikan Mrs"
+msgstr "就業時間マスタ表"
+
+msgid "Shuugyou Shubetu Kbns"
+msgstr "就業種別区分表"
+
+msgid "Seikyuusaki Mrs"
+msgstr "請求先マスタ表"
+
+msgid "Siiresaki Mrs"
+msgstr "仕入先マスタ表"
+
+msgid "Kake Genkin Kbns"
+msgstr "掛現金区分表"
+
+msgid "Simebi Kbns"
+msgstr "締日区分表"
+
+msgid "Siharai Tuki Kbns"
+msgstr "支払月区分表"
+
+msgid "Siharai Houhou Kbns"
+msgstr "支払方法区分表"
+
+msgid "Furikomi Futan Kbns"
+msgstr "振込負担区分表"
+
+msgid "Kouza Mrs"
+msgstr "口座マスタ表"
+
+msgid "Yokin Shurui Kbns"
+msgstr "預金種類区分表"
+
+msgid "Kouza Kankei Kbns"
+msgstr "自社口座との関係表"
+
+msgid "Furikomi Houhou Kbns"
+msgstr "振込方法区分表"
+
+msgid "Hinmoku Mrs"
+msgstr "品目マスタ表"
+
+msgid "Hinmoku Kbns"
+msgstr "品目区分表"
+
+msgid "Hinmoku Bunrui1 Kbns"
+msgstr "品目分類区分1表"
+
+msgid "Hinmoku Bunrui2 Kbns"
+msgstr "品目分類区分2表"
+
+msgid "Hinmoku Bunrui3 Kbns"
+msgstr "品目分類区分3表"
+
+msgid "Hinmoku Bunrui4 Kbns"
+msgstr "品目分類区分4表"
+
+msgid "Hinmoku Bunrui5 Kbns"
+msgstr "品目分類区分5表"
+
+msgid "Daigae Hinmoku Mrs"
+msgstr "代替商品表"
+
+msgid "Basho Tana Souko Mrs"
+msgstr "場所棚倉庫マスタ表"
+
+msgid "Souko Kbns"
+msgstr "倉庫区分表"
+
+msgid "Tanni Mrs"
+msgstr "単位マスタ表"
+
+msgid "Kazei Kbns"
+msgstr "課税区分表"
+
+msgid "Juhacchuu Dts"
+msgstr "受発注データ表"
+
+msgid "Juhacchuu Meisai Dts"
+msgstr "受発注明細データ表"
+
+msgid "Sikyuu Meisai Dts"
+msgstr "支給明細データ表"
+
+msgid "Siire Dts"
+msgstr "仕入データ表"
+
+msgid "Siire Meisai Dts"
+msgstr "仕入データ明細表"
+
+msgid "Journal Dts"
+msgstr "ジャーナルデータ表"
+
+msgid "Journal Kbns"
+msgstr "ジャーナル区分表"
+
+msgid "Journal Dai Kbns"
+msgstr "ジャーナル大区分表"
+
+msgid "Data Id Table Mrs"
+msgstr "データIDテーブル表"
+
+msgid "Zaiko Dts"
+msgstr "在庫データ表"
+
+msgid "Shoyuusha Kbns"
+msgstr "所有者区分表"
+
+msgid "Hinsitu Kbns"
+msgstr "品質区分表"
+
+msgid ""
+msgstr ""
+
+msgid "Anzen Zaiko Suu"
+msgstr "安全在庫数"
+
+msgid "Barcode"
+msgstr "取扱バーコード"
+
+msgid "Basho Tana Souko Mr"
+msgstr "場所棚倉庫ID"
+
+msgid "Bi"
+msgstr "日付"
+
+msgid "Bikou"
+msgstr "備考"
+
+msgid "Bumon Mr"
+msgstr "部門ID"
+
+msgid "Code"
+msgstr "コード"
+
+msgid "Created"
+msgstr "作成日時"
+
+msgid "Dai2 Tanni Mr"
+msgstr "単位2"
+
+msgid "Daikae Hinmoku Mr"
+msgstr "代替品目"
+
+msgid "Data"
+msgstr "データID"
+
+msgid "Data Id Table Mr"
+msgstr "データIDテーブル"
+
+msgid "Data Suu"
+msgstr "データ結果数量"
+
+msgid "Data Suu2"
+msgstr "データ結果数量2"
+
+msgid "Furikomi Futan Kbn"
+msgstr "振込料負担区分"
+
+msgid "Furikomi Houhou Kbn"
+msgstr "振込方法区分"
+
+msgid "Genka1"
+msgstr "原価1"
+
+msgid "Genka2"
+msgstr "原価2"
+
+msgid "Genka3"
+msgstr "原価3"
+
+msgid "Genka4"
+msgstr "原価4"
+
+msgid "Genka5"
+msgstr "原価5"
+
+msgid "Ginkou Bangou"
+msgstr "銀行番号"
+
+msgid "Ginkou Kana"
+msgstr "銀行名カナ"
+
+msgid "Ginkou Mei"
+msgstr "銀行名"
+
+msgid "Gyou Bangou"
+msgstr "行番号"
+
+msgid "Hacchuu Dt"
+msgstr "発注番号"
+
+msgid "Hacchuu Meisai Dt"
+msgstr "発注明細ID"
+
+msgid "Hansuu"
+msgstr "版数"
+
+msgid "Hiduke"
+msgstr "日付"
+
+msgid "Hikiate Juchuu Suu"
+msgstr "引当受注数"
+
+msgid "Hikiotosi Suu"
+msgstr "納品引落数"
+
+msgid "Hinmoku Bunrui1 Kbn"
+msgstr "分類1"
+
+msgid "Hinmoku Bunrui2 Kbn"
+msgstr "分類2"
+
+msgid "Hinmoku Bunrui3 Kbn"
+msgstr "分類3"
+
+msgid "Hinmoku Bunrui4 Kbn"
+msgstr "分類4"
+
+msgid "Hinmoku Bunrui5 Kbn"
+msgstr "分類5"
+
+msgid "Hinmoku Kbn"
+msgstr "品目区分"
+
+msgid "Hinmoku Mei"
+msgstr "品目名"
+
+msgid "Hinmoku Mr"
+msgstr "品目ID"
+
+msgid "Hinshitu Kbn"
+msgstr "品質区分"
+
+msgid "Hinsitu Utiwake"
+msgstr "品質内訳"
+
+msgid "Hojo Sasizu Dt"
+msgstr "補助生産指図ID"
+
+msgid "Honsiten Bangou"
+msgstr "本支店番号"
+
+msgid "Honsiten Kana"
+msgstr "本支店名カナ"
+
+msgid "Honsiten Mei"
+msgstr "本支店名"
+
+msgid "Hyouka Houhou"
+msgstr "評価方法"
+
+msgid "Id"
+msgstr "ID"
+
+msgid "Id Moto"
+msgstr "元ID"
+
+msgid "Iro Bikou"
+msgstr "色備考"
+
+msgid "Iroban"
+msgstr "色番"
+
+msgid "Iromei"
+msgstr "色名"
 
 msgid "Jikoku From"
 msgstr "時刻FROM"
@@ -1126,1362 +484,360 @@ msgstr "時刻FROM"
 msgid "Jikoku To"
 msgstr "時刻TO"
 
-msgid "Shuugyou Shubetu Mr"
-msgstr "種別"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Shuugyou Bi Mrs"
-msgstr "就業日マスタ表"
-
-msgid "Shuugyou Bi Mr"
-msgstr "就業日マスタ"
-
-msgid "Hiduke"
-msgstr "日付"
-
-msgid "Shuugyou Shubetu Mr"
-msgstr "就業区分"
-
-msgid "Shuugyou Jikan Mr"
-msgstr "シフトコード "
-
-msgid "Bikou"
-msgstr "備考"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Shoyou Jhs"
-msgstr "所要情報表"
-
-msgid "Shoyou Jh"
-msgstr "所要情報"
-
-msgid "Order Jh"
-msgstr "オーダ番号 "
-
-msgid "Hinmoku Mr"
-msgstr "品目コード "
-
-msgid "Kaisi Bi"
-msgstr "適用開始日 "
-
-msgid "Nouki"
-msgstr "納期"
-
-msgid "Hituyou Ryou"
-msgstr "必要量"
-
-msgid "Basho Mr"
-msgstr "場所コード "
-
-msgid ""
-msgstr ""
-
-msgid "Shokuti Hinmoku Jhs"
-msgstr "諸口品目情報表"
-
-msgid "Shokuti Hinmoku Jh"
-msgstr "諸口品目情報"
-
-msgid "Hacchuu Dt"
-msgstr "発注番号"
-
-msgid "Hacchuu Meisai Dt"
-msgstr "発注行番号"
-
-msgid "Hinmoku Mr"
-msgstr "品目コード"
-
-msgid "Hinmei"
-msgstr "品名"
-
-msgid "Kikaku"
-msgstr "規格"
-
-msgid "Zuban Maker"
-msgstr "図番／メーカー"
-
-msgid "Hansuu"
-msgstr "版数"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Shouhi Dts"
-msgstr "消費データ表"
-
-msgid "Shouhi Dt"
-msgstr "消費データ"
-
-msgid "Nyuuka Ukeire Dt"
-msgstr "入荷番号 "
-
-msgid "Bi"
-msgstr "消費日"
-
-msgid "Torihikisaki Mr"
-msgstr "取引先コード "
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid "Hacchuu Dt"
-msgstr "発注番号 "
-
-msgid "Hacchuu Meisai Dt"
-msgstr "発注行番号 "
-
-msgid "Hinmoku Mr"
-msgstr "品目コード "
-
-msgid ""
-msgstr ""
-
-msgid "Shouhi Meisai Dts"
-msgstr "消費明細データ表"
-
-msgid "Shouhi Meisai Dt"
-msgstr "消費明細データ"
-
-msgid "Shouhi Dt"
-msgstr "消費番号 "
-
-msgid "Hinmoku Mr"
-msgstr "品目コード "
-
-msgid "Suu"
-msgstr "消費数量"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid "Nyuuka Ukeire Dt"
-msgstr "入荷番号 "
-
-msgid "Hacchuu Dt"
-msgstr "発注番号 "
-
-msgid "Hacchuu Meisai Dt"
-msgstr "発注行番号 "
-
-msgid ""
-msgstr ""
-
-msgid "Basho Mrs"
-msgstr "場所マスタ表"
-
-msgid "Basho Mr"
-msgstr "場所マスタ"
-
-msgid "Name"
-msgstr "場所名"
-
-msgid "Basho Shurui Mr"
-msgstr "場所種類コード"
-
-msgid "Torihikisaki Mr"
-msgstr "取引先コード "
-
-msgid "Souko Mr"
-msgstr "倉庫コード "
-
-msgid "Kaisi Bi"
-msgstr "適用開始日 "
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Souko Mrs"
-msgstr "倉庫マスタ表"
-
-msgid "Souko Mr"
-msgstr "倉庫マスタ"
-
-msgid "Souko Kubun Mr"
-msgstr "倉庫区分"
-
-msgid "Name"
-msgstr "倉庫名"
-
-msgid "Bumon Mr"
-msgstr "部門コード "
-
-msgid "Kaisi Bi"
-msgstr "適用開始日 "
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Tanni Mrs"
-msgstr "単位マスタ表"
-
-msgid "Tanni Mr"
-msgstr "単位マスタ"
-
-msgid "Kigou"
-msgstr "記号"
-
-msgid "Name"
-msgstr "単位名"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Tanka Mrs"
-msgstr "単価マスタ表"
-
-msgid "Tanka Mr"
-msgstr "単価マスタ"
-
-msgid "Hinmoku Mr"
-msgstr "品目コード "
-
-msgid "Torihikisaki Mr"
-msgstr "取引先コード "
-
-msgid "Lot Tanni Suu"
-msgstr "ロット単位数"
-
-msgid "Kaisi Bi"
-msgstr "適用開始日 "
-
-msgid "Shuuryou Bi"
-msgstr "適用終了日"
-
-msgid "Tanka"
-msgstr "単価"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Tantousha Mrs"
-msgstr "担当者マスタ表"
-
-msgid "Tantousha Mr"
-msgstr "担当者マスタ"
-
-msgid "Kaisi Bi"
-msgstr "適用開始日 "
-
-msgid "Name"
-msgstr "担当者名"
-
-msgid "Kana Mei"
-msgstr "カナ名"
-
-msgid "Bumon Mr"
-msgstr "部門コード "
-
-msgid "Mail Address"
-msgstr "メールアドレス"
-
-msgid "Shuuryou Bi"
-msgstr "適用終了日"
-
-msgid "Sakusei Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Nyuuka Ukeire Dts"
-msgstr "入荷＿受入データ表"
-
-msgid "Nyuuka Ukeire Dt"
-msgstr "入荷＿受入データ"
-
-msgid "Hacchuu Dt"
-msgstr "発注番号 "
-
-msgid "Hacchuu Meisai Dt"
-msgstr "発注行番号 "
-
-msgid "Bi"
-msgstr "入荷日"
-
-msgid "Kono Tantousha Mr"
-msgstr "入荷担当者コード"
-
-msgid "Nyuuka Ukeire Mr"
-msgstr "入荷受入区分"
-
-msgid "Hinmoku Mr"
-msgstr "品目コード "
-
-msgid "Shokuti Hinmoku Kubun Mr"
-msgstr "諸口品目区分"
-
-msgid "Suu"
-msgstr "入荷数"
-
-msgid "Bikou"
-msgstr "入荷備考"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Hacchuu Dts"
-msgstr "発注データ表"
-
-msgid "Hacchuu Dt"
-msgstr "発注データ"
-
-msgid "Bi"
-msgstr "発注日"
-
-msgid "Torihikisaki Mr"
-msgstr "取引先コード "
-
-msgid "Kono Tantousha Mr"
-msgstr "発注担当者コード"
-
-msgid "Bumon Mr"
-msgstr "発注部門コード"
-
-msgid "Bikou"
-msgstr "備考"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Hacchuu Meisai Dts"
-msgstr "発注明細データ表"
-
-msgid "Hacchuu Meisai Dt"
-msgstr "発注明細データ"
-
-msgid "Hacchuu Dt"
-msgstr "発注番号 "
-
-msgid "Order Jh"
-msgstr "オーダ番号"
-
-msgid "Basho Mr"
-msgstr "納入場所コード"
-
-msgid "Hinmoku Mr"
-msgstr "品目コード "
-
-msgid "Shokuti Hinmoku Kubun Mr"
-msgstr "諸口品目区分"
-
-msgid "Ukeire Yotei Bi"
-msgstr "受入予定日"
-
-msgid "Kaitou Nouki"
-msgstr "回答納期"
-
-msgid "Tanka"
-msgstr "発注単価"
-
-msgid "Suu"
-msgstr "発注数量"
-
-msgid "Bikou"
-msgstr "明細備考"
-
-msgid "Nyuuka Zumi Suu"
-msgstr "入荷済数量"
-
-msgid "Kensa Zumi Suu"
-msgstr "検査済数量"
-
-msgid "Kenshuu Zumi Suu"
-msgstr "検収済数量"
-
-msgid "Kingaku"
-msgstr "発注金額"
-
-msgid "Shouhizei Kingau"
-msgstr "消費税金額"
-
-msgid "Kanryou Flg"
-msgstr "完了フラグ"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Himoku Mrs"
-msgstr "費目マスタ表"
-
-msgid "Himoku Mr"
-msgstr "費目マスタ"
-
-msgid "Name"
-msgstr "費目名称"
-
-msgid "Hendouhi Flg"
-msgstr "変動費フラグ"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Hinmoku Group Mrs"
-msgstr "品目グループマスタ表"
-
-msgid "Hinmoku Group Mr"
-msgstr "品目グループマスタ"
-
-msgid "Name"
-msgstr "品目グループ名"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Hinmoku Mrs"
-msgstr "品目マスタ表"
-
-msgid "Hinmoku Mr"
-msgstr "品目マスタ"
-
-msgid "Kaisi Bi"
-msgstr "適用開始日"
-
-msgid "Shuuryou Bi"
-msgstr "適用終了日"
-
-msgid "Name"
-msgstr "品名"
-
-msgid "Kikaku"
-msgstr "規格"
-
-msgid "Zuban Maker"
-msgstr "図番／メーカー"
-
-msgid "Hansuu"
-msgstr "版数"
-
-msgid "Hinmoku Kubun Mr"
-msgstr "品目区分 "
-
-msgid "Hinmoku Group Mr"
-msgstr "品目グループコード "
-
-msgid "Tanni Mr"
-msgstr "単位コード "
-
-msgid "Basho Mr"
-msgstr "場所コード "
-
-msgid "Lead Time"
-msgstr "リードタイム"
-
-msgid "Anzen Lead Time"
-msgstr "安全リードタイム"
-
-msgid "Anzen Zaiko Suu"
-msgstr "安全在庫数"
-
-msgid "Furyou Ritu"
-msgstr "不良率"
-
-msgid "Saishou Lot Suu"
-msgstr "最小ロット数"
-
-msgid "Kizami Lot Suu"
-msgstr "刻みロット数"
-
-msgid "Saidai Lot Suu"
-msgstr "最大ロット数"
-
-msgid "Yuukou Kikan"
-msgstr "有効期間"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Hinmoku Kubun Mrs"
-msgstr "品目区分マスタ表"
-
-msgid "Hinmoku Kubun Mr"
-msgstr "品目区分マスタ"
-
-msgid "Name"
-msgstr "品目区分名"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Hyoujun Genka Bom Mrs"
-msgstr "標準原価BOM表"
-
-msgid "Hyoujun Genka Bom Mr"
-msgstr "標準原価BOM"
-
-msgid "Ki Touroku Mr"
-msgstr "期"
-
-msgid "Hinmoku Mr"
-msgstr "品目コード "
-
-msgid "Kaisi Bi"
-msgstr "適用開始日 "
-
-msgid "Ko Hinmoku Mr"
-msgstr "子品目コード"
-
-msgid "Kijun Ryou"
-msgstr "基準量"
-
-msgid "Hituyou Ryou"
-msgstr "必要量"
-
-msgid "Budomari Ritu"
-msgstr "歩留率"
-
-msgid "Koujun"
-msgstr "工順"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Hyoujun Genka Sagyou Nourtu Mrs"
-msgstr "標準原価作業能率マスタ表"
-
-msgid "Hyoujun Genka Sagyou Nourtu Mr"
-msgstr "標準原価作業能率マスタ"
-
-msgid "Ki Touroku Mr"
-msgstr "期"
-
-msgid "Hinmoku Mr"
-msgstr "品目コード "
-
-msgid "Kaisi Bi"
-msgstr "適用開始日 "
-
-msgid "Koutei Mr"
-msgstr "工程コード "
-
-msgid "Sagyou Jikan Mr"
-msgstr "作業時間コード "
-
-msgid "Hyoujun Sagyou Jikan"
-msgstr "標準作業時間"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Hyoujun Genka Hinmoku Mrs"
-msgstr "標準原価品目マスタ表"
-
-msgid "Hyoujun Genka Hinmoku Mr"
-msgstr "標準原価品目マスタ"
-
-msgid "Ki Touroku Mr"
-msgstr "期"
-
-msgid "Hinmoku Mr"
-msgstr "品目コード "
-
-msgid "Kaisi Bi"
-msgstr "適用開始日 "
-
-msgid "Hinmei"
-msgstr "品名"
-
-msgid "Kijun Suu"
-msgstr "基準数"
-
-msgid "Himoku Mr"
-msgstr "費目コード "
-
-msgid "Bunrui1"
-msgstr "分類1"
-
-msgid "Bunrui2"
-msgstr "分類2"
-
-msgid "Bunrui3"
-msgstr "分類3"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Hyoujun Genka Hinmoku Koutei Mrs"
-msgstr "標準原価品目工程マスタ表"
-
-msgid "Hyoujun Genka Hinmoku Koutei Mr"
-msgstr "標準原価品目工程マスタ"
-
-msgid "Ki Touroku Mr"
-msgstr "期 "
-
-msgid "Hinmoku Mr"
-msgstr "品目コード "
-
-msgid "Kaisi Bi"
-msgstr "適用開始日 "
-
-msgid "Koujun"
-msgstr "工順"
-
-msgid "Koutei Mr"
-msgstr "工程コード "
-
-msgid ""
-msgstr ""
-
-msgid "Bumon Mrs"
-msgstr "部門マスタ表"
-
-msgid "Bumon Mr"
-msgstr "部門マスタ"
-
-msgid "Kaisi Bi"
-msgstr "適用開始日"
-
-msgid "Shuuryou Bi"
-msgstr "適用終了日"
+msgid "Joui Basho Tana Souko Mr"
+msgstr "上位ID"
 
 msgid "Joui Bumon Mr"
 msgstr "上位部門"
 
+msgid "Journal Dai Kbn"
+msgstr "ジャーナル大区分"
+
+msgid "Journal Kbn"
+msgstr "ジャーナル区分"
+
+msgid "Juchuu Dt"
+msgstr "元受注番号"
+
+msgid "Juchuu Flg"
+msgstr "受注フラグ"
+
+msgid "Juchuu Meisai Dt"
+msgstr "受注行番号"
+
+msgid "Juhacchuu Dt"
+msgstr "受発注ID"
+
+msgid "Juhacchuu Meisai Dt"
+msgstr "受発注明細ＩＤ"
+
+msgid "Kaishuu Torihikisaki Mr"
+msgstr "回収先ID"
+
+msgid "Kaisi Nitiji"
+msgstr "適用開始日"
+
 msgid "Kaisou"
 msgstr "部門階層"
 
-msgid "Name"
-msgstr "部門名"
+msgid "Kake Genkin Kbn"
+msgstr "掛現金区分"
 
-msgid "Ryakushou"
-msgstr "部門略称"
+msgid "Kakunin Zumi Suu"
+msgstr "確認済数量"
+
+msgid "Kakunin Zumi Suu2"
+msgstr "確認済数量2"
+
+msgid "Kana"
+msgstr "品名カナ"
 
 msgid "Kana Mei"
 msgstr "カナ名"
 
-msgid "Yuubin Bangou"
-msgstr "郵便番号"
+msgid "Kanryou Flg"
+msgstr "完了フラグ"
 
-msgid "Juusho1"
-msgstr "住所１"
+msgid "Kataban"
+msgstr "型番"
 
-msgid "Juusho2"
-msgstr "住所２"
+msgid "Kazei Kbn"
+msgstr "課税区分"
 
-msgid "Juusho3"
-msgstr "住所３"
+msgid "Keishou"
+msgstr "敬称"
 
-msgid "Tel"
-msgstr "TEL"
+msgid "Kigou"
+msgstr "記号"
 
-msgid "Fax"
-msgstr "FAX"
+msgid "Kikaku1"
+msgstr "規格1"
+
+msgid "Kikaku2"
+msgstr "規格2"
+
+msgid "Kikaku3"
+msgstr "規格3"
+
+msgid "Kikaku4"
+msgstr "規格4"
+
+msgid "Kikaku5"
+msgstr "規格5"
+
+msgid "Kingaku"
+msgstr "金額"
+
+msgid "Kingaku Goukei"
+msgstr "金額合計"
+
+msgid "Kinsi Flg"
+msgstr "禁止フラグ"
+
+msgid "Kousin User"
+msgstr "更新者"
 
 msgid "Koutin"
 msgstr "工賃"
 
-msgid "Tantousha Mr"
-msgstr "作成者"
+msgid "Kouza Bangou"
+msgstr "口座番号"
 
-msgid "Created"
-msgstr "作成日時"
+msgid "Kouza Kankei Kbn"
+msgstr "自社口座との関係"
 
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
+msgid "Kouza Meigi"
+msgstr "口座名義"
 
-msgid "Updated"
-msgstr "更新日時"
+msgid "Kouza Meigi Kana"
+msgstr "口座名義カナ"
 
-msgid ""
-msgstr ""
+msgid "Kouza Mr"
+msgstr "口座指定"
 
-msgid "Haraidasi Dts"
-msgstr "払出データ表"
+msgid "Lead Time"
+msgstr "リードタイム"
 
-msgid "Haraidasi Dt"
-msgstr "払出データ"
+msgid "Lot"
+msgstr "ロット"
 
-msgid "Haraidasi Kubun Mr"
-msgstr "払出区分"
+msgid "Mail Address"
+msgstr "メールアドレス"
 
-msgid "Keikaku Kubun Mr"
-msgstr "計画区分"
+msgid "Maker"
+msgstr "メーカー"
 
-msgid "Sagyou Siji Dt"
-msgstr "作業指示番号 "
-
-msgid "Koujun"
-msgstr "工順 "
-
-msgid "Hacchuu Dt"
-msgstr "発注番号 "
-
-msgid "Hacchuu Meisai Dt"
-msgstr "発注行番号 "
-
-msgid "Basho Mr"
-msgstr "場所コード "
-
-msgid "Bi"
-msgstr "払出日"
-
-msgid "Kono Tantousha Mr"
-msgstr "払出担当者コード"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid "Hinmoku Mr"
-msgstr "品目コード "
-
-msgid ""
-msgstr ""
-
-msgid "Haraidasi Siji Jhs"
-msgstr "払出指示表"
-
-msgid "Haraidasi Siji Jh"
-msgstr "払出指示"
-
-msgid "Order Jh"
-msgstr "オーダ番号 "
-
-msgid "Bi"
-msgstr "払出指示日"
-
-msgid "Basho Mr"
-msgstr "場所コード "
-
-msgid "Bikou"
-msgstr "備考"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid "Hinmoku Mr"
-msgstr "品目コード "
-
-msgid ""
-msgstr ""
-
-msgid "Haraidasi Siji Meisai Jhs"
-msgstr "払出指示明細表"
-
-msgid "Haraidasi Siji Meisai Jh"
-msgstr "払出指示明細"
-
-msgid "Haraidasi Siji Jh"
-msgstr "払出指示番号 "
-
-msgid "Hinmoku Mr"
-msgstr "品目コード "
-
-msgid "Kaisi Bi"
-msgstr "適用開始日 "
-
-msgid "Koujun"
-msgstr "工順"
-
-msgid "Suu"
-msgstr "払出数量"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Haraidasi Meisai Dts"
-msgstr "払出明細データ表"
-
-msgid "Haraidasi Meisai Dt"
-msgstr "払出明細データ"
-
-msgid "Haraidasi Dt"
-msgstr "払出番号 "
-
-msgid "Hinmoku Mr"
-msgstr "品目コード"
-
-msgid "Suu"
-msgstr "払出数量"
-
-msgid "Sikyuu Tanka"
-msgstr "支給単価"
-
-msgid "Sikyuu Kingaku"
-msgstr "支給金額"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Zaiko Chousei Riyuu Mrs"
-msgstr "在庫調整理由マスタ表"
-
-msgid "Zaiko Chousei Riyuu Mr"
-msgstr "在庫調整理由マスタ"
+msgid "Matome Kazei Flg"
+msgstr "纏め課税フラグ"
 
 msgid "Name"
-msgstr "理由"
+msgstr "名称"
 
-msgid "Tantousha Mr"
+msgid "Nichiji"
+msgstr "発生日時"
+
+msgid "Nouhin Zumi Suu"
+msgstr "納品済数量"
+
+msgid "Nouhin Zumi Suu2"
+msgstr "納品済数量2"
+
+msgid "Nouki"
+msgstr "納期"
+
+msgid "Oku"
+msgstr "奥"
+
+msgid "Order Dt"
+msgstr "オーダ番号"
+
+msgid "Palet"
+msgstr "自動パレット番号"
+
+msgid "Password"
+msgstr "パスワード"
+
+msgid "Retu"
+msgstr "列"
+
+msgid "Ryakushou"
+msgstr "部門略称"
+
+msgid "Saishuu Nyuuko Nitiji"
+msgstr "最終入庫日時"
+
+msgid "Saishuu Shukko Nitiji"
+msgstr "最終出庫日時"
+
+msgid "Sakusei User"
 msgstr "作成者"
 
-msgid "Created"
-msgstr "作成日時"
+msgid "Seisan Sasizu Dt"
+msgstr "生産指図ID"
 
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
+msgid "Seisiki Name"
+msgstr "正式名称"
 
-msgid "Updated"
-msgstr "更新日時"
+msgid "Shokushu Kbn"
+msgstr "職種コード"
 
-msgid ""
-msgstr ""
+msgid "Shouhizei Kingaku"
+msgstr "消費税金額"
 
-msgid "Shuugyou Shubetu Mrs"
-msgstr "就業種別マスタ表"
+msgid "Shouhizei Ritu"
+msgstr "消費税率"
 
-msgid "Shuugyou Shubetu Mr"
-msgstr "就業種別マスタ"
+msgid "Shounin Kengen Mr"
+msgstr "承認権限コード"
 
-msgid "Name"
-msgstr "種別名"
+msgid "Shoyou Tanni"
+msgstr "所要単位"
 
-msgid "Tantousha Mr"
-msgstr "作成者"
+msgid "Shoyuusha Kbn"
+msgstr "所有者区分"
 
-msgid "Created"
-msgstr "作成日時"
+msgid "Shuugyou Jikan Mr"
+msgstr "就業シフト"
 
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Shuugyou Pattern Mrs"
-msgstr "就業日パターンマスタ表"
+msgid "Shuugyou Kbn"
+msgstr "就業区分"
 
 msgid "Shuugyou Pattern Mr"
-msgstr "就業日パターンマスタ"
+msgstr "就業日パターン"
 
-msgid "Name"
-msgstr "名称"
+msgid "Shuugyou Shubetu Kbn"
+msgstr "種別"
 
-msgid "Tantousha Mr"
-msgstr "作成者"
+msgid "Shuukei Flg"
+msgstr "集計フラグ"
 
-msgid "Created"
-msgstr "作成日時"
+msgid "Shuuryou Nitiji"
+msgstr "終了日時"
 
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
+msgid "Siharai Houhou Kbn"
+msgstr "支払方法区分"
 
-msgid "Updated"
-msgstr "更新日時"
+msgid "Siharai Tuki Kbn"
+msgstr "支払月"
 
-msgid ""
-msgstr ""
+msgid "Siharaibi"
+msgstr "支払日"
 
-msgid "Haraidasi Kubun Mrs"
-msgstr "払出区分マスタ表"
+msgid "Siharaibi Kbn"
+msgstr "支払日ID"
 
-msgid "Haraidasi Kubun Mr"
-msgstr "払出区分マスタ"
+msgid "Siire Dt"
+msgstr "仕入番号"
 
-msgid "Name"
-msgstr "名称"
+msgid "Siire Kingaku Goukei"
+msgstr "仕入金額合計"
 
-msgid "Tantousha Mr"
-msgstr "作成者"
+msgid "Simebi Kbn"
+msgstr "締日"
 
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Keikaku Kubun Mrs"
-msgstr "計画区分マスタ表"
-
-msgid "Keikaku Kubun Mr"
-msgstr "計画区分マスタ"
-
-msgid "Name"
-msgstr "名称"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Kensa Houhou Kubun Mrs"
-msgstr "検査方法区分表"
-
-msgid "Kensa Houhou Kubun Mr"
-msgstr "検査方法区分"
-
-msgid "Name"
-msgstr "名称"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Kensa Joukyou Kubun Mrs"
-msgstr "検査状況区分表"
-
-msgid "Kensa Joukyou Kubun Mr"
-msgstr "検査状況区分"
-
-msgid "Name"
-msgstr "名称"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Hantei Kekka Kubun Mrs"
-msgstr "判定結果区分表"
-
-msgid "Hantei Kekka Kubun Mr"
-msgstr "判定結果区分"
-
-msgid "Name"
-msgstr "名称"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Nyuuka Ukeire Mrs"
-msgstr "入荷受入区分表"
-
-msgid "Nyuuka Ukeire Mr"
-msgstr "入荷受入区分"
-
-msgid "Name"
-msgstr "名称"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Ki Touroku Mrs"
-msgstr "期登録表"
-
-msgid "Ki Touroku Mr"
-msgstr "期登録"
-
-msgid "Name"
-msgstr "名称"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Basho Shurui Mrs"
-msgstr "場所種類マスタ表"
-
-msgid "Basho Shurui Mr"
-msgstr "場所種類マスタ"
-
-msgid "Name"
-msgstr "名称"
-
-msgid "Tantousha Mr"
-msgstr "作成者"
-
-msgid "Created"
-msgstr "作成日時"
-
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
-
-msgid "Updated"
-msgstr "更新日時"
-
-msgid ""
-msgstr ""
-
-msgid "Souko Kubun Mrs"
-msgstr "倉庫区分表"
-
-msgid "Souko Kubun Mr"
+msgid "Souko Kbn"
 msgstr "倉庫区分"
 
-msgid "Name"
-msgstr "名称"
+msgid "Suu"
+msgstr "数量"
 
-msgid "Tantousha Mr"
-msgstr "作成者"
+msgid "Suu Shoushu Keta1"
+msgstr "数量小数桁1"
 
-msgid "Created"
-msgstr "作成日時"
+msgid "Suu Shoushu Keta2"
+msgstr "数量小数桁2"
 
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
+msgid "Suu2"
+msgstr "数量2"
 
-msgid "Updated"
-msgstr "更新日時"
+msgid "Taka"
+msgstr "高"
+
+msgid "Tanka"
+msgstr "単価"
 
 msgid ""
 msgstr ""
 
-msgid "Shokuti Hinmoku Kubun Mrs"
-msgstr "諸口品目区分表"
+msgid ""
+msgstr ""
 
-msgid "Shokuti Hinmoku Kubun Mr"
-msgstr "諸口品目区分"
+msgid "Tanka Iti"
+msgstr "単価位置"
 
-msgid "Name"
-msgstr "名称"
+msgid "Tanka Shoushu Keta1"
+msgstr "単価小数桁1"
 
-msgid "Tantousha Mr"
-msgstr "作成者"
+msgid "Tanka Shoushu Keta2"
+msgstr "単価小数桁2"
 
-msgid "Created"
-msgstr "作成日時"
+msgid "Tanka1"
+msgstr "単価1"
 
-msgid "Kousin Tantousha Mr"
-msgstr "更新者"
+msgid "Tanka2"
+msgstr "単価2"
+
+msgid "Tanka3"
+msgstr "単価3"
+
+msgid "Tanka4"
+msgstr "単価4"
+
+msgid "Tanka5"
+msgstr "単価5"
+
+msgid "Tanni Iti"
+msgstr "単位位置"
+
+msgid "Tanni Mr"
+msgstr "単位"
+
+msgid "Tanni Mr2"
+msgstr "単位2"
+
+msgid "Tegata Sight"
+msgstr "手形サイト"
+
+msgid "Thema Mr"
+msgstr "テーマ"
+
+msgid "Torihikisaki Mr"
+msgstr "取引先"
+
+msgid "Updated"
+msgstr "更新日時"
+
+msgid "User"
+msgstr "担当者"
+
+msgid "Username"
+msgstr "ログインID"
+
+msgid "Utizei Flg"
+msgstr "内税フラグ"
+
+msgid "Yokin Shurui Kbn"
+msgstr "預金種類"
+
+msgid "Yoshin Torihikisaki Mr"
+msgstr "与信親取引先"
+
+msgid "Yosin Gendo Gaku"
+msgstr "与信限度額"
+
+msgid "Youi Zumi Suu"
+msgstr "用意済数量"
+
+msgid "Youi Zumi Suu2"
+msgstr "用意済数量2"
+
+msgid "Yuusen Junni"
+msgstr "優先順位"
+
+msgid "Zaiko Hikiate Flg"
+msgstr "在庫引当フラグ"
+
+msgid "Zaiko Kanri Taishou Flg"
+msgstr "在庫管理対象フラグ"
+
+msgid "Zaiko Suu"
+msgstr "在庫結果数量"
+
+msgid "Zaiko Suu2"
+msgstr "在庫結果数量2"
+
+msgid "Zaiko Zougen Fugou"
+msgstr "在庫増減符号"
+
+msgid "Zeikomi Kingaku"
+msgstr "税込金額"
+
+msgid "Zeiritu"
+msgstr "消費税率"
+
+msgid "Zumi Suu"
+msgstr "支給済数"
+
+msgid "Zumi Suu2"
+msgstr "支給済数2"
 

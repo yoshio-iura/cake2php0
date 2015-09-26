@@ -47,6 +47,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		<div id="header">
 			<!-- <h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1> -->
 			<p><?php if ($loginUser) {
+					echo $this->Html->image('woody/User.png', array('alt' => 'User', 'border' => '0'));
 					echo $loginUser['username'].':'.$loginUser['name'].' さん ';
 					echo $this->Html->link(__('logout'), array('controller' => 'users', 'action' => 'logout'));
 				}
@@ -63,8 +64,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		</div>
 		<div id="footer">
 			<?php echo $this->Html->link(
-					$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-					'http://www.cakephp.org/',
+					$this->Html->image('simomuralogo.jpg', array('alt' => $cakeDescription, 'width'=>'50', 'height'=>'40', 'border' => '0')),
+					'http://www.simomura.jp/',
 					array('target' => '_blank', 'escape' => false, 'id' => 'cake-powered')
 				);
 			?>
