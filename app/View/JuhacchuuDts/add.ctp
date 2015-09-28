@@ -7,6 +7,8 @@
 		echo $this->Form->input('juchuu_flg');
 		echo $this->Form->input('bi');
 		echo $this->Form->input('torihikisaki_mr_id');
+		echo $this->Form->input('shukka_torihikisaki_mr_id');
+		echo $this->Form->input('kituke_torihikisaki_mr_id');
 		echo $this->Form->input('user_id');
 		echo $this->Form->input('bumon_mr_id');
 		echo $this->Form->input('nouki');

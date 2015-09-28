@@ -4,6 +4,8 @@ App::uses('AppModel', 'Model');
  * JuhacchuuDt Model
  *
  * @property TorihikisakiMr $TorihikisakiMr
+ * @property ShukkaTorihikisakiMr $TorihikisakiMr
+ * @property KitukeTorihikisakiMr $TorihikisakiMr
  * @property User $User
  * @property BumonMr $BumonMr
  * @property JuchuuDt $JuchuuDt
@@ -31,6 +33,20 @@ class JuhacchuuDt extends AppModel {
 		'TorihikisakiMr' => array(
 			'className' => 'TorihikisakiMr',
 			'foreignKey' => 'torihikisaki_mr_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'ShukkaTorihikisakiMr' => array(
+			'className' => 'TorihikisakiMr',
+			'foreignKey' => 'shukka_torihikisaki_mr_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'KitukeTorihikisakiMr' => array(
+			'className' => 'TorihikisakiMr',
+			'foreignKey' => 'kituke_torihikisaki_mr_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

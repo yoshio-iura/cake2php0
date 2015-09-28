@@ -48,8 +48,23 @@ class JuhacchuuDtsController extends AppController {
  * @return void
  */
 	public function add() {
-		$this->edit();
-		$this->render('edit');
+		if ($this->request->is('post')) {
+			$this->JuhacchuuDt->create();
+			if ($this->JuhacchuuDt->save($this->request->data)) {
+				$this->Flash->success(__('The juhacchuu dt has been saved.'));
+				return $this->redirect(array('action' => 'index'));
+			} else {
+				$this->Flash->error(__('The juhacchuu dt could not be saved. Please, try again.'));
+			}
+		}
+		$torihikisakiMrs = $this->JuhacchuuDt->TorihikisakiMr->find('list');
+		$shukkaTorihikisakiMrs = $this->JuhacchuuDt->ShukkaTorihikisakiMr->find('list');
+		$kitukeTorihikisakiMrs = $this->JuhacchuuDt->KitukeTorihikisakiMr->find('list');
+		$users = $this->JuhacchuuDt->User->find('list');
+		$bumonMrs = $this->JuhacchuuDt->BumonMr->find('list');
+		$juchuuDts = $this->JuhacchuuDt->JuchuuDt->find('list');
+		$bashoTanaSoukoMrs = $this->JuhacchuuDt->BashoTanaSoukoMr->find('list');
+		$this->set(compact('torihikisakiMrs', 'shukkaTorihikisakiMrs', 'kitukeTorihikisakiMrs', 'users', 'bumonMrs', 'juchuuDts', 'bashoTanaSoukoMrs'));
 	}
 
 /**
@@ -60,18 +75,15 @@ class JuhacchuuDtsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
-		if ($this->action == 'edit' && !$this->JuhacchuuDt->exists($id)) {
+		if (!$this->JuhacchuuDt->exists($id)) {
 			throw new NotFoundException(__('Invalid juhacchuu dt'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
-			if (!empty($this->request->data)) {
-				unset($this->JuhacchuuDt->JuhacchuuMeisaiDt->validate['JuhacchuuDt_id']);	// バリデーションエラーを出さないため
-				if ($this->JuhacchuuDt->save($this->request->data)) {
-					$this->Flash->success(__('The juhacchuu dt has been saved.'));
-					return $this->redirect(array('action' => 'index'));
-				} else {
-					$this->Flash->error(__('The juhacchuu dt could not be saved. Please, try again.'));
-				}
+			if ($this->JuhacchuuDt->save($this->request->data)) {
+				$this->Flash->success(__('The juhacchuu dt has been saved.'));
+				return $this->redirect(array('action' => 'index'));
+			} else {
+				$this->Flash->error(__('The juhacchuu dt could not be saved. Please, try again.'));
 			}
 		} else {
 			$options = array('conditions' => array('JuhacchuuDt.' . $this->JuhacchuuDt->primaryKey => $id));

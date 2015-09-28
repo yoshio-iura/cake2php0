@@ -13,6 +13,11 @@
 			$this->Form->input('JuhacchuuDt.bi',array('label'=>'','type'=>'text','size'=>"10")),
 			$this->Form->input('JuhacchuuDt.torihikisaki_mr_id',array('label'=>'')),
 		)).'</table>';
+		echo '<table class="tbl1">'.$this->Html->tableHeaders(array('受注なら出荷先','受注なら気付先'))
+			.$this->Html->tableCells(array(
+			$this->Form->input('JuhacchuuDt.shukka_torihikisaki_mr_id',array('label'=>'')),
+			$this->Form->input('JuhacchuuDt.kituke_torihikisaki_mr_id',array('label'=>'')),
+		)).'</table>';
 		echo '<table class="tbl1">'.$this->Html->tableHeaders(array(array('担当者'=>array('colspan'=>2)),'部門ID','納期'))
 			.$this->Html->tableCells(array(
 			$this->Form->input('JuhacchuuDt.user_id',array('label'=>'')),
