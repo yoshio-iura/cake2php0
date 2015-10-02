@@ -37,14 +37,14 @@ class ShoyuushaKbnFixture extends CakeTestFixture {
 			'id' => 1,
 			'code' => 1,
 			'name' => 'Lorem ipsum dolor sit amet',
-			'kaisi_nitiji' => '2015-09-26 09:39:49',
+			'kaisi_nitiji' => '2015-09-28 19:05:48',
 			'id_moto' => 1,
 			'kinsi_flg' => 1,
-			'shuuryou_nitiji' => '2015-09-26 09:39:49',
+			'shuuryou_nitiji' => '2015-09-28 19:05:48',
 			'sakusei_user_id' => 1,
-			'created' => '2015-09-26 09:39:49',
+			'created' => '2015-09-28 19:05:48',
 			'kousin_user_id' => 1,
-			'updated' => '2015-09-26 09:39:49'
+			'updated' => '2015-09-28 19:05:48'
 		),
 	);
 

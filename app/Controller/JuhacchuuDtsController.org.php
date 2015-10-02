@@ -16,7 +16,7 @@ class JuhacchuuDtsController extends AppController {
  * @var array
  */
 	public $components = array('Paginator', 'Flash', 'Session');
-
+	public $helpers = array('Js');
 /**
  * index method
  *
@@ -48,23 +48,8 @@ class JuhacchuuDtsController extends AppController {
  * @return void
  */
 	public function add() {
-		if ($this->request->is('post')) {
-			$this->JuhacchuuDt->create();
-			if ($this->JuhacchuuDt->save($this->request->data)) {
-				$this->Flash->success(__('The juhacchuu dt has been saved.'));
-				return $this->redirect(array('action' => 'index'));
-			} else {
-				$this->Flash->error(__('The juhacchuu dt could not be saved. Please, try again.'));
-			}
-		}
-		$torihikisakiMrs = $this->JuhacchuuDt->TorihikisakiMr->find('list');
-		$shukkaTorihikisakiMrs = $this->JuhacchuuDt->ShukkaTorihikisakiMr->find('list');
-		$kitukeTorihikisakiMrs = $this->JuhacchuuDt->KitukeTorihikisakiMr->find('list');
-		$users = $this->JuhacchuuDt->User->find('list');
-		$bumonMrs = $this->JuhacchuuDt->BumonMr->find('list');
-		$juchuuDts = $this->JuhacchuuDt->JuchuuDt->find('list');
-		$bashoTanaSoukoMrs = $this->JuhacchuuDt->BashoTanaSoukoMr->find('list');
-		$this->set(compact('torihikisakiMrs', 'shukkaTorihikisakiMrs', 'kitukeTorihikisakiMrs', 'users', 'bumonMrs', 'juchuuDts', 'bashoTanaSoukoMrs'));
+		$this->edit();
+		$this->render('edit');
 	}
 
 /**
@@ -75,15 +60,26 @@ class JuhacchuuDtsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
-		if (!$this->JuhacchuuDt->exists($id)) {
+		if ($this->action == 'edit' && !$this->JuhacchuuDt->exists($id)) {
 			throw new NotFoundException(__('Invalid juhacchuu dt'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
-			if ($this->JuhacchuuDt->save($this->request->data)) {
-				$this->Flash->success(__('The juhacchuu dt has been saved.'));
-				return $this->redirect(array('action' => 'index'));
-			} else {
-				$this->Flash->error(__('The juhacchuu dt could not be saved. Please, try again.'));
+			if (!empty($this->request->data)) {
+				unset($this->JuhacchuuDt->JuhacchuuMeisaiDt->validate['JuhacchuuDt_id']);	// バリデーションエラーを出さないため
+				if ($this->JuhacchuuDt->save($this->request->data)) {
+					$juhacchuu_dt_id=$this->JuhacchuuDt->getInsertId();
+					foreach($this->request->data['JuhacchuuMeisaiDt'] as $juhacchuuMeisaiDt) {
+						//loop for each person added
+$this->Session->setFlash("juhacchuu_dt_id=$juhacchuu_dt_id"));
+						$juhacchuuMeisaiDt['juhacchuu_dt_id']=$juhacchuu_dt_id;
+						$this->JuhacchuuDt->JuhacchuuMeisaiDt->create();
+						$this->JuhacchuuDt->JuhacchuuMeisaiDt->save($juhacchuuMeisaiDt);
+					}//end foreach
+				//	$this->Session->setFlash(__('The juhacchuu dt has been saved.'));
+					return $this->redirect(array('action' => 'index'));
+				} else {
+					$this->Session->setFlash(__('The juhacchuu dt could not be saved. Please, try again.'));
+				}
 			}
 		} else {
 			$options = array('conditions' => array('JuhacchuuDt.' . $this->JuhacchuuDt->primaryKey => $id));

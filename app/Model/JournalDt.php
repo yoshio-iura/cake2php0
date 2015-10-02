@@ -4,12 +4,13 @@ App::uses('AppModel', 'Model');
  * JournalDt Model
  *
  * @property JournalKbn $JournalKbn
- * @property Data $Data
  * @property HinmokuMr $HinmokuMr
  * @property BashoTanaSoukoMr $BashoTanaSoukoMr
  * @property TorihikisakiMr $TorihikisakiMr
  * @property TanniMr $TanniMr
  * @property TanniMr2 $TanniMr2
+ * @property SakuseiUser $SakuseiUser
+ * @property KousinUser $KousinUser
  */
 class JournalDt extends AppModel {
 
@@ -25,13 +26,6 @@ class JournalDt extends AppModel {
 		'JournalKbn' => array(
 			'className' => 'JournalKbn',
 			'foreignKey' => 'journal_kbn_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
-		'Data' => array(
-			'className' => 'Data',
-			'foreignKey' => 'data_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

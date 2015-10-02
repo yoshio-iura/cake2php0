@@ -43,3 +43,23 @@
 		<li><?php echo $this->Html->link(__('New Shounin Kengen Mr'), array('controller' => 'shounin_kengen_mrs', 'action' => 'add')); ?> </li>
 	</ul>
 </div>
+<button id="buttonId">Ajax通信</button>
+<div id="updateArea">ここがAjaxで更新される</div>
+<?php echo $this->Html->script(array('jquery-1.6.4.min'));?>
+<script type='text/javascript'>
+$(function () {
+    $("#buttonId").bind("click",
+      function (event) {
+        $.ajax({
+          async:true,
+          dataType:"html",
+          success: function (data, textStatus) {
+            $("#updateArea").html(data);
+          },
+          url:"\/cake2erp0\/torihikisaki_mrs\/ajaxget"
+        });
+        return false;
+      });
+  });
+</script>
+

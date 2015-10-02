@@ -56,17 +56,10 @@ class ShoyuushaKbnTest extends CakeTestCase {
 		'app.furikomi_houhou_kbn',
 		'app.basho_tana_souko_mr',
 		'app.souko_kbn',
-		'app.seisan_sasizu_dt',
-		'app.hojo_sasizu_dt',
-		'app.tanni_mr2',
-		'app.hinshitu_kbn',
+		'app.hinsitu_kbn',
 		'app.juhacchuu_meisai_dt',
 		'app.juhacchuu_dt',
 		'app.juchuu_dt',
-		'app.juchuu_meisai_dt',
-		'app.hacchuu_meisai_dt',
-		'app.hacchuu_dt',
-		'app.order_dt',
 		'app.sikyuu_meisai_dt'
 	);
 

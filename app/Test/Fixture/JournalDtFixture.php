@@ -13,7 +13,7 @@ class JournalDtFixture extends CakeTestFixture {
 		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 11, 'key' => 'primary'),
 		'nichiji' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'journal_kbn_id' => array('type' => 'integer', 'null' => true, 'default' => null),
-		'data_id' => array('type' => 'integer', 'null' => true, 'default' => null),
+		'data_ids' => array('type' => 'integer', 'null' => true, 'default' => null),
 		'hinmoku_mr_id' => array('type' => 'integer', 'null' => true, 'default' => null),
 		'hinmoku_mei' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 60),
 		'lot' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 80),
@@ -54,9 +54,9 @@ class JournalDtFixture extends CakeTestFixture {
 	public $records = array(
 		array(
 			'id' => 1,
-			'nichiji' => '2015-09-26 09:00:37',
+			'nichiji' => '2015-09-28 19:40:20',
 			'journal_kbn_id' => 1,
-			'data_id' => 1,
+			'data_ids' => 1,
 			'hinmoku_mr_id' => 1,
 			'hinmoku_mei' => 'Lorem ipsum dolor sit amet',
 			'lot' => 'Lorem ipsum dolor sit amet',
@@ -78,11 +78,11 @@ class JournalDtFixture extends CakeTestFixture {
 			'bikou' => 'Lorem ipsum dolor sit amet',
 			'id_moto' => 1,
 			'kinsi_flg' => 1,
-			'shuuryou_nitiji' => '2015-09-26 09:00:37',
+			'shuuryou_nitiji' => '2015-09-28 19:40:20',
 			'sakusei_user_id' => 1,
-			'created' => '2015-09-26 09:00:37',
+			'created' => '2015-09-28 19:40:20',
 			'kousin_user_id' => 1,
-			'updated' => '2015-09-26 09:00:37'
+			'updated' => '2015-09-28 19:40:20'
 		),
 	);
 

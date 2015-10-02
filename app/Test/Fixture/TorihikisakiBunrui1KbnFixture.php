@@ -37,14 +37,14 @@ class TorihikisakiBunrui1KbnFixture extends CakeTestFixture {
 			'id' => 1,
 			'code' => 'Lorem ipsum dolor ',
 			'name' => 'Lorem ipsum dolor ',
-			'kaisi_nitiji' => '2015-09-16 04:20:16',
+			'kaisi_nitiji' => '2015-09-28 19:06:36',
 			'id_moto' => 1,
 			'kinsi_flg' => 1,
-			'shuuryou_nitiji' => '2015-09-16 04:20:16',
+			'shuuryou_nitiji' => '2015-09-28 19:06:36',
 			'sakusei_user_id' => 1,
-			'created' => '2015-09-16 04:20:16',
+			'created' => '2015-09-28 19:06:36',
 			'kousin_user_id' => 1,
-			'updated' => '2015-09-16 04:20:16'
+			'updated' => '2015-09-28 19:06:36'
 		),
 	);
 

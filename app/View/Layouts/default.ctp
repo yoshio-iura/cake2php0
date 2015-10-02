@@ -46,15 +46,21 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	<div id="container">
 		<div id="header">
 			<!-- <h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1> -->
-			<p><?php if ($loginUser) {
+			<div class="headeruser">
+			<?php	if ($loginUser) {
 					echo $this->Html->image('woody/User.png', array('alt' => 'User', 'border' => '0'));
 					echo $loginUser['username'].':'.$loginUser['name'].' さん ';
-					echo $this->Html->link(__('logout'), array('controller' => 'users', 'action' => 'logout'));
 				}
-				echo $this->Session->flash();		//復活20150917iura//削除20150917m.s.
-				echo $this->Session->flash('auth');	//復活20150917iura//削除20150917m.s.
-			//	echo $this->Flash->render('auth');
-			?></p>
+			?>
+			</div>
+			<div class="headermenu">
+			<ul> <li><?php echo $this->Html->link('新規 '.__('Juhacchuu Dt'), array('controller' => 'juhacchuu_dts', 'action' => 'add')); ?>
+			</li><li><?php echo $this->Html->link(__('logout'), array('controller' => 'users', 'action' => 'logout')); ?>
+			</li></ul>
+			</div>
+			<?php	echo $this->Session->flash();		//復活20150917iura//削除20150917m.s.	?>
+			<?php	echo $this->Session->flash('auth');	//復活20150917iura//削除20150917m.s.	?>
+			<!--	echo $this->Flash->render('auth');	-->
 		</div>
 		<div id="content">
 

@@ -181,4 +181,11 @@ class UsersController extends AppController {
 		$this->User->recursive = 0;
 		$this->set('users', $this->Paginator->paginate($conditions));
 	}
+
+	public function ajaxget() {
+		$this->autoRender = false;
+		Configure::write('debug',0);
+		echo 'BbBbBb';
+	}
+
 }

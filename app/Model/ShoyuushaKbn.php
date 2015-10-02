@@ -13,28 +13,6 @@ class ShoyuushaKbn extends AppModel {
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**
- * belongsTo associations
- *
- * @var array
- */
-	public $belongsTo = array(
-		'SakuseiUser' => array(
-			'className' => 'SakuseiUser',
-			'foreignKey' => 'sakusei_user_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
-		'KousinUser' => array(
-			'className' => 'KousinUser',
-			'foreignKey' => 'kousin_user_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		)
-	);
-
-/**
  * hasMany associations
  *
  * @var array

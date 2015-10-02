@@ -58,4 +58,13 @@ input[type=checkbox] {
 	background: #ccc;
 	background-image: url("../img/woody/wood.jpg")
 }
+div.headermenu {
+	float: right;
+}
+div.headermenu li {
+	float: left;
+}
+div.headeruser {
+	float: left;
+}
 

@@ -4,10 +4,17 @@ App::uses('AppModel', 'Model');
  * JournalKbn Model
  *
  * @property JournalDaiKbn $JournalDaiKbn
- * @property DataTableMr $DataTableMr
+ * @property JournalKongenMr $JournalKongenMr
  * @property JournalDt $JournalDt
  */
 class JournalKbn extends AppModel {
+
+/**
+ * Display field
+ *
+ * @var string
+ */
+	public $displayField = 'name';
 
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
@@ -25,9 +32,9 @@ class JournalKbn extends AppModel {
 			'fields' => '',
 			'order' => ''
 		),
-		'DataTableMr' => array(
-			'className' => 'DataTableMr',
-			'foreignKey' => 'data_id_table_mr_id',
+		'JournalKongenMr' => array(
+			'className' => 'JournalKongenMr',
+			'foreignKey' => 'journal_kongen_mr_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

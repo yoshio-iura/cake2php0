@@ -6,23 +6,25 @@
 		if ($this->action == 'edit') {
 			echo $this->Form->input('id');
 		}
-		echo '<table class="tbl1">'.$this->Html->tableHeaders(array('コード','受注フラグ','日付','取引先'))
+		echo '<table class="tbl1">'.$this->Html->tableHeaders(array('コード','受注フラグ','日付','取引先コード','名称'))
 			.$this->Html->tableCells(array(
 			$this->Form->input('JuhacchuuDt.code',array('label'=>'')),
-			$this->Form->input('JuhacchuuDt.juchuu_flg',array('label'=>'')),
+			$this->Form->input('JuhacchuuDt.juchuu_flg',array('label'=>'', 'onclick'=>'chkdisp(this,"juchuu_nomi")')),
 			$this->Form->input('JuhacchuuDt.bi',array('label'=>'','type'=>'text','size'=>"10")),
-			$this->Form->input('JuhacchuuDt.torihikisaki_mr_id',array('label'=>'')),
+			$this->Form->input('unused.torihikisaki_code',array('label'=>'','type'=>'text','size'=>"5",'onchange'=>'changeTorihikisakiCode(this)')),
+			$this->Form->input('unused.torihikisaki_mei',array('label'=>'','readonly'=>'readonly','size'=>"20")),
 		)).'</table>';
-		echo '<table class="tbl1">'.$this->Html->tableHeaders(array('受注なら出荷先','受注なら気付先'))
+		echo $this->Form->hidden('JuhacchuuDt.torihikisaki_mr_id');
+		echo '<table class="tbl1" id="juchuu_nomi" style="display:none;">'.$this->Html->tableHeaders(array('受注なら出荷先','受注なら気付先'))
 			.$this->Html->tableCells(array(
 			$this->Form->input('JuhacchuuDt.shukka_torihikisaki_mr_id',array('label'=>'')),
 			$this->Form->input('JuhacchuuDt.kituke_torihikisaki_mr_id',array('label'=>'')),
 		)).'</table>';
 		echo '<table class="tbl1">'.$this->Html->tableHeaders(array(array('担当者'=>array('colspan'=>2)),'部門ID','納期'))
 			.$this->Html->tableCells(array(
-			$this->Form->input('JuhacchuuDt.user_id',array('label'=>'')),
+			$this->Form->input('JuhacchuuDt.user_id',array('label'=>'','empty' => '')),
 			$this->Html->link('検索', '/users/popup', array('rel' => 'browse_user')),
-			$this->Form->input('JuhacchuuDt.bumon_mr_id',array('label'=>'')),
+			$this->Form->input('JuhacchuuDt.bumon_mr_id',array('label'=>'','empty' => '')),
 			$this->Form->input('JuhacchuuDt.nouki',array('label'=>'','type'=>'text','size'=>"10")),
 		)).'</table>';
 		echo '<table class="tbl1">'.$this->Html->tableHeaders(array('備考'))
@@ -32,7 +34,7 @@
 		echo '<table class="tbl1">'.$this->Html->tableHeaders(array('元受注番号','場所棚倉庫ID','金額合計','消費税金額','内税フラグ','纏め課税フラグ'))
 			.$this->Html->tableCells(array(
 			$this->Form->input('JuhacchuuDt.juchuu_dt_id',array('label'=>'')),
-			$this->Form->input('JuhacchuuDt.basho_tana_souko_mr_id',array('label'=>'')),
+			$this->Form->input('JuhacchuuDt.basho_tana_souko_mr_id',array('label'=>'','empty' => '')),
 			$this->Form->input('JuhacchuuDt.kingaku_goukei',array('label'=>'', 'style'=>'text-align:right')),
 			$this->Form->input('JuhacchuuDt.shouhizei_kingaku',array('label'=>'', 'style'=>'text-align:right')),
 			$this->Form->input('JuhacchuuDt.utizei_flg',array('label'=>'')),
@@ -52,14 +54,33 @@
 
 	<h3>受発注明細</h3>
 	<table id="mytable" class="tbl1">
-	<tr><th></th><th>品目名</th><th>数量</th><th>単価</th><th>備考</th><th width="30em">行№</th></tr>
-	<tr id="juhacchuu_meisai_dt0" style="display:none;">
+<!--	<tr><th></th><th>品目ID</th><th>品目名</th><th>ロット</th><th>数量</th><th>単位</th><th>数量2</th><th>単位2</th><th>単位位置</th>
+		<th>単価</th><th>内税フラグ</th><th>金額</th><th>消費税率</th><th>納期</th><th>備考</th><th>納入場所</th><th width="30em">行№</th></tr>
+-->	<tr id="juhacchuu_meisai_dt0" style="display:none;">
+		<td>
+		<table><tr>
+		<th>品目ID</th>    <td><?php echo $this->Form->input('unused.hinmoku_mr_id' ,array('label'=>'','type'=>'select')); ?></td>
+		<th>品目名</th>    <td><?php echo $this->Form->input('unused.hinmoku_mei'   ,array('label'=>'','type'=>'text')); ?></td>
+		<th>ロット</th>    <td><?php echo $this->Form->input('unused.lot'           ,array('label'=>'','type'=>'text')); ?></td>
+		</tr></table><table><tr>
+		<th>数量</th>      <td><?php echo $this->Form->input('unused.suu'           ,array('label'=>'','type'=>'number', 'step'=>'0.01', 'style'=>'text-align:right')); ?></td>
+		<th>単位</th>      <td><?php echo $this->Form->input('unused.tanni_mr_id'   ,array('label'=>'','type'=>'select','empty' => '')); ?></td>
+		<th>数量2</th>     <td><?php echo $this->Form->input('unused.suu2'          ,array('label'=>'','type'=>'number', 'step'=>'0.01', 'style'=>'text-align:right')); ?></td>
+		<th>単位2</th>     <td><?php echo $this->Form->input('unused.tanni_mr2_id'  ,array('label'=>'','type'=>'select','empty' => '')); ?></td>
+		<th>単位位置</th>  <td><?php echo $this->Form->input('unused.tanka_iti'     ,array('label'=>'','type'=>'number', 'style'=>'text-align:center')); ?></td>
+		<th>単価</th>      <td><?php echo $this->Form->input('unused.tanka'         ,array('label'=>'','type'=>'number', 'step'=>'0.01', 'style'=>'text-align:right')); ?></td>
+		<th>内税フラグ</th><td><?php echo $this->Form->input('unused.utizei_flg'    ,array('label'=>'','type'=>'checkbox')); ?></td>
+		</tr></table><table><tr>
+		<th>金額</th>      <td><?php echo $this->Form->input('unused.kingaku'       ,array('label'=>'','type'=>'number', 'style'=>'text-align:right')); ?></td>
+		<th>消費税率</th>  <td><?php echo $this->Form->input('unused.shouhizei_ritu',array('label'=>'','type'=>'number', 'style'=>'text-align:right')); ?></td>
+		<th>納期</th>      <td><?php echo $this->Form->input('unused.nouki'         ,array('label'=>'','type'=>'text', 'size'=>'10')); ?></td>
+		<th>備考</th>      <td><?php echo $this->Form->input('unused.bikou'         ,array('label'=>'','type'=>'text')); ?></td>
+		<th>納入場所</th>  <td><?php echo $this->Form->input('unused.basho_tana_souko_mr_id',array('label'=>'','type'=>'select','empty' => '')); ?></td>
+		</tr></table></td><td><table><tr><th width="30em">行№</th></tr><tr>
+		<td><?php echo $this->Form->input('unused.gyou_bangou'   ,array('label'=>'','type'=>'number', 'style'=>'text-align:right')); ?></td>
+		</tr><tr><th>抹消</th><tr>
 		<td><?php echo $this->Form->button('&nbsp;-&nbsp;',array('type'=>'button','title'=>'ここをクリックするとこの行の明細を削除します。')); ?></td>
-		<td><?php echo $this->Form->input('unused.hinmoku_mei',array('label'=>'','type'=>'text')); ?></td>
-		<td><?php echo $this->Form->input('unused.suu',array('label'=>'','type'=>'number', 'step'=>'0.01', 'style'=>'text-align:right')); ?></td>
-		<td><?php echo $this->Form->input('unused.tanka',array('label'=>'','type'=>'number', 'step'=>'0.01', 'style'=>'text-align:right')); ?></td>
-		<td><?php echo $this->Form->input('unused.bikou',array('label'=>'','type'=>'text')); ?></td>
-		<td><?php echo $this->Form->input('unused.gyou_bangou',array('label'=>'','type'=>'number', 'style'=>'text-align:right')); ?></td>
+		</tr></table></td>
 <!--		echo $this->Form->input('id');
 		echo $this->Form->input('juhacchuu_dt_id');
 		echo $this->Form->input('gyou_bangou');
@@ -94,7 +115,7 @@
 		echo $this->Form->input('sakusei_user_id');
 		echo $this->Form->input('kousin_user_id');
 -->	</tr>
-	<tr id="trAdd"><td> <?php echo $this->Form->button('+',array('type'=>'button','title'=>'ここをクリックすると明細の新しい行を追加します。','onclick'=>'addJuhacchuuMeisaiDt()')); ?> </td><td></td><td></td><td></td><td></td></tr>
+	<tr id="trAdd"><td></td><th>追加 <?php echo $this->Form->button('+',array('type'=>'button','title'=>'ここをクリックすると明細の新しい行を追加します。','onclick'=>'addJuhacchuuMeisaiDt()')); ?> </th></tr>
 	</table>
 
 <?php echo $this->Form->end(__d('cake', 'Submit')); ?>
@@ -127,8 +148,6 @@
 <script type="text/javascript">
 	InputCalendar.createOnLoaded('JuhacchuuDtBi', {format: 'yyyy-mm-dd', lang:'ja'});
 	InputCalendar.createOnLoaded('JuhacchuuDtNouki', {format: 'yyyy-mm-dd', lang:'ja'});
-	InputCalendar.createOnLoaded('JuhacchuuDtKaisi_nitiji', {format: 'yyyy-mm-dd', lang:'ja'});
-	InputCalendar.createOnLoaded('JuhacchuuDtShuuryouNitiji', {format: 'yyyy-mm-dd', lang:'ja'});
 	InputCalendar.createOnLoaded('JuhacchuuMeisaiDt0UkeireYoteiBi', {format: 'yyyy-mm-dd', lang:'ja'});
 </script>
 
@@ -148,7 +167,7 @@
 	<!-- 検索ウィンドウ -->
 <script type="text/javascript">
 user_id = 0;
-j$(document).ready(function(){
+j$(function(){
 	j$("a[rel^='browse_user']").prettyPopin({
 		modal : true,
 		width : 800,
@@ -164,6 +183,18 @@ j$(document).ready(function(){
 			user_id = 0;
 		}
 	})
+	j$("#unusedTorihikisakiCode").bind("change",function (event) {
+		var torihikisaki_code = j$(this).val();
+		j$.ajax({
+			type:"POST",
+			data:{'torihikisaki_code':torihikisaki_code,},
+			async:true,
+			dataType:"html",
+			success: function (data, textStatus) {j$("#unusedTorihikisakiMei").val(data);},
+			url:<?php echo "'".$this->Html->url(array('controller' => 'torihikisaki_mrs', 'action' => 'ajaxget'))."'"; ?>
+		});
+		return false;
+	});
 });
 </script>
 
@@ -176,15 +207,38 @@ j$(document).ready(function(){
 		lastRow++;
 		j$("#mytable tbody>tr:#juhacchuu_meisai_dt0").clone(true).attr('id','juhacchuu_meisai_dt'+lastRow).removeAttr('style').insertBefore("#mytable tbody>tr:#trAdd");
 		j$("#juhacchuu_meisai_dt"+lastRow+" button").attr('onclick','removeJuhacchuuMeisaiDt('+lastRow+')');
-		j$("#juhacchuu_meisai_dt"+lastRow+" input:first").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][hinmoku_mei]').attr('id','JuhacchuuMeisaiDt'+lastRow+'HinmokuMei');
-		j$("#juhacchuu_meisai_dt"+lastRow+" input:eq(1)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][suu]').attr('id','JuhacchuuMeisaiDt'+lastRow+'Suu');
-		j$("#juhacchuu_meisai_dt"+lastRow+" input:eq(2)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][tanka]').attr('id','JuhacchuuMeisaiDt'+lastRow+'Tanka');
-		j$("#juhacchuu_meisai_dt"+lastRow+" input:eq(3)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][bikou]').attr('id','JuhacchuuMeisaiDt'+lastRow+'Bikou');
-		j$("#juhacchuu_meisai_dt"+lastRow+" input:eq(3)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][gyou_bangou]').attr('id','JuhacchuuMeisaiDt'+lastRow+'GyouBangou');
+		j$("#juhacchuu_meisai_dt"+lastRow+" select:first").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][hinmoku_mr_id]').attr('id','JuhacchuuMeisaiDt'+lastRow+'hinmoku_mr_id');
+		j$("#juhacchuu_meisai_dt"+lastRow+" input:first").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][hinmoku_mei]')  .attr('id','JuhacchuuMeisaiDt'+lastRow+'hinmoku_mei');
+		j$("#juhacchuu_meisai_dt"+lastRow+" input:eq(1)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][lot]')          .attr('id','JuhacchuuMeisaiDt'+lastRow+'lot');
+		j$("#juhacchuu_meisai_dt"+lastRow+" input:eq(2)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][suu]')          .attr('id','JuhacchuuMeisaiDt'+lastRow+'Suu');
+		j$("#juhacchuu_meisai_dt"+lastRow+" select:eq(1)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][tanni_mr_id]')  .attr('id','JuhacchuuMeisaiDt'+lastRow+'tanni_mr_id');
+		j$("#juhacchuu_meisai_dt"+lastRow+" input:eq(3)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][suu2]')         .attr('id','JuhacchuuMeisaiDt'+lastRow+'Suu2');
+		j$("#juhacchuu_meisai_dt"+lastRow+" select:eq(2)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][tanni_mr2_id]') .attr('id','JuhacchuuMeisaiDt'+lastRow+'tanni_mr2_id');
+		j$("#juhacchuu_meisai_dt"+lastRow+" input:eq(4)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][tanka_iti]')    .attr('id','JuhacchuuMeisaiDt'+lastRow+'tanka_iti');
+		j$("#juhacchuu_meisai_dt"+lastRow+" input:eq(5)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][tanka]')        .attr('id','JuhacchuuMeisaiDt'+lastRow+'Tanka');
+		j$("#juhacchuu_meisai_dt"+lastRow+" input:eq(7)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][utizei_flg]')  .attr('id','JuhacchuuMeisaiDt'+lastRow+'utizei_flg');
+		j$("#juhacchuu_meisai_dt"+lastRow+" input:eq(8)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][kingaku]')     .attr('id','JuhacchuuMeisaiDt'+lastRow+'kingaku');
+		j$("#juhacchuu_meisai_dt"+lastRow+" input:eq(9)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][shouhizei_ritu]').attr('id','JuhacchuuMeisaiDt'+lastRow+'shouhizei_ritu');
+		j$("#juhacchuu_meisai_dt"+lastRow+" input:eq(10)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][nouki]')       .attr('id','JuhacchuuMeisaiDt'+lastRow+'nouki');
+		j$("#juhacchuu_meisai_dt"+lastRow+" input:eq(11)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][bikou]')       .attr('id','JuhacchuuMeisaiDt'+lastRow+'Bikou');
+		j$("#juhacchuu_meisai_dt"+lastRow+" select:eq(3)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][basho_tana_souko_mr_id]').attr('id','JuhacchuuMeisaiDt'+lastRow+'basho_tana_souko_mr_id');
+		j$("#juhacchuu_meisai_dt"+lastRow+" input:eq(12)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][gyou_bangou]') .attr('id','JuhacchuuMeisaiDt'+lastRow+'GyouBangou');
 	}
 	
 	function removeJuhacchuuMeisaiDt(x) {
 		j$("#juhacchuu_meisai_dt"+x).remove();
+	}
+</script>
+
+	<!-- 受注フラグON-OFF -->
+<script type='text/javascript'>
+	function chkdisp( obj,id ) {
+//	alert(obj+" "+id)
+		if( obj.checked ){
+			document.getElementById(id).style.display = "block";
+		} else {
+			document.getElementById(id).style.display = "none";
+		}
 	}
 </script>
 

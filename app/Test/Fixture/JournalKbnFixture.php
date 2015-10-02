@@ -14,7 +14,8 @@ class JournalKbnFixture extends CakeTestFixture {
 		'code' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 6),
 		'name' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 40),
 		'journal_dai_kbn_id' => array('type' => 'integer', 'null' => true, 'default' => null),
-		'data_id_table_mr_id' => array('type' => 'integer', 'null' => true, 'default' => null),
+		'setumei' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 240),
+		'journal_kongen_mr_id' => array('type' => 'integer', 'null' => true, 'default' => null),
 		'zaiko_zougen_fugou' => array('type' => 'integer', 'null' => true, 'default' => null),
 		'kaisi_nitiji' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'id_moto' => array('type' => 'integer', 'null' => true, 'default' => null),
@@ -41,16 +42,17 @@ class JournalKbnFixture extends CakeTestFixture {
 			'code' => 'Lore',
 			'name' => 'Lorem ipsum dolor sit amet',
 			'journal_dai_kbn_id' => 1,
-			'data_id_table_mr_id' => 1,
+			'setumei' => 'Lorem ipsum dolor sit amet',
+			'journal_kongen_mr_id' => 1,
 			'zaiko_zougen_fugou' => 1,
-			'kaisi_nitiji' => '2015-09-26 09:01:00',
+			'kaisi_nitiji' => '2015-09-29 19:04:29',
 			'id_moto' => 1,
 			'kinsi_flg' => 1,
-			'shuuryou_nitiji' => '2015-09-26 09:01:00',
+			'shuuryou_nitiji' => '2015-09-29 19:04:29',
 			'sakusei_user_id' => 1,
-			'created' => '2015-09-26 09:01:00',
+			'created' => '2015-09-29 19:04:29',
 			'kousin_user_id' => 1,
-			'updated' => '2015-09-26 09:01:00'
+			'updated' => '2015-09-29 19:04:29'
 		),
 	);
 

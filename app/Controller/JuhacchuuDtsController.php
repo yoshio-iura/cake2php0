@@ -66,7 +66,7 @@ class JuhacchuuDtsController extends AppController {
 		if ($this->request->is(array('post', 'put'))) {
 			if (!empty($this->request->data)) {
 				unset($this->JuhacchuuDt->JuhacchuuMeisaiDt->validate['JuhacchuuDt_id']);	// バリデーションエラーを出さないため
-				if ($this->JuhacchuuDt->save($this->request->data)) {
+				if ($this->JuhacchuuDt->saveAll($this->request->data)) {
 					$this->Flash->success(__('The juhacchuu dt has been saved.'));
 					return $this->redirect(array('action' => 'index'));
 				} else {
@@ -84,7 +84,8 @@ class JuhacchuuDtsController extends AppController {
 		$bumonMrs = $this->JuhacchuuDt->BumonMr->find('list');
 		$juchuuDts = $this->JuhacchuuDt->JuchuuDt->find('list');
 		$bashoTanaSoukoMrs = $this->JuhacchuuDt->BashoTanaSoukoMr->find('list');
-		$this->set(compact('torihikisakiMrs', 'shukkaTorihikisakiMrs', 'kitukeTorihikisakiMrs', 'users', 'bumonMrs', 'juchuuDts', 'bashoTanaSoukoMrs'));
+		$tanniMrs = $this->JuhacchuuDt->JuhacchuuMeisaiDt->TanniMr->find('list');
+		$this->set(compact('torihikisakiMrs', 'shukkaTorihikisakiMrs', 'kitukeTorihikisakiMrs', 'users', 'bumonMrs', 'juchuuDts', 'bashoTanaSoukoMrs', 'tanniMrs'));
 	}
 
 /**

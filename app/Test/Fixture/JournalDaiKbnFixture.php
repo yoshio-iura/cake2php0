@@ -13,6 +13,7 @@ class JournalDaiKbnFixture extends CakeTestFixture {
 		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 11, 'key' => 'primary'),
 		'code' => array('type' => 'integer', 'null' => true, 'default' => null),
 		'name' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 40),
+		'setumei' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 240),
 		'kaisi_nitiji' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'id_moto' => array('type' => 'integer', 'null' => true, 'default' => null),
 		'kinsi_flg' => array('type' => 'boolean', 'null' => true, 'default' => null),
@@ -37,14 +38,15 @@ class JournalDaiKbnFixture extends CakeTestFixture {
 			'id' => 1,
 			'code' => 1,
 			'name' => 'Lorem ipsum dolor sit amet',
-			'kaisi_nitiji' => '2015-09-26 09:01:14',
+			'setumei' => 'Lorem ipsum dolor sit amet',
+			'kaisi_nitiji' => '2015-09-29 18:45:52',
 			'id_moto' => 1,
 			'kinsi_flg' => 1,
-			'shuuryou_nitiji' => '2015-09-26 09:01:14',
+			'shuuryou_nitiji' => '2015-09-29 18:45:52',
 			'sakusei_user_id' => 1,
-			'created' => '2015-09-26 09:01:14',
+			'created' => '2015-09-29 18:45:52',
 			'kousin_user_id' => 1,
-			'updated' => '2015-09-26 09:01:14'
+			'updated' => '2015-09-29 18:45:52'
 		),
 	);
 
