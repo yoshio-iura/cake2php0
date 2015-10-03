@@ -85,7 +85,8 @@ class JuhacchuuDtsController extends AppController {
 		$juchuuDts = $this->JuhacchuuDt->JuchuuDt->find('list');
 		$bashoTanaSoukoMrs = $this->JuhacchuuDt->BashoTanaSoukoMr->find('list');
 		$tanniMrs = $this->JuhacchuuDt->JuhacchuuMeisaiDt->TanniMr->find('list');
-		$this->set(compact('torihikisakiMrs', 'shukkaTorihikisakiMrs', 'kitukeTorihikisakiMrs', 'users', 'bumonMrs', 'juchuuDts', 'bashoTanaSoukoMrs', 'tanniMrs'));
+		$tanniMr2s = $this->JuhacchuuDt->JuhacchuuMeisaiDt->TanniMr2->find('list');
+		$this->set(compact('torihikisakiMrs', 'shukkaTorihikisakiMrs', 'kitukeTorihikisakiMrs', 'users', 'bumonMrs', 'juchuuDts', 'bashoTanaSoukoMrs', 'tanniMrs', 'tanniMr2s'));
 	}
 
 /**
