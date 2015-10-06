@@ -40,6 +40,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->Html->script('effects'); 
 		echo $this->Html->script('protocalendar'); 
 		echo $this->Html->script('lang_ja');  
+
 	?>
 </head>
 <body>

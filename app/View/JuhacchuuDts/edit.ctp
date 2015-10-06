@@ -64,10 +64,13 @@
 	<?php echo $this->Html->link('品目CD', '/hinmoku_mrs/popup', array('rel' => 'prettyPopin', 'id'=>'hinmoku_popup', 'style'=>'display:none;')); ?>
 	<table id="mytable" class="tbl1">
 	<tr id="juhacchuu_meisai_dt0" style="display:none;">
-		<td>
+		<td><table><tbody><tr><th width="30em">行№</th></tr><tr>
+		<td><?php echo $this->Form->input('unused.gyou_bangou'   ,array('label'=>'','type'=>'number', 'style'=>'text-align:right')); ?></td>
+		</tr><tr><th><?php echo $this->Form->button('削除',array('id'=>'removeJuhacchuuMeisaiDt0','type'=>'button','title'=>'ここをクリックするとこの行の明細を削除します。')); ?></th>
+		</tr></table></td><td>
 		<?php echo $this->Form->hidden('unused.hinmoku_mr_id' ,array('label'=>'','type'=>'text')); ?>
 		<table><tr>
-		<th><?php echo $this->Form->button('品目CD',array('type'=>'button','title'=>'ここをクリックすると品目検索画面になります。')); ?>
+		<th><?php echo $this->Form->button('品目CD',array('id'=>'hinmoku_prettyPopin0','type'=>'button','title'=>'ここをクリックすると品目検索画面になります。')); ?>
 		</th>		   <td><?php echo $this->Form->input('unused.hinmoku_code' ,array('label'=>'','type'=>'text','size'=>"10",'onchange'=>'change_hinmoku(this)')); ?></td>
 		<th>品目名</th>    <td><?php echo $this->Form->input('unused.hinmoku_mei'   ,array('label'=>'','type'=>'text','size'=>"40")); ?></td>
 		<th>ロット</th>    <td><?php echo $this->Form->input('unused.lot'           ,array('label'=>'','type'=>'text')); ?></td>
@@ -86,14 +89,34 @@
 		<th>納期</th>      <td><?php echo $this->Form->input('unused.nouki'         ,array('label'=>'','type'=>'text', 'size'=>'10')); ?></td>
 		<th>備考</th>      <td><?php echo $this->Form->input('unused.bikou'         ,array('label'=>'','type'=>'text', 'size'=>'40')); ?></td>
 		<th>納入場所</th>  <td><?php echo $this->Form->input('unused.basho_tana_souko_mr_id',array('label'=>'','type'=>'select','empty' => '')); ?></td>
-		</tr></table></td><td><table><tr><th width="30em">行№</th></tr><tr>
-		<td><?php echo $this->Form->input('unused.gyou_bangou'   ,array('label'=>'','type'=>'number', 'style'=>'text-align:right')); ?></td>
-		</tr><tr><th>抹消</th><tr>
-		<td><?php echo $this->Form->button('&nbsp;-&nbsp;',array('type'=>'button','title'=>'ここをクリックするとこの行の明細を削除します。')); ?></td>
-		</tr></table></td>
+		</tr></table><table id=mytable0><tbody><tr id="sikyuu_meisai_dt0" style="display:none;">
+			<th width="30em">支給行№
+			<br><?php echo $this->Form->input('unused0.gyou_bangou'   ,array('label'=>'','type'=>'number', 'style'=>'text-align:right')); ?>
+			<br><?php echo $this->Form->button('削除',array('type'=>'button','id'=>'btnDelSikyuu0','onclick'=>'delSikyuuMeisaiDt(this)','title'=>'ここをクリックするとこの行の支給明細を削除します。')); ?>
+			</th>
+			<td><table><tr>
+			<th><?php echo $this->Form->button('支給品CD',array('id'=>'hinmoku_prettyPopin00','type'=>'button','title'=>'ここをクリックすると品目検索画面になります。')); ?>
+			</th>		   <td><?php echo $this->Form->input('unused0.hinmoku_code'  ,array('label'=>'','type'=>'text','size'=>"10",'onchange'=>'change_hinmoku(this)')); ?></td>
+			<th>品目名</th>    <td><?php echo $this->Form->input('unused0.hinmoku_mei'   ,array('label'=>'','type'=>'text','size'=>"40")); ?></td>
+			<th>ロット</th>    <td><?php echo $this->Form->input('unused0.lot'           ,array('label'=>'','type'=>'text')); ?></td>
+			</tr></table><table><tr>
+			<th>所要単位</th>  <td><?php echo $this->Form->input('unused0.shoyou_tanni'   ,array('label'=>'','type'=>'number', 'step'=>'0.01', 'style'=>'text-align:right')); ?></td>
+			<th>所要数量</th>  <td><?php echo $this->Form->input('unused0.suu'           ,array('label'=>'','type'=>'number', 'step'=>'0.01', 'style'=>'text-align:right')); ?></td>
+			<th>単位</th>      <td><?php echo $this->Form->input('unused0.tanni_mr_id'   ,array('label'=>'','type'=>'select','empty' => '')); ?></td>
+			<th>所要数量2</th> <td><?php echo $this->Form->input('unused0.suu2'          ,array('label'=>'','type'=>'number', 'step'=>'0.01', 'style'=>'text-align:right')); ?></td>
+			<th>単位2</th>     <td><?php echo $this->Form->input('unused0.tanni_mr2_id'  ,array('label'=>'','type'=>'select','empty' => '')); ?></td>
+			</tr></table><table><tr>
+			<th>単位位置</th>  <td><?php echo $this->Form->input('unused0.tanka_iti'     ,array('label'=>'','type'=>'number', 'size'=>'1', 'style'=>'text-align:center')); ?></td>
+			<th>備考</th>      <td><?php echo $this->Form->input('unused0.bikou'         ,array('label'=>'','type'=>'text', 'size'=>'40')); ?></td>
+			<th>納入場所</th>  <td><?php echo $this->Form->input('unused0.basho_tana_souko_mr_id',array('label'=>'','type'=>'select','empty' => '')); ?></td>
+			</tr></table></td>
+			</tr>
+			<tr id="trAddSikyuu0"><th><?php echo $this->Form->button('支給追加',array('type'=>'button','id'=>'btnAddSikyuu0','onclick'=>'addSikyuuMeisaiDt(this)','title'=>'ここをクリックすると支給の新しい行を追加します。')); ?> </th>
+			</tr>
+		</tbody></table></td>
 	</tr>
-	<tr id="trAdd"><td></td><th>追加 <?php echo $this->Form->button('+',array('type'=>'button','title'=>'ここをクリックすると明細の新しい行を追加します。','onclick'=>'addJuhacchuuMeisaiDt()')); ?> </th></tr>
-	</table>
+	<tr id="trAdd"><th><?php echo $this->Form->button('追加',array('type'=>'button','title'=>'ここをクリックすると明細の新しい行を追加します。','onclick'=>'addJuhacchuuMeisaiDt()')); ?> </th><td></td></tr>
+	</tbody></table>
 
 <?php echo $this->Form->end(__d('cake', 'Submit')); ?>
 </div>
@@ -150,6 +173,7 @@ hinmoku_mr_id = '';
 hinmoku_mr_code = '';
 hinmoku_mr_name = '';
 hinmoku_popup_gyou = 0;
+hinmoku_popup_sikyuu = "";
 j$(function(){
 	j$("a[rel^='prettyPopin']:eq(0)").prettyPopin({//取引先検索
 		modal : true,
@@ -212,9 +236,9 @@ j$(function(){
 		loader_path: '<?php echo $this->webroot; ?>/img/prettyPopin/loader.gif',
 		callback: function(){
 			if(hinmoku_mr_code > '') {
-				j$("#JuhacchuuMeisaiDt"+hinmoku_popup_gyou+"HinmokuMrId").val(hinmoku_mr_id);
-				j$("#unused"+hinmoku_popup_gyou+"HinmokuCode").val(hinmoku_mr_code);
-				j$("#JuhacchuuMeisaiDt"+hinmoku_popup_gyou+"HinmokuMei").val(hinmoku_mr_name);
+				j$("#"+hinmoku_popup_sikyuu+"JuhacchuuMeisaiDt"+hinmoku_popup_gyou+"HinmokuMrId").val(hinmoku_mr_id);
+				j$("#unused"+hinmoku_popup_sikyuu+hinmoku_popup_gyou+"HinmokuCode").val(hinmoku_mr_code);
+				j$("#"+hinmoku_popup_sikyuu+"JuhacchuuMeisaiDt"+hinmoku_popup_gyou+"HinmokuMei").val(hinmoku_mr_name);
 			}
 			hinmoku_mr_code = '';
 		}
@@ -240,23 +264,29 @@ function change_torihikisaki(this1){
 function change_hinmoku(this1){
 	var hinmoku_code = this1.value;
 	//alert(this1.name);//this1.nameはdata[unused][1][hinmoku_code]の文字列、これを']['で分割した2番目が行番号となる。
+	//alert(this1.name);//this1.nameはdata[unusedSikyuu][1][hinmoku_code]の文字列、これを']['で分割した2番目が行番号となる。
 	var arrayNameData = this1.name.split('\]\[');
+	if(arrayNameData[0].slice(-6)=="Sikyuu"){
+		hinmoku_popup_sikyuu = "Sikyuu";
+	}else{	hinmoku_popup_sikyuu = "";
+	}
 	j$.ajax({
 		type:"POST",
 		data:{'hinmoku_code':hinmoku_code,},
 		async:true,
 		dataType: 'json',
 		success: function (data, textStatus) {
-			j$("#JuhacchuuMeisaiDt"+arrayNameData[1]+"HinmokuMrId").val(data.HinmokuMr.id);
-			j$("#JuhacchuuMeisaiDt"+arrayNameData[1]+"HinmokuMei").val(data.HinmokuMr.name);
+			j$("#"+hinmoku_popup_sikyuu+"JuhacchuuMeisaiDt"+arrayNameData[1]+"HinmokuMrId").val(data.HinmokuMr.id);
+			j$("#"+hinmoku_popup_sikyuu+"JuhacchuuMeisaiDt"+arrayNameData[1]+"HinmokuMei").val(data.HinmokuMr.name);
 		},
 		url:<?php echo "'".$this->Html->url(array('controller' => 'hinmoku_mrs', 'action' => 'ajaxget'))."'"; ?>
 	});
 	return false;
 }
-function hinmoku_prettyPopin(this1){
+function hinmoku_prettyPopin(this1,sikyuu=""){
 //alert(this1);
 	hinmoku_popup_gyou = this1;
+	hinmoku_popup_sikyuu = sikyuu;
 	document.getElementById('hinmoku_popup').click();//$(#hinmoku_popup')[0].click();
 }
 function change_kingaku(this1){
@@ -288,39 +318,78 @@ function change_kingaku(this1){
 	<!-- 明細行追加削除 -->
 <script type='text/javascript'>
 	var lastRow=0;
+	var lastRows=new Array();
+	var cntSikyuu=0;
 	addJuhacchuuMeisaiDt();
 	
 	function addJuhacchuuMeisaiDt() {
 		lastRow++;
 		j$("#mytable tbody>tr:#juhacchuu_meisai_dt0").clone(true).attr('id','juhacchuu_meisai_dt'+lastRow).removeAttr('style').insertBefore("#mytable tbody>tr:#trAdd");
-		j$("#juhacchuu_meisai_dt"+lastRow+" button:eq(1)").attr('onclick','removeJuhacchuuMeisaiDt('+lastRow+')');
-		j$("#juhacchuu_meisai_dt"+lastRow+" button:first").attr('onclick','hinmoku_prettyPopin('+lastRow+')');
-		j$("#juhacchuu_meisai_dt"+lastRow+" input:first").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][hinmoku_mr_id]').attr('id','JuhacchuuMeisaiDt'+lastRow+'HinmokuMrId');
-		j$("#juhacchuu_meisai_dt"+lastRow+" input:eq(1)").attr('name','data[unused]['+lastRow+'][hinmoku_code]')  .attr('id','unused'+lastRow+'hinmoku_code');
-		j$("#juhacchuu_meisai_dt"+lastRow+" input:eq(2)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][hinmoku_mei]')  .attr('id','JuhacchuuMeisaiDt'+lastRow+'HinmokuMei');
-		j$("#juhacchuu_meisai_dt"+lastRow+" input:eq(3)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][lot]')          .attr('id','JuhacchuuMeisaiDt'+lastRow+'Lot');
-		j$("#juhacchuu_meisai_dt"+lastRow+" input:eq(4)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][suu]')          .attr('id','JuhacchuuMeisaiDt'+lastRow+'Suu');
-		j$("#juhacchuu_meisai_dt"+lastRow+" select:first").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][tanni_mr_id]')  .attr('id','JuhacchuuMeisaiDt'+lastRow+'TanniMrId');
-		j$("#juhacchuu_meisai_dt"+lastRow+" input:eq(5)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][suu2]')         .attr('id','JuhacchuuMeisaiDt'+lastRow+'Suu2');
-		j$("#juhacchuu_meisai_dt"+lastRow+" select:eq(1)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][tanni_mr2_id]') .attr('id','JuhacchuuMeisaiDt'+lastRow+'TanniMr2Id');
-		j$("#juhacchuu_meisai_dt"+lastRow+" input:eq(6)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][tanka_iti]')    .attr('id','JuhacchuuMeisaiDt'+lastRow+'TankaIti');
-		j$("#juhacchuu_meisai_dt"+lastRow+" input:eq(7)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][tanka]')        .attr('id','JuhacchuuMeisaiDt'+lastRow+'Tanka');
-		j$("#juhacchuu_meisai_dt"+lastRow+" input:eq(9)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][utizei_flg]')  .attr('id','JuhacchuuMeisaiDt'+lastRow+'UtizeiFlg');
-		j$("#juhacchuu_meisai_dt"+lastRow+" input:eq(10)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][kingaku]')     .attr('id','JuhacchuuMeisaiDt'+lastRow+'Kingaku');
-		j$("#juhacchuu_meisai_dt"+lastRow+" input:eq(11)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][shouhizei_ritu]').attr('id','JuhacchuuMeisaiDt'+lastRow+'ShouhizeiRitu');
-		j$("#juhacchuu_meisai_dt"+lastRow+" input:eq(12)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][nouki]')       .attr('id','JuhacchuuMeisaiDt'+lastRow+'Nouki');
-		j$("#juhacchuu_meisai_dt"+lastRow+" input:eq(13)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][bikou]')       .attr('id','JuhacchuuMeisaiDt'+lastRow+'Bikou');
-		j$("#juhacchuu_meisai_dt"+lastRow+" select:eq(2)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][basho_tana_souko_mr_id]').attr('id','JuhacchuuMeisaiDt'+lastRow+'BashoTanaSoukoMrId');
-		j$("#juhacchuu_meisai_dt"+lastRow+" input:eq(14)").attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][gyou_bangou]') .attr('id','JuhacchuuMeisaiDt'+lastRow+'GyouBangou');
-		j$("#JuhacchuuMeisaiDt"+lastRow+"GyouBangou").val(lastRow);
+		j$("#juhacchuu_meisai_dt"+lastRow+" #removeJuhacchuuMeisaiDt0" ).attr('onclick','removeJuhacchuuMeisaiDt('+lastRow+')');
+		j$("#juhacchuu_meisai_dt"+lastRow+" #hinmoku_prettyPopin0"     ).attr('onclick','hinmoku_prettyPopin('+lastRow+')');
+		j$("#juhacchuu_meisai_dt"+lastRow+" #unusedGyouBangou"         ).attr('id','JuhacchuuMeisaiDt'+lastRow+'GyouBangou'        ).attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][gyou_bangou]')  ;
+		j$("#juhacchuu_meisai_dt"+lastRow+" #unusedHinmokuMrId"        ).attr('id','JuhacchuuMeisaiDt'+lastRow+'HinmokuMrId'       ).attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][hinmoku_mr_id]');
+		j$("#juhacchuu_meisai_dt"+lastRow+" #unusedHinmokuCode"        ).attr('id','unused'           +lastRow+'HinmokuCode'       ).attr('name','data[unused]['+lastRow+'][hinmoku_code]')            ;
+		j$("#juhacchuu_meisai_dt"+lastRow+" #unusedHinmokuMei"         ).attr('id','JuhacchuuMeisaiDt'+lastRow+'HinmokuMei'        ).attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][hinmoku_mei]')  ;
+		j$("#juhacchuu_meisai_dt"+lastRow+" #unusedLot"                ).attr('id','JuhacchuuMeisaiDt'+lastRow+'Lot'               ).attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][lot]')          ;
+		j$("#juhacchuu_meisai_dt"+lastRow+" #unusedSuu"                ).attr('id','JuhacchuuMeisaiDt'+lastRow+'Suu'               ).attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][suu]')          ;
+		j$("#juhacchuu_meisai_dt"+lastRow+" #unusedTanniMrId"          ).attr('id','JuhacchuuMeisaiDt'+lastRow+'TanniMrId'         ).attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][tanni_mr_id]')  ;
+		j$("#juhacchuu_meisai_dt"+lastRow+" #unusedSuu2"               ).attr('id','JuhacchuuMeisaiDt'+lastRow+'Suu2'              ).attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][suu2]')         ;
+		j$("#juhacchuu_meisai_dt"+lastRow+" #unusedTanniMr2Id"         ).attr('id','JuhacchuuMeisaiDt'+lastRow+'TanniMr2Id'        ).attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][tanni_mr2_id]') ;
+		j$("#juhacchuu_meisai_dt"+lastRow+" #unusedTankaIti"           ).attr('id','JuhacchuuMeisaiDt'+lastRow+'TankaIti'          ).attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][tanka_iti]')    ;
+		j$("#juhacchuu_meisai_dt"+lastRow+" #unusedTanka"              ).attr('id','JuhacchuuMeisaiDt'+lastRow+'Tanka'             ).attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][tanka]')        ;
+		j$("#juhacchuu_meisai_dt"+lastRow+" #unusedUtizeiFlg"          ).attr('id','JuhacchuuMeisaiDt'+lastRow+'UtizeiFlg'         ).attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][utizei_flg]')   ;
+		j$("#juhacchuu_meisai_dt"+lastRow+" #unusedKingaku"            ).attr('id','JuhacchuuMeisaiDt'+lastRow+'Kingaku'           ).attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][kingaku]')      ;
+		j$("#juhacchuu_meisai_dt"+lastRow+" #unusedShouhizeiRitu"      ).attr('id','JuhacchuuMeisaiDt'+lastRow+'ShouhizeiRitu'     ).attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][shouhizei_ritu]');
+		j$("#juhacchuu_meisai_dt"+lastRow+" #unusedNouki"              ).attr('id','JuhacchuuMeisaiDt'+lastRow+'Nouki'             ).attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][nouki]')        ;
+		j$("#juhacchuu_meisai_dt"+lastRow+" #unusedBikou"              ).attr('id','JuhacchuuMeisaiDt'+lastRow+'Bikou'             ).attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][bikou]')        ;
+		j$("#juhacchuu_meisai_dt"+lastRow+" #unusedBashoTanaSoukoMrId" ).attr('id','JuhacchuuMeisaiDt'+lastRow+'BashoTanaSoukoMrId').attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][basho_tana_souko_mr_id]');
+		j$("#juhacchuu_meisai_dt"+lastRow+" #mytable0"                 ).attr('id','mytable'+lastRow);
+		j$("#mytable"            +lastRow+" #sikyuu_meisai_dt0"        ).attr('id','sikyuu_meisai_dt'+lastRow);
+		j$("#mytable"            +lastRow+" #trAddSikyuu0"             ).attr('id','trAddSikyuu'+lastRow);
+		j$("#trAddSikyuu"        +lastRow+" #btnAddSikyuu0"            ).attr('id','btnAddSikyuu_'+lastRow);
+		j$("#JuhacchuuMeisaiDt"  +lastRow+"GyouBangou").val(lastRow);
 		InputCalendar.createOnLoaded('JuhacchuuMeisaiDt'+lastRow+'Nouki', {format: 'yyyy-mm-dd', lang:'ja'});
+		lastRows[lastRow]=0;
 	}
 	
 	function removeJuhacchuuMeisaiDt(x) {
 		j$("#juhacchuu_meisai_dt"+x).remove();
 	}
+
+	function addSikyuuMeisaiDt(this1) {
+		var arrayIdData = this1.id.split("_");	//"btnAddSikyuu_9"の形のidが入る。
+		var theRow = arrayIdData[1];		//alert(theRow);
+		lastRows[theRow]++;			//alert(lastRows[theRow]);
+		var newRow = theRow+"_"+lastRows[theRow];	//	alert(newRow);
+		cntSikyuu++;
+		j$("#mytable"+theRow+" #sikyuu_meisai_dt"+theRow).clone(true).attr("id","sikyuu_meisai_dt"+newRow).removeAttr("style").insertBefore("#mytable"+theRow+" #trAddSikyuu"+theRow);
+		j$("#sikyuu_meisai_dt"+newRow+" #btnDelSikyuu0").attr("id","btnDelSikyuu"+newRow);	//"btnDelSikyuu9_9"の形のidになる。
+		j$("#sikyuu_meisai_dt"+newRow+" #unused0GyouBangou"         ).attr("id","SikyuuJuhacchuuMeisaiDt"+cntSikyuu+"GyouBangou"        ).attr("name","data[SikyuuJuhacchuuMeisaiDt]["+cntSikyuu+"][gyou_bangou]")  ;
+		j$("#sikyuu_meisai_dt"+newRow+" #hinmoku_prettyPopin00"     ).attr('onclick','hinmoku_prettyPopin('+cntSikyuu+',"Sikyuu")');
+		j$("#sikyuu_meisai_dt"+newRow+" #unused0HinmokuMrId"        ).attr("id","SikyuuJuhacchuuMeisaiDt"+cntSikyuu+"HinmokuMrId"       ).attr("name","data[SikyuuJuhacchuuMeisaiDt]["+cntSikyuu+"][hinmoku_mr_id]");
+		j$("#sikyuu_meisai_dt"+newRow+" #unused0HinmokuCode"        ).attr("id","unusedSikyuu"           +cntSikyuu+"HinmokuCode"       ).attr("name","data[unusedSikyuu]["+cntSikyuu+"][hinmoku_code]")            ;
+		j$("#sikyuu_meisai_dt"+newRow+" #unused0HinmokuMei"         ).attr("id","SikyuuJuhacchuuMeisaiDt"+cntSikyuu+"HinmokuMei"        ).attr("name","data[SikyuuJuhacchuuMeisaiDt]["+cntSikyuu+"][hinmoku_mei]")  ;
+		j$("#sikyuu_meisai_dt"+newRow+" #unused0Lot"                ).attr("id","SikyuuJuhacchuuMeisaiDt"+cntSikyuu+"Lot"               ).attr("name","data[SikyuuJuhacchuuMeisaiDt]["+cntSikyuu+"][lot]")          ;
+		j$("#sikyuu_meisai_dt"+newRow+" #unused0Suu"                ).attr("id","SikyuuJuhacchuuMeisaiDt"+cntSikyuu+"Suu"               ).attr("name","data[SikyuuJuhacchuuMeisaiDt]["+cntSikyuu+"][suu]")          ;
+		j$("#sikyuu_meisai_dt"+newRow+" #unused0TanniMrId"          ).attr("id","SikyuuJuhacchuuMeisaiDt"+cntSikyuu+"TanniMrId"         ).attr("name","data[SikyuuJuhacchuuMeisaiDt]["+cntSikyuu+"][tanni_mr_id]")  ;
+		j$("#sikyuu_meisai_dt"+newRow+" #unused0Suu2"               ).attr("id","SikyuuJuhacchuuMeisaiDt"+cntSikyuu+"Suu2"              ).attr("name","data[SikyuuJuhacchuuMeisaiDt]["+cntSikyuu+"][suu2]")         ;
+		j$("#sikyuu_meisai_dt"+newRow+" #unused0TanniMr2Id"         ).attr("id","SikyuuJuhacchuuMeisaiDt"+cntSikyuu+"TanniMr2Id"        ).attr("name","data[SikyuuJuhacchuuMeisaiDt]["+cntSikyuu+"][tanni_mr2_id]") ;
+		j$("#sikyuu_meisai_dt"+newRow+" #unused0TankaIti"           ).attr("id","SikyuuJuhacchuuMeisaiDt"+cntSikyuu+"TankaIti"          ).attr("name","data[SikyuuJuhacchuuMeisaiDt]["+cntSikyuu+"][tanka_iti]")    ;
+		j$("#sikyuu_meisai_dt"+newRow+" #unused0OyaJuhacchuuMeisaiDtId").attr("id","SikyuuJuhacchuuMeisaiDt"+cntSikyuu+"OyaJuhacchuuMeisaiDtId").attr("name","data[SikyuuJuhacchuuMeisaiDt]["+cntSikyuu+"][OyaJuhacchuuMeisaiDtId]");
+		j$("#sikyuu_meisai_dt"+newRow+" #unused0SikyuuTanni"        ).attr("id","SikyuuJuhacchuuMeisaiDt"+cntSikyuu+"SikyuuTanni"       ).attr("name","data[SikyuuJuhacchuuMeisaiDt]["+cntSikyuu+"][SikyuuTanni]")  ;
+		j$("#sikyuu_meisai_dt"+newRow+" #unused0Bikou"              ).attr("id","SikyuuJuhacchuuMeisaiDt"+cntSikyuu+"Bikou"             ).attr("name","data[SikyuuJuhacchuuMeisaiDt]["+cntSikyuu+"][bikou]")        ;
+		j$("#sikyuu_meisai_dt"+newRow+" #unused0BashoTanaSoukoMrId" ).attr("id","SikyuuJuhacchuuMeisaiDt"+cntSikyuu+"BashoTanaSoukoMrId").attr("name","data[SikyuuJuhacchuuMeisaiDt]["+cntSikyuu+"][basho_tana_souko_mr_id]");
+		j$("#SikyuuJuhacchuuMeisaiDt"+cntSikyuu+"GyouBangou").val(lastRows[theRow]);
+	}
+
+	function delSikyuuMeisaiDt(this1) {
+		var theRows = this1.id.replace("btnDelSikyuu","");	alert(this1.id);
+		j$("#sikyuu_meisai_dt"+theRows).remove();
+	}
+
 </script>
 
 <!-- 高密度表示 -->
-<?php echo $this->Html->css(array('iura'), array('inline'=>false)) ;?>
+<?php echo $this->Html->css(array("iura"), array("inline"=>false)) ;?>
 

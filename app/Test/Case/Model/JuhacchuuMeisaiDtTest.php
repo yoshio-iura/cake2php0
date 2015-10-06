@@ -36,12 +36,15 @@ class JuhacchuuMeisaiDtTest extends CakeTestCase {
 		'app.hinmoku_kbn',
 		'app.kazei_kbn',
 		'app.hinmoku_bunrui1_kbn',
+		'app.zaiko_dt',
+		'app.basho_tana_souko_mr',
+		'app.souko_kbn',
+		'app.shoyuusha_kbn',
+		'app.hinsitu_kbn',
 		'app.hinmoku_bunrui2_kbn',
 		'app.hinmoku_bunrui3_kbn',
 		'app.hinmoku_bunrui4_kbn',
 		'app.hinmoku_bunrui5_kbn',
-		'app.basho_tana_souko_mr',
-		'app.souko_kbn',
 		'app.seikyuusaki_mr',
 		'app.kake_genkin_kbn',
 		'app.siiresaki_mr',
@@ -55,12 +58,7 @@ class JuhacchuuMeisaiDtTest extends CakeTestCase {
 		'app.furikomi_futan_kbn',
 		'app.furikomi_houhou_kbn',
 		'app.juchuu_dt',
-		'app.juchuu_meisai_dt',
-		'app.hacchuu_meisai_dt',
-		'app.hacchuu_dt',
-		'app.order_dt',
-		'app.sikyuu_meisai_dt',
-		'app.zaiko_dt'
+		'app.sikyuu_meisai_dt'
 	);
 
 /**

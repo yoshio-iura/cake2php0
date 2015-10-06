@@ -12,7 +12,6 @@ class JuhacchuuMeisaiDtFixture extends CakeTestFixture {
 	public $fields = array(
 		'id' => array('type' => 'integer', 'null' => false, 'default' => null, 'length' => 11, 'key' => 'primary'),
 		'juhacchuu_dt_id' => array('type' => 'integer', 'null' => true, 'default' => null),
-		'juchuu_flg' => array('type' => 'boolean', 'null' => true, 'default' => null),
 		'gyou_bangou' => array('type' => 'integer', 'null' => true, 'default' => null),
 		'hinmoku_mr_id' => array('type' => 'integer', 'null' => true, 'default' => null),
 		'hinmoku_mei' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 40),
@@ -29,6 +28,8 @@ class JuhacchuuMeisaiDtFixture extends CakeTestFixture {
 		'nouki' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'bikou' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 60),
 		'basho_tana_souko_mr_id' => array('type' => 'integer', 'null' => true, 'default' => null),
+		'oya_juhacchuu_meisai_id' => array('type' => 'integer', 'null' => true, 'default' => null),
+		'shoyou_tanni' => array('type' => 'integer', 'null' => true, 'default' => null),
 		'nouhin_zumi_suu' => array('type' => 'float', 'null' => true, 'default' => null),
 		'nouhin_zumi_suu2' => array('type' => 'float', 'null' => true, 'default' => null),
 		'youi_zumi_suu' => array('type' => 'float', 'null' => true, 'default' => null),
@@ -61,7 +62,6 @@ class JuhacchuuMeisaiDtFixture extends CakeTestFixture {
 		array(
 			'id' => 1,
 			'juhacchuu_dt_id' => 1,
-			'juchuu_flg' => 1,
 			'gyou_bangou' => 1,
 			'hinmoku_mr_id' => 1,
 			'hinmoku_mei' => 'Lorem ipsum dolor sit amet',
@@ -75,9 +75,11 @@ class JuhacchuuMeisaiDtFixture extends CakeTestFixture {
 			'utizei_flg' => 1,
 			'kingaku' => 1,
 			'shouhizei_ritu' => 1,
-			'nouki' => '2015-09-26 08:48:24',
+			'nouki' => '2015-10-06 17:11:51',
 			'bikou' => 'Lorem ipsum dolor sit amet',
 			'basho_tana_souko_mr_id' => 1,
+			'oya_juhacchuu_meisai_id' => 1,
+			'shoyou_tanni' => 1,
 			'nouhin_zumi_suu' => 1,
 			'nouhin_zumi_suu2' => 1,
 			'youi_zumi_suu' => 1,
@@ -87,14 +89,14 @@ class JuhacchuuMeisaiDtFixture extends CakeTestFixture {
 			'kanryou_flg' => 1,
 			'order_dt_id' => 1,
 			'juchuu_meisai_dt_id' => 1,
-			'kaisi_nitiji' => '2015-09-26 08:48:24',
+			'kaisi_nitiji' => '2015-10-06 17:11:51',
 			'id_moto' => 1,
 			'kinsi_flg' => 1,
-			'shuuryou_nitiji' => '2015-09-26 08:48:24',
+			'shuuryou_nitiji' => '2015-10-06 17:11:51',
 			'sakusei_user_id' => 1,
-			'created' => '2015-09-26 08:48:24',
+			'created' => '2015-10-06 17:11:51',
 			'kousin_user_id' => 1,
-			'updated' => '2015-09-26 08:48:24'
+			'updated' => '2015-10-06 17:11:51'
 		),
 	);
 

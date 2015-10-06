@@ -66,7 +66,7 @@ class JuhacchuuDtsController extends AppController {
 		if ($this->request->is(array('post', 'put'))) {
 			if (!empty($this->request->data)) {
 				unset($this->JuhacchuuDt->JuhacchuuMeisaiDt->validate['JuhacchuuDt_id']);	// バリデーションエラーを出さないため
-				if ($this->JuhacchuuDt->saveAll($this->request->data)) {
+				if ($this->JuhacchuuDt->saveAll($this->request->data, array('deep' => true))) {
 					$this->Flash->success(__('The juhacchuu dt has been saved.'));
 					return $this->redirect(array('action' => 'index'));
 				} else {

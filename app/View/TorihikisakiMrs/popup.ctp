@@ -8,7 +8,7 @@
 	</td><td>
 	<a href="#" rel='close'>閉じる</a>
 	</td></tr></table>
-	<table cellpadding="0" cellspacing="0">
+	<table class="tbl1">
 	<thead>
 	<tr>
 			<th><?php echo $this->Paginator->sort('code'); ?></th>
@@ -40,5 +40,5 @@
 		echo $this->Paginator->next(__('next') . ' >', array('rel' => 'internal'), null, array('class' => 'next disabled'));
 	?>
 	</div>
-<?php echo $this->Html->css(array('prettyPopin'), array('inline'=>false)) ;?>
+<?php echo $this->Html->css(array('prettyPopin','iura'), array('inline'=>false)) ;?>
 </div>
