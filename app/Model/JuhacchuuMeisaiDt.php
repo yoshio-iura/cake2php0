@@ -7,10 +7,12 @@ App::uses('AppModel', 'Model');
  * @property HinmokuMr $HinmokuMr
  * @property TanniMr $TanniMr
  * @property TanniMr2 $TanniMr2
+ * @property KazeiKbn $KazeiKbn
  * @property BashoTanaSoukoMr $BashoTanaSoukoMr
- * @property OyaJuhacchuuMeisai $OyaJuhacchuuMeisai
+ * @property OyaJuhacchuuMeisaiDt $OyaJuhacchuuMeisaiDt
  * @property OrderDt $OrderDt
  * @property JuchuuMeisaiDt $JuchuuMeisaiDt
+ * @property SiireUriageMeisaiDt $SiireUriageMeisaiDt
  * @property SikyuuMeisaiDt $SikyuuMeisaiDt
  * @property ZaikoDt $ZaikoDt
  */
@@ -38,14 +40,14 @@ class JuhacchuuMeisaiDt extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
-/*		),
+		),
 		'HinmokuMr' => array(
 			'className' => 'HinmokuMr',
 			'foreignKey' => 'hinmoku_mr_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
-*/		),
+		),
 		'TanniMr' => array(
 			'className' => 'TanniMr',
 			'foreignKey' => 'tanni_mr_id',
@@ -54,8 +56,15 @@ class JuhacchuuMeisaiDt extends AppModel {
 			'order' => ''
 		),
 		'TanniMr2' => array(
-			'className' => 'TanniMr',
+			'className' => 'TanniMr2',
 			'foreignKey' => 'tanni_mr2_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'KazeiKbn' => array(
+			'className' => 'KazeiKbn',
+			'foreignKey' => 'kazei_kbn_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
@@ -66,9 +75,9 @@ class JuhacchuuMeisaiDt extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
-/*		),
+		),
 		'OyaJuhacchuuMeisaiDt' => array(
-			'className' => 'JuhacchuuMeisaiDt',
+			'className' => 'OyaJuhacchuuMeisaiDt',
 			'foreignKey' => 'oya_juhacchuu_meisai_dt_id',
 			'conditions' => '',
 			'fields' => '',
@@ -87,7 +96,7 @@ class JuhacchuuMeisaiDt extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
-*/		)
+		)
 	);
 
 /**
@@ -96,7 +105,20 @@ class JuhacchuuMeisaiDt extends AppModel {
  * @var array
  */
 	public $hasMany = array(
-/*		'SikyuuMeisaiDt' => array(
+		'SiireUriageMeisaiDt' => array(
+			'className' => 'SiireUriageMeisaiDt',
+			'foreignKey' => 'juhacchuu_meisai_dt_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		),
+		'SikyuuMeisaiDt' => array(
 			'className' => 'SikyuuMeisaiDt',
 			'foreignKey' => 'juhacchuu_meisai_dt_id',
 			'dependent' => false,
@@ -109,7 +131,7 @@ class JuhacchuuMeisaiDt extends AppModel {
 			'finderQuery' => '',
 			'counterQuery' => ''
 		),
-*/		'ZaikoDt' => array(
+		'ZaikoDt' => array(
 			'className' => 'ZaikoDt',
 			'foreignKey' => 'juhacchuu_meisai_dt_id',
 			'dependent' => false,

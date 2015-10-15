@@ -11,6 +11,20 @@ App::uses('AppController', 'Controller');
 class JuhacchuuDtsController extends AppController {
 
 /**
+ *  Layout
+ *
+ * @var string
+ */
+	public $layout = 'bootstrap';
+
+/**
+ * Helpers
+ *
+ * @var array
+ */
+	public $helpers = array('TwitterBootstrap.BootstrapHtml', 'TwitterBootstrap.BootstrapForm', 'TwitterBootstrap.BootstrapPaginator');
+
+/**
  * Components
  *
  * @var array
@@ -77,16 +91,16 @@ class JuhacchuuDtsController extends AppController {
 			$options = array('conditions' => array('JuhacchuuDt.' . $this->JuhacchuuDt->primaryKey => $id));
 			$this->request->data = $this->JuhacchuuDt->find('first', $options);
 		}
-		$torihikisakiMrs = $this->JuhacchuuDt->TorihikisakiMr->find('list');
-		$shukkaTorihikisakiMrs = $this->JuhacchuuDt->ShukkaTorihikisakiMr->find('list');
-		$kitukeTorihikisakiMrs = $this->JuhacchuuDt->KitukeTorihikisakiMr->find('list');
+		//$torihikisakiMrs = $this->JuhacchuuDt->TorihikisakiMr->find('list');
+		//$shukkaTorihikisakiMrs = $this->JuhacchuuDt->ShukkaTorihikisakiMr->find('list');
+		//$kitukeTorihikisakiMrs = $this->JuhacchuuDt->KitukeTorihikisakiMr->find('list');
 		$users = $this->JuhacchuuDt->User->find('list');
 		$bumonMrs = $this->JuhacchuuDt->BumonMr->find('list');
-		$juchuuDts = $this->JuhacchuuDt->JuchuuDt->find('list');
+		//$juchuuDts = $this->JuhacchuuDt->JuchuuDt->find('list');
 		$bashoTanaSoukoMrs = $this->JuhacchuuDt->BashoTanaSoukoMr->find('list');
 		$tanniMrs = $this->JuhacchuuDt->JuhacchuuMeisaiDt->TanniMr->find('list');
 		$tanniMr2s = $this->JuhacchuuDt->JuhacchuuMeisaiDt->TanniMr2->find('list');
-		$this->set(compact('torihikisakiMrs', 'shukkaTorihikisakiMrs', 'kitukeTorihikisakiMrs', 'users', 'bumonMrs', 'juchuuDts', 'bashoTanaSoukoMrs', 'tanniMrs', 'tanniMr2s'));
+		$this->set(compact('users', 'bumonMrs', 'bashoTanaSoukoMrs', 'tanniMrs', 'tanniMr2s'));
 	}
 
 /**

@@ -4,13 +4,15 @@ App::uses('AppModel', 'Model');
  * JuhacchuuDt Model
  *
  * @property TorihikisakiMr $TorihikisakiMr
- * @property ShukkaTorihikisakiMr $TorihikisakiMr
- * @property KitukeTorihikisakiMr $TorihikisakiMr
+ * @property ShukkaTorihikisakiMr $ShukkaTorihikisakiMr
+ * @property KitukeTorihikisakiMr $KitukeTorihikisakiMr
  * @property User $User
  * @property BumonMr $BumonMr
  * @property JuchuuDt $JuchuuDt
  * @property BashoTanaSoukoMr $BashoTanaSoukoMr
+ * @property ZeikeisanKbn $ZeikeisanKbn
  * @property JuhacchuuMeisaiDt $JuhacchuuMeisaiDt
+ * @property SiireUriageDt $SiireUriageDt
  */
 class JuhacchuuDt extends AppModel {
 
@@ -38,14 +40,14 @@ class JuhacchuuDt extends AppModel {
 			'order' => ''
 		),
 		'ShukkaTorihikisakiMr' => array(
-			'className' => 'TorihikisakiMr',
+			'className' => 'ShukkaTorihikisakiMr',
 			'foreignKey' => 'shukka_torihikisaki_mr_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
 		'KitukeTorihikisakiMr' => array(
-			'className' => 'TorihikisakiMr',
+			'className' => 'KitukeTorihikisakiMr',
 			'foreignKey' => 'kituke_torihikisaki_mr_id',
 			'conditions' => '',
 			'fields' => '',
@@ -78,6 +80,13 @@ class JuhacchuuDt extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
+		),
+		'ZeikeisanKbn' => array(
+			'className' => 'ZeikeisanKbn',
+			'foreignKey' => 'zeikeisan_kbn_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
 		)
 	);
 
@@ -89,6 +98,19 @@ class JuhacchuuDt extends AppModel {
 	public $hasMany = array(
 		'JuhacchuuMeisaiDt' => array(
 			'className' => 'JuhacchuuMeisaiDt',
+			'foreignKey' => 'juhacchuu_dt_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		),
+		'SiireUriageDt' => array(
+			'className' => 'SiireUriageDt',
 			'foreignKey' => 'juhacchuu_dt_id',
 			'dependent' => false,
 			'conditions' => '',

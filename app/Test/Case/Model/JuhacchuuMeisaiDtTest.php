@@ -50,15 +50,14 @@ class JuhacchuuMeisaiDtTest extends CakeTestCase {
 		'app.siiresaki_mr',
 		'app.simebi_kbn',
 		'app.siharai_tuki_kbn',
-		'app.siharaibi_kbn',
 		'app.siharai_houhou_kbn',
 		'app.yokin_shurui_kbn',
 		'app.kouza_mr',
 		'app.kouza_kankei_kbn',
 		'app.furikomi_futan_kbn',
 		'app.furikomi_houhou_kbn',
-		'app.juchuu_dt',
-		'app.sikyuu_meisai_dt'
+		'app.code',
+		'app.juchuu_dt'
 	);
 
 /**

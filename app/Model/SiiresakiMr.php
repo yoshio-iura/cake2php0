@@ -7,12 +7,12 @@ App::uses('AppModel', 'Model');
  * @property KakeGenkinKbn $KakeGenkinKbn
  * @property SimebiKbn $SimebiKbn
  * @property SiharaiTukiKbn $SiharaiTukiKbn
- * @property SiharaibiKbn $SiharaibiKbn
  * @property SiharaiHouhouKbn $SiharaiHouhouKbn
  * @property YokinShuruiKbn $YokinShuruiKbn
  * @property KouzaKankeiKbn $KouzaKankeiKbn
  * @property FurikomiFutanKbn $FurikomiFutanKbn
  * @property FurikomiHouhouKbn $FurikomiHouhouKbn
+ * @property code $siharaibi_kbns
  */
 class SiiresakiMr extends AppModel {
 
@@ -60,13 +60,6 @@ class SiiresakiMr extends AppModel {
 			'fields' => '',
 			'order' => ''
 		),
-		'SiharaibiKbn' => array(
-			'className' => 'SiharaibiKbn',
-			'foreignKey' => 'siharaibi_kbn_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
 		'SiharaiHouhouKbn' => array(
 			'className' => 'SiharaiHouhouKbn',
 			'foreignKey' => 'siharai_houhou_kbn_id',
@@ -98,6 +91,13 @@ class SiiresakiMr extends AppModel {
 		'FurikomiHouhouKbn' => array(
 			'className' => 'FurikomiHouhouKbn',
 			'foreignKey' => 'furikomi_houhou_kbn_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'SiharaibiKbn' => array(
+			'className' => 'SiharaibiKbn',
+			'foreignKey' => 'siharaibi_kbn_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

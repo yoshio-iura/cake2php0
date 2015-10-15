@@ -75,14 +75,14 @@ class SiiresakiMrFixture extends CakeTestFixture {
 			'kouza_kankei_kbn_id' => 1,
 			'furikomi_futan_kbn_id' => 1,
 			'furikomi_houhou_kbn_id' => 1,
-			'kaisi_nitiji' => '2015-09-16 11:16:42',
+			'kaisi_nitiji' => '2015-10-14 13:48:08',
 			'id_moto' => 1,
 			'kinsi_flg' => 1,
-			'shuuryou_nitiji' => '2015-09-16 11:16:42',
+			'shuuryou_nitiji' => '2015-10-14 13:48:08',
 			'sakusei_user_id' => 1,
-			'created' => '2015-09-16 11:16:42',
+			'created' => '2015-10-14 13:48:08',
 			'kousin_user_id' => 1,
-			'updated' => '2015-09-16 11:16:42'
+			'updated' => '2015-10-14 13:48:08'
 		),
 	);
 

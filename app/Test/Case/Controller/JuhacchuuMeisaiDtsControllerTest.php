@@ -36,12 +36,15 @@ class JuhacchuuMeisaiDtsControllerTest extends ControllerTestCase {
 		'app.hinmoku_kbn',
 		'app.kazei_kbn',
 		'app.hinmoku_bunrui1_kbn',
+		'app.zaiko_dt',
+		'app.basho_tana_souko_mr',
+		'app.souko_kbn',
+		'app.shoyuusha_kbn',
+		'app.hinsitu_kbn',
 		'app.hinmoku_bunrui2_kbn',
 		'app.hinmoku_bunrui3_kbn',
 		'app.hinmoku_bunrui4_kbn',
 		'app.hinmoku_bunrui5_kbn',
-		'app.basho_tana_souko_mr',
-		'app.souko_kbn',
 		'app.seikyuusaki_mr',
 		'app.kake_genkin_kbn',
 		'app.siiresaki_mr',
@@ -54,19 +57,52 @@ class JuhacchuuMeisaiDtsControllerTest extends ControllerTestCase {
 		'app.kouza_kankei_kbn',
 		'app.furikomi_futan_kbn',
 		'app.furikomi_houhou_kbn',
-		'app.juchuu_dt',
-		'app.juchuu_meisai_dt',
-		'app.hacchuu_meisai_dt',
-		'app.hacchuu_dt',
-		'app.order_dt',
-		'app.sikyuu_meisai_dt',
-		'app.zaiko_dt',
-		'app.shoyuusha_kbn',
-		'app.seisan_sasizu_dt',
-		'app.hojo_sasizu_dt',
-		'app.hinshitu_kbn',
-		'app.sakusei_user',
-		'app.kousin_user'
+		'app.juchuu_dt'
 	);
+
+/**
+ * testIndex method
+ *
+ * @return void
+ */
+	public function testIndex() {
+		$this->markTestIncomplete('testIndex not implemented.');
+	}
+
+/**
+ * testView method
+ *
+ * @return void
+ */
+	public function testView() {
+		$this->markTestIncomplete('testView not implemented.');
+	}
+
+/**
+ * testAdd method
+ *
+ * @return void
+ */
+	public function testAdd() {
+		$this->markTestIncomplete('testAdd not implemented.');
+	}
+
+/**
+ * testEdit method
+ *
+ * @return void
+ */
+	public function testEdit() {
+		$this->markTestIncomplete('testEdit not implemented.');
+	}
+
+/**
+ * testDelete method
+ *
+ * @return void
+ */
+	public function testDelete() {
+		$this->markTestIncomplete('testDelete not implemented.');
+	}
 
 }

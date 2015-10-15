@@ -4,11 +4,9 @@ App::uses('AppModel', 'Model');
  * TorihikisakiMr Model
  *
  * @property KeishouKbn $KeishouKbn
- * @property ShuugyouBiMr $ShuugyouBiMr
+ * @property ShuugyouPatternMr $ShuugyouPatternMr
  * @property User $User
  * @property GroupOyaTorihikisakiMr $GroupOyaTorihikisakiMr
- * @property SiiresakiOyaTorihikisakiMr $SiiresakiOyaTorihikisakiMr
- * @property SeikyuuTorihikisakiMr $SeikyuuTorihikisakiMr
  * @property KokyakuOyaTorihikisakiMr $KokyakuOyaTorihikisakiMr
  * @property ShainKazkuDaihyouTorihikisakiMr $ShainKazkuDaihyouTorihikisakiMr
  * @property TorihikisakiBunrui1Kbn $TorihikisakiBunrui1Kbn
@@ -16,11 +14,32 @@ App::uses('AppModel', 'Model');
  * @property TorihikisakiBunrui3Kbn $TorihikisakiBunrui3Kbn
  * @property TorihikisakiBunrui4Kbn $TorihikisakiBunrui4Kbn
  * @property TorihikisakiBunrui5Kbn $TorihikisakiBunrui5Kbn
+ * @property KaishuuTorihikisakiMr $KaishuuTorihikisakiMr
+ * @property KakeGenkinKbn $KakeGenkinKbn
+ * @property SimebiKbn $SimebiKbn
+ * @property KaishuuTukiKbn $KaishuuTukiKbn
+ * @property KaishuuHouhouKbn $KaishuuHouhouKbn
+ * @property KouzaMr $KouzaMr
+ * @property FurikomiFutanKbn $FurikomiFutanKbn
+ * @property YoshinTorihikisakiMr $YoshinTorihikisakiMr
+ * @property SiireKakeGenkinKbn $SiireKakeGenkinKbn
+ * @property SireSimebiKbn $SireSimebiKbn
+ * @property SiharaiTukiKbn $SiharaiTukiKbn
+ * @property SiharaiHouhouKbn $SiharaiHouhouKbn
+ * @property YokinShuruiKbn $YokinShuruiKbn
+ * @property KouzaKankeiKbn $KouzaKankeiKbn
+ * @property BashoTanaSoukoMr $BashoTanaSoukoMr
  * @property BumonMr $BumonMr
  * @property HinmokuMr $HinmokuMr
+ * @property JournalDt $JournalDt
+ * @property JuhacchuuDt $JuhacchuuDt
+ * @property NyuukinDt $NyuukinDt
+ * @property SeikyuuDt $SeikyuuDt
  * @property SeikyuusakiMr $SeikyuusakiMr
+ * @property SiireUriageDt $SiireUriageDt
  * @property SiiresakiMr $SiiresakiMr
  * @property User $User
+ * @property ZaikoDt $ZaikoDt
  */
 class TorihikisakiMr extends AppModel {
 
@@ -64,20 +83,6 @@ class TorihikisakiMr extends AppModel {
 		'GroupOyaTorihikisakiMr' => array(
 			'className' => 'TorihikisakiMr',
 			'foreignKey' => 'group_oya_torihikisaki_mr_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
-		'SiiresakiOyaTorihikisakiMr' => array(
-			'className' => 'TorihikisakiMr',
-			'foreignKey' => 'siiresaki_oya_torihikisaki_mr_id',
-			'conditions' => '',
-			'fields' => '',
-			'order' => ''
-		),
-		'SeikyuuTorihikisakiMr' => array(
-			'className' => 'TorihikisakiMr',
-			'foreignKey' => 'seikyuu_torihikisaki_mr_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
@@ -130,6 +135,104 @@ class TorihikisakiMr extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
+		),
+		'KaishuuTorihikisakiMr' => array(
+			'className' => 'TorihikisakiMr',
+			'foreignKey' => 'kaishuu_torihikisaki_mr_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'KakeGenkinKbn' => array(
+			'className' => 'KakeGenkinKbn',
+			'foreignKey' => 'kake_genkin_kbn_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'SimebiKbn' => array(
+			'className' => 'SimebiKbn',
+			'foreignKey' => 'simebi_kbn_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'KaishuuTukiKbn' => array(
+			'className' => 'SiharaiTukiKbn',
+			'foreignKey' => 'kaishuu_tuki_kbn_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'KaishuuHouhouKbn' => array(
+			'className' => 'SiharaiHouhouKbn',
+			'foreignKey' => 'kaishuu_houhou_kbn_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'KouzaMr' => array(
+			'className' => 'KouzaMr',
+			'foreignKey' => 'kouza_mr_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'FurikomiFutanKbn' => array(
+			'className' => 'FurikomiFutanKbn',
+			'foreignKey' => 'furikomi_futan_kbn_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'YoshinTorihikisakiMr' => array(
+			'className' => 'TorihikisakiMr',
+			'foreignKey' => 'yoshin_torihikisaki_mr_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'SiireKakeGenkinKbn' => array(
+			'className' => 'KakeGenkinKbn',
+			'foreignKey' => 'siire_kake_genkin_kbn_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'SireSimebiKbn' => array(
+			'className' => 'SimebiKbn',
+			'foreignKey' => 'sire_simebi_kbn_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'SiharaiTukiKbn' => array(
+			'className' => 'SiharaiTukiKbn',
+			'foreignKey' => 'siharai_tuki_kbn_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'SiharaiHouhouKbn' => array(
+			'className' => 'SiharaiHouhouKbn',
+			'foreignKey' => 'siharai_houhou_kbn_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'YokinShuruiKbn' => array(
+			'className' => 'YokinShuruiKbn',
+			'foreignKey' => 'yokin_shurui_kbn_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		),
+		'KouzaKankeiKbn' => array(
+			'className' => 'KouzaKankeiKbn',
+			'foreignKey' => 'kouza_kankei_kbn_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
 		)
 	);
 
@@ -139,6 +242,19 @@ class TorihikisakiMr extends AppModel {
  * @var array
  */
 	public $hasMany = array(
+		'BashoTanaSoukoMr' => array(
+			'className' => 'BashoTanaSoukoMr',
+			'foreignKey' => 'torihikisaki_mr_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		),
 		'BumonMr' => array(
 			'className' => 'BumonMr',
 			'foreignKey' => 'torihikisaki_mr_id',
@@ -165,8 +281,73 @@ class TorihikisakiMr extends AppModel {
 			'finderQuery' => '',
 			'counterQuery' => ''
 		),
+		'JournalDt' => array(
+			'className' => 'JournalDt',
+			'foreignKey' => 'torihikisaki_mr_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		),
+		'JuhacchuuDt' => array(
+			'className' => 'JuhacchuuDt',
+			'foreignKey' => 'torihikisaki_mr_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		),
+		'NyuukinDt' => array(
+			'className' => 'NyuukinDt',
+			'foreignKey' => 'torihikisaki_mr_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		),
+		'SeikyuuDt' => array(
+			'className' => 'SeikyuuDt',
+			'foreignKey' => 'torihikisaki_mr_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		),
 		'SeikyuusakiMr' => array(
 			'className' => 'SeikyuusakiMr',
+			'foreignKey' => 'torihikisaki_mr_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		),
+		'SiireUriageDt' => array(
+			'className' => 'SiireUriageDt',
 			'foreignKey' => 'torihikisaki_mr_id',
 			'dependent' => false,
 			'conditions' => '',
@@ -193,6 +374,19 @@ class TorihikisakiMr extends AppModel {
 		),
 		'User' => array(
 			'className' => 'User',
+			'foreignKey' => 'torihikisaki_mr_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
+		),
+		'ZaikoDt' => array(
+			'className' => 'ZaikoDt',
 			'foreignKey' => 'torihikisaki_mr_id',
 			'dependent' => false,
 			'conditions' => '',

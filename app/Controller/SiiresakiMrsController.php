@@ -7,6 +7,13 @@ App::uses('AppController', 'Controller');
 class SiiresakiMrsController extends AppController {
 
 /**
+ *  Layout
+ *
+ * @var string
+ */
+	public $layout = 'bootstrap';
+
+/**
  * Scaffold
  *
  * @var mixed
