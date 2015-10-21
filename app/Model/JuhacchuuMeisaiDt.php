@@ -56,7 +56,7 @@ class JuhacchuuMeisaiDt extends AppModel {
 			'order' => ''
 		),
 		'TanniMr2' => array(
-			'className' => 'TanniMr2',
+			'className' => 'TanniMr',
 			'foreignKey' => 'tanni_mr2_id',
 			'conditions' => '',
 			'fields' => '',
@@ -77,21 +77,21 @@ class JuhacchuuMeisaiDt extends AppModel {
 			'order' => ''
 		),
 		'OyaJuhacchuuMeisaiDt' => array(
-			'className' => 'OyaJuhacchuuMeisaiDt',
+			'className' => 'JuhacchuuMeisaiDt',
 			'foreignKey' => 'oya_juhacchuu_meisai_dt_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
-		),
+/*		),
 		'OrderDt' => array(
 			'className' => 'OrderDt',
 			'foreignKey' => 'order_dt_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
-		),
+*/		),
 		'JuchuuMeisaiDt' => array(
-			'className' => 'JuchuuMeisaiDt',
+			'className' => 'JuhacchuuMeisaiDt',
 			'foreignKey' => 'juchuu_meisai_dt_id',
 			'conditions' => '',
 			'fields' => '',

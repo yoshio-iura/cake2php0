@@ -82,7 +82,7 @@ class JuhacchuuDtsController extends AppController {
 				unset($this->JuhacchuuDt->JuhacchuuMeisaiDt->validate['JuhacchuuDt_id']);	// バリデーションエラーを出さないため
 				if ($this->JuhacchuuDt->saveAll($this->request->data, array('deep' => true))) {
 					$this->Flash->success(__('The juhacchuu dt has been saved.'));
-					return $this->redirect(array('action' => 'index'));
+					return $this->redirect(array('action' => ($this->action=='edit')?'index':'add'));
 				} else {
 					$this->Flash->error(__('The juhacchuu dt could not be saved. Please, try again.'));
 				}
@@ -100,7 +100,9 @@ class JuhacchuuDtsController extends AppController {
 		$bashoTanaSoukoMrs = $this->JuhacchuuDt->BashoTanaSoukoMr->find('list');
 		$tanniMrs = $this->JuhacchuuDt->JuhacchuuMeisaiDt->TanniMr->find('list');
 		$tanniMr2s = $this->JuhacchuuDt->JuhacchuuMeisaiDt->TanniMr2->find('list');
-		$this->set(compact('users', 'bumonMrs', 'bashoTanaSoukoMrs', 'tanniMrs', 'tanniMr2s'));
+		$zeikeisanKbns = $this->JuhacchuuDt->ZeikeisanKbn->find('list');
+		$kazeiKbns = $this->JuhacchuuDt->JuhacchuuMeisaiDt->KazeiKbn->find('list');
+		$this->set(compact('users', 'bumonMrs', 'bashoTanaSoukoMrs', 'tanniMrs', 'tanniMr2s', 'zeikeisanKbns', 'kazeiKbns'));
 	}
 
 /**

@@ -19,13 +19,6 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
 		echo $this->fetch('script');
-
-		//日付入力protocalendar用以下５行
-		echo $this->Html->css('simple'); 
-		echo $this->Html->script('prototype'); 
-		echo $this->Html->script('effects'); 
-		echo $this->Html->script('protocalendar'); 
-		echo $this->Html->script('lang_ja');  
 	?>
 </head>
 <body>

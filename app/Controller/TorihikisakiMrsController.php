@@ -77,4 +77,16 @@ class TorihikisakiMrsController extends AppController {
 */		}
 //	}
 
+/**
+ * ajaxgetid
+ */
+	public function ajaxgetid() {
+		$this->autoRender = false;
+		$this->TorihikisakiMr->recursive = -1;
+		Configure::write('debug',0);
+		$torihikisaki_id = (isset($_POST['torihikisaki_id']))? h($_POST['torihikisaki_id']) : 0;
+		$options = array('conditions' => array('TorihikisakiMr.id' => $torihikisaki_id));
+		$torihikisaki_mr = $this->TorihikisakiMr->find('first', $options);
+		echo json_encode($torihikisaki_mr);
+	}
 }

@@ -26,6 +26,8 @@ class User extends AppModel {
  * @var string
  */
 	public $displayField = 'name';
+	var $virtualFields = array('kigou_name' => "CONCAT(User.kigou, ':', User.name)");
+	public $order = 'kigou_name';
 
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed

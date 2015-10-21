@@ -40,14 +40,14 @@ class JuhacchuuDt extends AppModel {
 			'order' => ''
 		),
 		'ShukkaTorihikisakiMr' => array(
-			'className' => 'ShukkaTorihikisakiMr',
+			'className' => 'TorihikisakiMr',
 			'foreignKey' => 'shukka_torihikisaki_mr_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
 		),
 		'KitukeTorihikisakiMr' => array(
-			'className' => 'KitukeTorihikisakiMr',
+			'className' => 'TorihikisakiMr',
 			'foreignKey' => 'kituke_torihikisaki_mr_id',
 			'conditions' => '',
 			'fields' => '',
@@ -68,7 +68,7 @@ class JuhacchuuDt extends AppModel {
 			'order' => ''
 		),
 		'JuchuuDt' => array(
-			'className' => 'JuchuuDt',
+			'className' => 'JuhacchuuDt',
 			'foreignKey' => 'juchuu_dt_id',
 			'conditions' => '',
 			'fields' => '',

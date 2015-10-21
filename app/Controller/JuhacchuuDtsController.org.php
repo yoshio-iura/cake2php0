@@ -70,13 +70,12 @@ class JuhacchuuDtsController extends AppController {
 					$juhacchuu_dt_id=$this->JuhacchuuDt->getInsertId();
 					foreach($this->request->data['JuhacchuuMeisaiDt'] as $juhacchuuMeisaiDt) {
 						//loop for each person added
-$this->Session->setFlash("juhacchuu_dt_id=$juhacchuu_dt_id"));
 						$juhacchuuMeisaiDt['juhacchuu_dt_id']=$juhacchuu_dt_id;
 						$this->JuhacchuuDt->JuhacchuuMeisaiDt->create();
 						$this->JuhacchuuDt->JuhacchuuMeisaiDt->save($juhacchuuMeisaiDt);
 					}//end foreach
 				//	$this->Session->setFlash(__('The juhacchuu dt has been saved.'));
-					return $this->redirect(array('action' => 'index'));
+					return $this->redirect(array('action' => 'add'));
 				} else {
 					$this->Session->setFlash(__('The juhacchuu dt could not be saved. Please, try again.'));
 				}
@@ -92,7 +91,8 @@ $this->Session->setFlash("juhacchuu_dt_id=$juhacchuu_dt_id"));
 		$bumonMrs = $this->JuhacchuuDt->BumonMr->find('list');
 		$juchuuDts = $this->JuhacchuuDt->JuchuuDt->find('list');
 		$bashoTanaSoukoMrs = $this->JuhacchuuDt->BashoTanaSoukoMr->find('list');
-		$this->set(compact('torihikisakiMrs', 'shukkaTorihikisakiMrs', 'kitukeTorihikisakiMrs', 'users', 'bumonMrs', 'juchuuDts', 'bashoTanaSoukoMrs'));
+		$zeikeisanKbns = $this->JuhacchuuDt->ZeikeisanKbn->find('list');
+		$this->set(compact('torihikisakiMrs', 'shukkaTorihikisakiMrs', 'kitukeTorihikisakiMrs', 'users', 'bumonMrs', 'juchuuDts', 'bashoTanaSoukoMrs', 'zeikeisanKbns'));
 	}
 
 /**

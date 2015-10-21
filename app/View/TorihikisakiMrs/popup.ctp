@@ -40,5 +40,5 @@
 		echo $this->Paginator->next(__('next') . ' >', array('rel' => 'internal'), null, array('class' => 'next disabled'));
 	?>
 	</div>
-<?php echo $this->Html->css(array('prettyPopin','iura'), array('inline'=>false)) ;?>
+<?php echo $this->Html->css(array('prettyPopin','iurabs1'), array('inline'=>false)) ;?>
 </div>

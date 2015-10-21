@@ -19,7 +19,17 @@
 	<?php foreach ($hinmoku_mrs as $hinmoku_mr): ?>
 	<tr>
 		<td class="actions">
-			<a rel="close" href="#" onclick="hinmoku_mr_id=<?php echo $hinmoku_mr['HinmokuMr']['id']; ?>;hinmoku_mr_code='<?php echo $hinmoku_mr['HinmokuMr']['code']; ?>';hinmoku_mr_name='<?php echo $hinmoku_mr['HinmokuMr']['name']; ?>';">選択</a>
+			<a rel="close" href="#" onclick="hinmoku_mr_id=<?php echo $hinmoku_mr['HinmokuMr']['id'];
+							?>;hinmoku_mr_code='<?php echo $hinmoku_mr['HinmokuMr']['code'];
+							?>';hinmoku_mr_name='<?php echo $hinmoku_mr['HinmokuMr']['name'];
+							?>';hinmoku_mr_lot='<?php echo $hinmoku_mr['HinmokuMr']['lot'];
+							?>';hinmoku_mr_tanni_mr_id='<?php echo $hinmoku_mr['HinmokuMr']['tanni_mr_id'];
+							?>';hinmoku_mr_tanni_mr2_id='<?php echo $hinmoku_mr['HinmokuMr']['tanni_mr2_id'];
+							?>';hinmoku_mr_tanni_iti='<?php echo $hinmoku_mr['HinmokuMr']['tanni_iti'];
+							?>';hinmoku_mr_kazei_kbn_id='<?php echo $hinmoku_mr['HinmokuMr']['kazei_kbn_id'];
+							?>';hinmoku_mr_tanka1='<?php echo $hinmoku_mr['HinmokuMr']['tanka1'];
+							?>';hinmoku_mr_genka1='<?php echo $hinmoku_mr['HinmokuMr']['genka1'];
+							?>';">選択</a>
 		</td>
 		<td><?php echo h($hinmoku_mr['HinmokuMr']['code']); ?>&nbsp;</td>
 		<td><?php echo h($hinmoku_mr['HinmokuMr']['name']); ?>&nbsp;</td>
@@ -40,5 +50,5 @@
 		echo $this->Paginator->next(__('next') . ' >', array('rel' => 'internal'), null, array('class' => 'next disabled'));
 	?>
 	</div>
-<?php echo $this->Html->css(array('prettyPopin','iura'), array('inline'=>false)) ;?>
+<?php echo $this->Html->css(array('prettyPopin','iurabs1'), array('inline'=>false)) ;?>
 </div>

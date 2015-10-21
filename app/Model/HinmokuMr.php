@@ -4,7 +4,7 @@ App::uses('AppModel', 'Model');
  * HinmokuMr Model
  *
  * @property TanniMr $TanniMr
- * @property Dai2TanniMr $Dai2TanniMr
+ * @property TanniMr2 $TanniMr2
  * @property KazeiKbn $KazeiKbn
  * @property HinmokuKbn $HinmokuKbn
  * @property HinmokuBunrui1Kbn $HinmokuBunrui1Kbn
@@ -40,9 +40,9 @@ class HinmokuMr extends AppModel {
 			'fields' => '',
 			'order' => ''
 		),
-		'Dai2TanniMr' => array(
+		'TanniMr2' => array(
 			'className' => 'TanniMr',
-			'foreignKey' => 'dai2_tanni_mr_id',
+			'foreignKey' => 'tanni_mr2_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

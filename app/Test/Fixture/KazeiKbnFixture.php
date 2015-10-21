@@ -15,7 +15,7 @@ class KazeiKbnFixture extends CakeTestFixture {
 		'zeiritu' => array('type' => 'float', 'null' => true, 'default' => null),
 		'name' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 20),
 		'ryakugou' => array('type' => 'string', 'null' => true, 'default' => null, 'length' => 2),
-		'kaisi_nitiji' => array('type' => 'datetime', 'null' => true, 'default' => null),
+		'kaisi_nitiji' => array('type' => 'date', 'null' => true, 'default' => null),
 		'id_moto' => array('type' => 'integer', 'null' => true, 'default' => null),
 		'kinsi_flg' => array('type' => 'boolean', 'null' => true, 'default' => null),
 		'shuuryou_nitiji' => array('type' => 'datetime', 'null' => true, 'default' => null),
@@ -41,14 +41,14 @@ class KazeiKbnFixture extends CakeTestFixture {
 			'zeiritu' => 1,
 			'name' => 'Lorem ipsum dolor ',
 			'ryakugou' => '',
-			'kaisi_nitiji' => '2015-10-05 10:16:46',
+			'kaisi_nitiji' => '2015-10-17',
 			'id_moto' => 1,
 			'kinsi_flg' => 1,
-			'shuuryou_nitiji' => '2015-10-05 10:16:46',
+			'shuuryou_nitiji' => '2015-10-17 16:11:40',
 			'sakusei_user_id' => 1,
-			'created' => '2015-10-05 10:16:46',
+			'created' => '2015-10-17 16:11:40',
 			'kousin_user_id' => 1,
-			'updated' => '2015-10-05 10:16:46'
+			'updated' => '2015-10-17 16:11:40'
 		),
 	);
 

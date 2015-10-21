@@ -58,7 +58,7 @@ class HinmokuMrsController extends AppController {
 		$this->autoRender = false;
 		$this->HinmokuMr->recursive = -1;
 		Configure::write('debug',0);
-		$hinmoku_code = (isset($_POST['hinmoku_code']))? h($_POST['hinmoku_code']) : "11000001";
+		$hinmoku_code = (isset($_POST['hinmoku_code']))? h($_POST['hinmoku_code']) : "";
 //		echo $hinmoku_code.'BbBbBb';
 //		if($this->RequestHandler->isAjax()){
 //			echo $hinmoku_code.'BbBbBb';
@@ -76,5 +76,17 @@ class HinmokuMrsController extends AppController {
 			$this->set('hinmoku_mr', $hinmoku_mr);
 */		}
 //	}
+/**
+ * ajaxgetid
+ */
+	public function ajaxgetid() {
+		$this->autoRender = false;
+		$this->HinmokuMr->recursive = -1;
+		Configure::write('debug',0);
+		$hinmoku_id = (isset($_POST['hinmoku_id']))? h($_POST['hinmoku_id']) : 0;
+		$options = array('conditions' => array('HinmokuMr.id' => $hinmoku_id));
+		$hinmoku_mr = $this->HinmokuMr->find('first', $options);
+		echo json_encode($hinmoku_mr);
+	}
 
 }

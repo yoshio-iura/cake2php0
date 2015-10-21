@@ -20,33 +20,14 @@
 	<?php echo $this->Html->css('bootstrap-responsive.min'); ?>
 	<?php echo $this->Html->css(array('jquery-ui/jquery-ui.min','jquery-ui/jquery-ui.theme.min','jquery-ui/jquery-ui.structure.min')); ?>
 
-	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-	<!--[if lt IE 9]>
-	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-
-	<!-- Le fav and touch icons -->
-	<!--
-	<link rel="shortcut icon" href="/ico/favicon.ico">
-	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="/ico/apple-touch-icon-144-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="/ico/apple-touch-icon-114-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="/ico/apple-touch-icon-72-precomposed.png">
-	<link rel="apple-touch-icon-precomposed" href="/ico/apple-touch-icon-57-precomposed.png">
-	-->
 	<?php
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
-		//日付入力protocalendar用以下５行
-		echo $this->Html->css('simple'); 
-		echo $this->Html->script('prototype'); 
-		echo $this->Html->script('effects'); 
-		echo $this->Html->script('protocalendar'); 
-		echo $this->Html->script('lang_ja');  
 	?>
 </head>
 
 <body>
-<?php echo $this->Html->script(array('jquery-migrate.min','bootstrap.min','jquery-ui/jquery-ui.min')); ?>
+<?php echo $this->Html->script(array('jquery-1.11.3.min','jquery-migrate.min','bootstrap.min','jquery-ui/jquery-ui.min')); ?>
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid" style="background-image: url('/cake2erp0/img/woody/desk.jpg')">
