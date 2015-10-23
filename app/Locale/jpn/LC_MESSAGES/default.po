@@ -841,3 +841,18 @@ msgstr "支給済数"
 msgid "Zumi Suu2"
 msgstr "支給済数2"
 
+msgid "Zaiko"
+msgstr "現在庫"
+
+msgid "Nouzan"
+msgstr "納品残"
+
+msgid "Kafusoku"
+msgstr "過不足"
+
+msgid "Chuuzan"
+msgstr "発注済"
+
+msgid "You Hachuu"
+msgstr "余裕"
+

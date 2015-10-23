@@ -26,6 +26,24 @@ class JuhacchuuMeisaiDt extends AppModel {
 	public $displayField = 'hinmoku_mei';
 
 
+/**
+ * Validation rules
+ *
+ * @var array
+ */
+	public $validate = array(
+		'tanka_iti' => array(
+			'range' => array(
+				'rule' => array('range',1,2),
+				'message' => '単位位置は1か2だけが可能です。',
+				//'allowEmpty' => false,
+				//'required' => false,
+				//'last' => false, // Stop validation after this rule
+				//'on' => 'create', // Limit validation to 'create' or 'update' operations
+			),
+		),
+	);
+
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**
