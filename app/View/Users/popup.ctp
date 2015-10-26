@@ -19,7 +19,7 @@
 			<th><?php echo $this->Paginator->sort('mail_address'); ?></th>		-->
 			<th><?php echo $this->Paginator->sort('username'); ?></th>
 		<!--	<th><?php echo $this->Paginator->sort('password'); ?></th>
-			<th><?php echo $this->Paginator->sort('thema_mr_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('theme_mr_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('torihikisaki_mr_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('shokushu_kbn_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('shounin_kengen_mr_id'); ?></th>
@@ -51,7 +51,7 @@
 		<td><?php echo h($user['User']['username']); ?>&nbsp;</td>
 		<!-- <td><?php echo h($user['User']['password']); ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($user['ThemaMr']['name'], array('controller' => 'thema_mrs', 'action' => 'view', $user['ThemaMr']['id'])); ?>
+			<?php echo $this->Html->link($user['ThemeMr']['name'], array('controller' => 'theme_mrs', 'action' => 'view', $user['ThemeMr']['id'])); ?>
 		</td>
 		<td>
 			<?php echo $this->Html->link($user['TorihikisakiMr']['name'], array('controller' => 'torihikisaki_mrs', 'action' => 'view', $user['TorihikisakiMr']['id'])); ?>

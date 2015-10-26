@@ -81,10 +81,10 @@ class JuhacchuuDtsController extends AppController {
 			if (!empty($this->request->data)) {
 				unset($this->JuhacchuuDt->JuhacchuuMeisaiDt->validate['JuhacchuuDt_id']);	// バリデーションエラーを出さないため
 				if ($this->JuhacchuuDt->saveAll($this->request->data, array('deep' => true))) {
-					$this->Flash->success(__('The juhacchuu dt has been saved.'));
+					$this->Session->setFlash(__('The juhacchuu dt has been saved.'), 'default', array('class' => 'alert alert-success'));
 					return $this->redirect(array('action' => ($this->action=='edit')?'index':'add'));
 				} else {
-					$this->Flash->error(__('The juhacchuu dt could not be saved. Please, try again.'));
+					$this->Session->setFlash(__('The juhacchuu dt could not be saved. Please, try again.'), 'default', array('class' => 'alert alert-danger'));
 				}
 			}
 		} else {

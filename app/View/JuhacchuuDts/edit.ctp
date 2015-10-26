@@ -137,26 +137,19 @@
 	</tbody></table>
 	</fieldset>
 
-<?php echo $this->BootstrapForm->end(__d('cake', 'Submit')); ?>
+<?php echo $this->BootstrapForm->submit(__d('cake', 'Submit'),array('class'=>'btn-lg btn-success')); ?>
 	</div>
 	<div class="span3">
 		<div class="well" style="padding: 8px 0; margin-top:8px;">
 		<ul class="nav nav-list">
 			<li class="nav-header"><?php echo __('Actions'); ?></li>
-		<li><?php echo $this->BootstrapForm->postLink(__d('cake', 'Delete'), array('action' => 'delete', $this->BootstrapForm->value('JuhacchuuDt.id')), array('confirm' => __('Are you sure you want to delete # %s?', $this->BootstrapForm->value('JuhacchuuDt.id')))); ?></li>
 		<li><?php echo $this->Html->link(__d('cake', 'List %s', __('Juhacchuu Dts')), array('action' => 'index')); ?></li>
 		<li><?php echo $this->Html->link(__d('cake', 'List %s', __('Torihikisaki Mrs')), array('controller' => 'torihikisaki_mrs', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__d('cake', 'New %s', __('Torihikisaki Mr')), array('controller' => 'torihikisaki_mrs', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__d('cake', 'List %s', __('Users')), array('controller' => 'users', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__d('cake', 'New %s', __('User')), array('controller' => 'users', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__d('cake', 'List %s', __('Bumon Mrs')), array('controller' => 'bumon_mrs', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__d('cake', 'New %s', __('Bumon Mr')), array('controller' => 'bumon_mrs', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__d('cake', 'List %s', __('Juchuu Dts')), array('controller' => 'juchuu_dts', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__d('cake', 'New %s', __('Juchuu Dt')), array('controller' => 'juchuu_dts', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__d('cake', 'List %s', __('Basho Tana Souko Mrs')), array('controller' => 'basho_tana_souko_mrs', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__d('cake', 'New %s', __('Basho Tana Souko Mr')), array('controller' => 'basho_tana_souko_mrs', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__d('cake', 'List %s', __('Juhacchuu Meisai Dts')), array('controller' => 'juhacchuu_meisai_dts', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__d('cake', 'New %s', __('Juhacchuu Meisai Dt')), array('controller' => 'juhacchuu_meisai_dts', 'action' => 'add')); ?> </li>
 		</ul>
 		</div>
 	</div>
@@ -491,7 +484,3 @@ function change_basho(this1){
 		if(e.keyCode == 113){$("#JuhacchuuDtJuchuuFlg").focus();}
 	};
 </script>
-
-<!-- 井浦流表示 -->
-<?php echo $this->Html->css(array("iurabs"), array("inline"=>false)) ;?>
-

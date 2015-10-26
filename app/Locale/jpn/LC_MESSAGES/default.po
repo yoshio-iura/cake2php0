@@ -1,8 +1,17 @@
+msgid "Actions"
+msgstr "操作メニュー"
+
 msgid "Username or password is incorrect"
 msgstr "ユーザーIDとパスワードを正しく入力して下さい。"
 
 msgid "The user has been saved."
 msgstr "ユーザーの情報を登録しました。"
+
+msgid "The juhacchuu dt has been saved."
+msgstr "受発注データを保存しました。"
+
+msgid "The juhacchuu dt could not be saved. Please, try again."
+msgstr "受発注データを保存できませんでした。やり直してください。"
 
 msgid ""
 msgstr ""

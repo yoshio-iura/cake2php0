@@ -10,8 +10,7 @@
 		echo $this->Form->input('bumon_mr_id', array('empty' => ''));
 		echo $this->Form->input('mail_address');
 		echo $this->Form->input('username');
-		echo $this->Form->input('password');
-		echo $this->Form->input('thema_mr_id', array('empty' => ''));
+		echo $this->Form->input('theme_mr_id', array('empty' => ''));
 		echo $this->Form->input('torihikisaki_mr_id', array('empty' => ''));
 		echo $this->Form->input('shokushu_kbn_id', array('empty' => ''));
 		echo $this->Form->input('shounin_kengen_mr_id', array('empty' => ''));
@@ -33,8 +32,8 @@
 		<li><?php echo $this->Html->link(__('List Users'), array('action' => 'index')); ?></li>
 		<li><?php echo $this->Html->link(__('List Bumon Mrs'), array('controller' => 'bumon_mrs', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Bumon Mr'), array('controller' => 'bumon_mrs', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Thema Mrs'), array('controller' => 'thema_mrs', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Thema Mr'), array('controller' => 'thema_mrs', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Theme Mrs'), array('controller' => 'theme_mrs', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Theme Mr'), array('controller' => 'theme_mrs', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Torihikisaki Mrs'), array('controller' => 'torihikisaki_mrs', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Torihikisaki Mr'), array('controller' => 'torihikisaki_mrs', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Shokushu Kbns'), array('controller' => 'shokushu_kbns', 'action' => 'index')); ?> </li>

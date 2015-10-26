@@ -92,11 +92,11 @@ class UsersController extends AppController {
 			}
 		}
 		$bumonMrs = $this->User->BumonMr->find('list');
-		$themaMrs = $this->User->ThemaMr->find('list');
+		$themeMrs = $this->User->ThemeMr->find('list');
 		$torihikisakiMrs = $this->User->TorihikisakiMr->find('list');
 		$shokushuKbns = $this->User->ShokushuKbn->find('list');
 		$shouninKengenMrs = $this->User->ShouninKengenMr->find('list');
-		$this->set(compact('bumonMrs', 'themaMrs', 'torihikisakiMrs', 'shokushuKbns', 'shouninKengenMrs'));
+		$this->set(compact('bumonMrs', 'themeMrs', 'torihikisakiMrs', 'shokushuKbns', 'shouninKengenMrs'));
 	}
 
 /**
@@ -122,11 +122,11 @@ class UsersController extends AppController {
 			$this->request->data = $this->User->find('first', $options);
 		}
 		$bumonMrs = $this->User->BumonMr->find('list');
-		$themaMrs = $this->User->ThemaMr->find('list');
+		$themeMrs = $this->User->ThemeMr->find('list');
 		$torihikisakiMrs = $this->User->TorihikisakiMr->find('list');
 		$shokushuKbns = $this->User->ShokushuKbn->find('list');
 		$shouninKengenMrs = $this->User->ShouninKengenMr->find('list');
-		$this->set(compact('bumonMrs', 'themaMrs', 'torihikisakiMrs', 'shokushuKbns', 'shouninKengenMrs'));
+		$this->set(compact('bumonMrs', 'themeMrs', 'torihikisakiMrs', 'shokushuKbns', 'shouninKengenMrs'));
 	}
 
 /**

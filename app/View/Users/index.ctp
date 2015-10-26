@@ -11,7 +11,7 @@
 			<th><?php echo $this->Paginator->sort('mail_address'); ?></th> -->
 			<th><?php echo $this->Paginator->sort('username'); ?></th>
 			<!-- <th><?php echo $this->Paginator->sort('password'); ?></th>
-			<th><?php echo $this->Paginator->sort('thema_mr_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('theme_mr_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('torihikisaki_mr_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('shokushu_kbn_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('shounin_kengen_mr_id'); ?></th>
@@ -40,7 +40,7 @@
 		<td><?php echo h($user['User']['username']); ?>&nbsp;</td>
 		<!-- <td><?php echo h($user['User']['password']); ?>&nbsp;</td>
 		<td>
-			<?php echo $this->Html->link($user['ThemaMr']['name'], array('controller' => 'thema_mrs', 'action' => 'view', $user['ThemaMr']['id'])); ?>
+			<?php echo $this->Html->link($user['ThemeMr']['name'], array('controller' => 'theme_mrs', 'action' => 'view', $user['ThemeMr']['id'])); ?>
 		</td>
 		<td>
 			<?php echo $this->Html->link($user['TorihikisakiMr']['name'], array('controller' => 'torihikisaki_mrs', 'action' => 'view', $user['TorihikisakiMr']['id'])); ?>
@@ -88,8 +88,8 @@
 		<li><?php echo $this->Html->link(__('New User'), array('action' => 'add')); ?></li>
 		<li><?php echo $this->Html->link(__('List Bumon Mrs'), array('controller' => 'bumon_mrs', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Bumon Mr'), array('controller' => 'bumon_mrs', 'action' => 'add')); ?> </li>
-		<li><?php echo $this->Html->link(__('List Thema Mrs'), array('controller' => 'thema_mrs', 'action' => 'index')); ?> </li>
-		<li><?php echo $this->Html->link(__('New Thema Mr'), array('controller' => 'thema_mrs', 'action' => 'add')); ?> </li>
+		<li><?php echo $this->Html->link(__('List Theme Mrs'), array('controller' => 'theme_mrs', 'action' => 'index')); ?> </li>
+		<li><?php echo $this->Html->link(__('New Theme Mr'), array('controller' => 'theme_mrs', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Torihikisaki Mrs'), array('controller' => 'torihikisaki_mrs', 'action' => 'index')); ?> </li>
 		<li><?php echo $this->Html->link(__('New Torihikisaki Mr'), array('controller' => 'torihikisaki_mrs', 'action' => 'add')); ?> </li>
 		<li><?php echo $this->Html->link(__('List Shokushu Kbns'), array('controller' => 'shokushu_kbns', 'action' => 'index')); ?> </li>

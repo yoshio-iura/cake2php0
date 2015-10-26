@@ -4,7 +4,7 @@ App::uses('AppModel', 'Model');
  * User Model
  *
  * @property BumonMr $BumonMr
- * @property ThemaMr $ThemaMr
+ * @property ThemeMr $ThemeMr
  * @property TorihikisakiMr $TorihikisakiMr
  * @property ShokushuKbn $ShokushuKbn
  * @property ShouninKengenMr $ShouninKengenMr
@@ -45,9 +45,9 @@ class User extends AppModel {
 			'fields' => '',
 			'order' => ''
 		),
-		'ThemaMr' => array(
-			'className' => 'ThemaMr',
-			'foreignKey' => 'thema_mr_id',
+		'ThemeMr' => array(
+			'className' => 'ThemeMr',
+			'foreignKey' => 'theme_mr_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
