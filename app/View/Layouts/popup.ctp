@@ -15,6 +15,8 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 		echo $this->Html->meta('icon');
 
 		echo $this->Html->css('cake.generic');
+		echo $this->Html->css('bootstrap.min');
+		echo $this->Html->css(array('iurabs','../theme/'.$loginUser['ThemeMr']['code'].'/css/iurabs'));
 
 		echo $this->fetch('meta');
 		echo $this->fetch('css');
@@ -22,7 +24,7 @@ $cakeVersion = __d('cake_dev', 'CakePHP %s', Configure::version())
 	?>
 </head>
 <body>
-	<div id="container">
+	<div id="container-fluid">
 		<div id="content">
 			<?php echo $this->fetch('content'); ?>
 		</div>

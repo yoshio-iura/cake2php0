@@ -6,6 +6,13 @@ App::uses('AppController', 'Controller');
  */
 class HinmokuMrsController extends AppController {
 
+/**
+ *  Layout
+ *
+ * @var string
+ */
+	public $layout = 'bootstrap';
+
 	public $components = array('Paginator', 'Flash', 'Session', 'RequestHandler');
 
 /**

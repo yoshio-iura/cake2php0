@@ -335,7 +335,7 @@ msgid ""
 msgstr ""
 
 msgid "Anzen Zaiko Suu"
-msgstr "安全在庫数"
+msgstr "安全在庫"
 
 msgid "Barcode"
 msgstr "取扱バーコード"
@@ -862,6 +862,6 @@ msgstr "過不足"
 msgid "Chuuzan"
 msgstr "発注済"
 
-msgid "You Hachuu"
-msgstr "余裕"
+msgid "Yoyuu Zaiko"
+msgstr "在庫余裕"
 

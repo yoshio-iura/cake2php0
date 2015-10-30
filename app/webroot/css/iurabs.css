@@ -1,19 +1,13 @@
 body {
-//	background-image: url("../img/woody/wood.jpg");
+	background: #fec;
 }
-#content{
-	background: #fff;
-//	background-image: url("../img/woody/wood.jpg");
-}
-div.container-fluid {
-//	background-image: url("../img/woody/desk.jpg");
+.row{
+	background: #fec;
 }
 div.form-actions {
-//	background-image: url("../img/woody/desk.jpg");
 	padding : 5px;
 }
 div.paging {
-//	background-image: url("../img/woody/desk.jpg");
 	color: #0f0;
 }
 div.row-fluid {
@@ -23,7 +17,7 @@ div.control-group {
 /*	float: left;	*/
 }
 select {
-	font-size: 101%;
+	font-size: 120%;
 	vertical-align:middle
 }
 input, textarea {
@@ -54,6 +48,9 @@ table tr td {
 .tbl1 td {
 	border: 0;
 	padding: 0 1px;
+}
+.tbl1 input{
+	font-size: 120%;
 }
 .tbl1 tr:nth-child(even) {
 	background: transparent;

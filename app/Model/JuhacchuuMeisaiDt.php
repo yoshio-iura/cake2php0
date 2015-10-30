@@ -31,19 +31,20 @@ class JuhacchuuMeisaiDt extends AppModel {
  *
  * @var array
  */
-	public $validate = array(
+/*	public $validate = array(
 		'tanka_iti' => array(
-			'range' => array(
-				'rule' => array('range',1,2),
-				'message' => '単位位置は1か2だけが可能です。',
-				//'allowEmpty' => false,
-				//'required' => false,
-				//'last' => false, // Stop validation after this rule
-				//'on' => 'create', // Limit validation to 'create' or 'update' operations
-			),
+			'rule' => array('inList', array(1,2)),
+			//'message' => '単位位置は1か2だけが可能です。',
+			//'allowEmpty' => false,
+			//'required' => false,
+			//'last' => false, // Stop validation after this rule
+			//'on' => 'create', // Limit validation to 'create' or 'update' operations
+		),
+		'basho_tana_souko_mr_id' => array(
+			'rule' => 'notEmpty',
 		),
 	);
-
+*/
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**

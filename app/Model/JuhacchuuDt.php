@@ -87,6 +87,13 @@ class JuhacchuuDt extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
+		),
+		'History' => array(
+			'className' => 'History',
+			'foreignKey' => 'id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
 		)
 	);
 

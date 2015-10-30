@@ -48,7 +48,7 @@
 		</dd>
 		<dt><?php echo __('Torihikisaki Mr'); ?></dt>
 		<dd>
-			<?php echo $this->Html->link($user['TorihikisakiMr']['name'], array('controller' => 'torihikisaki_mrs', 'action' => 'view', $user['TorihikisakiMr']['id'])); ?>
+			<?php echo h($user['User']['torihikisaki_mr_id']); ?>
 			&nbsp;
 		</dd>
 		<dt><?php echo __('Shokushu Kbn'); ?></dt>

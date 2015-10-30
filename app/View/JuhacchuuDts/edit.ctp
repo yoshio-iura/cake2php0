@@ -1,5 +1,5 @@
-<div class="row-fluid">
-	<div class="span9">
+<div class="row">
+	<div class="col-md-9">
 		<?php echo $this->BootstrapForm->create('JuhacchuuDt', array('class' => 'form-horizontal'));?>
 	<fieldset>
 		<legend><?php echo __d('cake', ucfirst($this->action).' %s', '受発注伝票');
@@ -15,7 +15,7 @@
 			.$this->Html->tableCells(array(
 			$this->BootstrapForm->input('JuhacchuuDt.juchuu_flg',array('label'=>false)),
 			$this->BootstrapForm->input('JuhacchuuDt.bi',array('label'=>false,'type'=>'text','size'=>"10",'default'=>date('Y-m-d'))),
-			$this->BootstrapForm->input('unused.torihikisaki_code',array('label'=>false,'type'=>'text','size'=>"5",'onchange'=>'change_torihikisaki(this)')),
+			$this->BootstrapForm->input('unused.torihikisaki_code',array('label'=>false,'type'=>'text','size'=>"5",'onchange'=>'change_torihikisaki(this)','required'=>'true')),
 			$this->BootstrapForm->input('unused.torihikisaki_name',array('label'=>false,'readonly'=>'readonly','size'=>"40")),
 		)).'</table>';
 		echo $this->BootstrapForm->hidden('JuhacchuuDt.torihikisaki_mr_id',array('label'=>false,'type'=>'text','size'=>"10"));
@@ -64,7 +64,7 @@
 	?>
 
 	<div class='col-md-12'><h3>受発注明細</h3></div>
-	<?php echo $this->Html->link('品目CD', '/hinmoku_mrs/popup', array('rel' => 'prettyPopin', 'id'=>'hinmoku_popup', 'style'=>'display:none;')); ?>
+	<?php echo $this->Html->link('品目CD', '/zaiko_fusoku_hyouji_vws/popup', array('rel' => 'prettyPopin', 'id'=>'hinmoku_popup', 'style'=>'display:none;')); ?>
 	<table id="mytable" class="tbl1">
 	<?php for($i1=-1;$i1<$i1max;$i1++): ?>
 	<?php if($i1<0){
@@ -104,7 +104,7 @@
 		</tr></table><table><tr>
 		<th>納期</th>      <td><?php echo $this->BootstrapForm->input($tbl1.'.nouki'         ,array('label'=>false,'type'=>'text', 'size'=>'10','default'=>date('Y-m-d'))); ?></td>
 		<th>備考</th>      <td><?php echo $this->BootstrapForm->input($tbl1.'.bikou'         ,array('label'=>false,'type'=>'text', 'size'=>'40')); ?></td>
-		<th>納入場所</th>  <td><?php echo $this->BootstrapForm->input($tbl1.'.basho_tana_souko_mr_id',array('label'=>false,'type'=>'select')); ?></td>
+		<th>納入場所</th>  <td><?php echo $this->BootstrapForm->input($tbl1.'.basho_tana_souko_mr_id',array('label'=>false,'type'=>'select','required'=>'true')); ?></td>
 		</tr></table><table id=mytable<?php echo ($i1<0)?'0':'_'.$i1; ?>><tbody><tr id="sikyuu_meisai_dt<?php echo ($i1<0)?'0':'_'.$i1; ?>" style="display:none;">
 			<th width="3em">支給行№
 			<br><?php echo $this->BootstrapForm->input('unused0.gyou_bangou'   ,array('label'=>false,'type'=>'number', 'style'=>'text-align:right')); ?>
@@ -139,7 +139,7 @@
 
 <?php echo $this->BootstrapForm->submit(__d('cake', 'Submit'),array('class'=>'btn-lg btn-success')); ?>
 	</div>
-	<div class="span3">
+	<div class="col-md-3">
 		<div class="well" style="padding: 8px 0; margin-top:8px;">
 		<ul class="nav nav-list">
 			<li class="nav-header"><?php echo __('Actions'); ?></li>
@@ -182,8 +182,8 @@ hinmoku_popup_sikyuu = "";
 ($(function(){
 	$("a[rel^='prettyPopin']:eq(0)").prettyPopin({//取引先検索
 		modal : true,
-		width : 800,
-		height: 700,
+		width : 960,
+		height: 780,
 		opacity: 0.5,
 		animationSpeed: '0', 
 		followScroll: false,
@@ -199,8 +199,8 @@ hinmoku_popup_sikyuu = "";
 	});
 	$("a[rel^='prettyPopin']:eq(1)").prettyPopin({//出荷先検索
 		modal : true,
-		width : 800,
-		height: 700,
+		width : 960,
+		height: 780,
 		opacity: 0.5,
 		animationSpeed: '0', 
 		followScroll: false,
@@ -216,8 +216,8 @@ hinmoku_popup_sikyuu = "";
 	});
 	$("a[rel^='prettyPopin']:eq(2)").prettyPopin({//気付先検索
 		modal : true,
-		width : 800,
-		height: 700,
+		width : 960,
+		height: 780,
 		opacity: 0.5,
 		animationSpeed: '0', 
 		followScroll: false,
@@ -233,8 +233,8 @@ hinmoku_popup_sikyuu = "";
 	});
 	$("a[rel^='prettyPopin']:eq(3)").prettyPopin({//品目検索
 		modal : true,
-		width : 800,
-		height: 700,
+		width : 960,
+		height: 780,
 		opacity: 0.5,
 		animationSpeed: '0', 
 		followScroll: false,
@@ -344,11 +344,10 @@ function index_hinmoku(this1){
 	});
 	return false;
 }
-function hinmoku_prettyPopin(this1,sikyuu=""){
-//alert(this1);
+function hinmoku_prettyPopin(this1, sikyuu){
 	hinmoku_popup_gyou = this1;
-	hinmoku_popup_sikyuu = sikyuu;
-	document.getElementById('hinmoku_popup').click();//$(#hinmoku_popup')[0].click();
+	hinmoku_popup_sikyuu = sikyuu === undefined ? '' : sikyuu;
+	document.getElementById('hinmoku_popup').click();
 }
 function change_kingaku(this1){
 	//alert(this1.name);//this1.nameはdata[unused][1][hinmoku_code]の文字列、これを']['で分割した2番目が行番号となる。
@@ -407,7 +406,7 @@ function change_basho(this1){
 		lastRow++;
 		$("#juhacchuu_meisai_dt0").clone(true).attr('id','juhacchuu_meisai_dt_'+lastRow).removeAttr("style").insertBefore("#trAdd");
 		$("#juhacchuu_meisai_dt_"+lastRow+" #removeJuhacchuuMeisaiDt0" ).attr('onclick','removeJuhacchuuMeisaiDt('+lastRow+')');
-		$("#juhacchuu_meisai_dt_"+lastRow+" #hinmoku_prettyPopin0"     ).attr('onclick','hinmoku_prettyPopin('+lastRow+')');
+		$("#juhacchuu_meisai_dt_"+lastRow+" #hinmoku_prettyPopin0"     ).attr('onclick','hinmoku_prettyPopin('+lastRow+')').attr('id','unused'           +lastRow+'HinmokuPopin'       );
 		$("#juhacchuu_meisai_dt_"+lastRow+" #unusedGyouBangou"         ).attr('id','JuhacchuuMeisaiDt'+lastRow+'GyouBangou'        ).attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][gyou_bangou]')  ;
 		$("#juhacchuu_meisai_dt_"+lastRow+" #unusedOyaJuhacchuuDtId"   ).attr('id','JuhacchuuMeisaiDt'+lastRow+'OyaJuhacchuuDtId'  ).attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][oya_juhacchuu_dt_id]');
 		$("#juhacchuu_meisai_dt_"+lastRow+" #unusedHinmokuMrId"        ).attr('id','JuhacchuuMeisaiDt'+lastRow+'HinmokuMrId'       ).attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][hinmoku_mr_id]');
@@ -433,6 +432,8 @@ function change_basho(this1){
 		$("#trAddSikyuu_"        +lastRow+" #btnAddSikyuu0"            ).attr('id','btnAddSikyuu_'+lastRow);
 		$("#JuhacchuuMeisaiDt"   +lastRow+"GyouBangou").val(1+lastRow);
 		$("#JuhacchuuMeisaiDt"   +lastRow+"TankaIti").val(1);
+		$("#JuhacchuuMeisaiDt"   +lastRow+"NouhinZumiSuu").val(0);
+		$("#JuhacchuuMeisaiDt"   +lastRow+"NouhinZumiSuu2").val(0);
 		$("#JuhacchuuMeisaiDt"   +lastRow+"BashoTanaSoukoMrId").val($("#JuhacchuuDtBashoTanaSoukoMrId").val());
 		InputCalendar.createOnLoaded('JuhacchuuMeisaiDt'+lastRow+'Nouki', {format: 'yyyy-mm-dd', lang:'ja'});
 		lastRows[lastRow]=-1;
@@ -481,6 +482,6 @@ function change_basho(this1){
 	// キーボードを押したときに実行されるイベント　参照：http://hakuhin.jp/js/key_board.html#KEY_BOARD_03
 	// ------------------------------------------------------------
 	document.onkeydown = function (e){
-		if(e.keyCode == 113){$("#JuhacchuuDtJuchuuFlg").focus();}
+		if(e.keyCode == 113){$("#unused0HinmokuPopin").click();}//F2
 	};
 </script>

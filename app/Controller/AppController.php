@@ -48,4 +48,24 @@ class AppController extends Controller {
 		return parent::beforeFilter();
 	}
 
+	//http://blog.s-giken.net/102.html
+	function write_log($model){
+		//$ip = $this->request->clientIp(false);
+		$data = array(
+			'user_id' => ''.$this->Auth->user('id'),
+			'created' => date('Y-m-d H:i:s'),
+			'gamen_page' => ''.env('REQUEST_URI'),//$systemName,
+			'from_page'  => ''.env('HTTP_REFERER'),//$level,
+			'pc_ip' => ''.env('REMOTE_ADDR'),//$ip,
+			'browser' => ''.env('HTTP_USER_AGENT'),//$message,
+		);
+		if	( $model == 'User' ) {
+			$this->User->History->create();
+			$this->User->History->save($data);
+		}elseif	( $model == 'JuhacchuuDt' ) {
+			$this->JuhacchuuDt->History->create();
+			$this->JuhacchuuDt->History->save($data);
+		}
+	}
+
 }

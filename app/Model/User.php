@@ -51,14 +51,14 @@ class User extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
-		),
-		'TorihikisakiMr' => array(
+/*		),
+‰½ŒÌ‚©view‚ÅƒGƒ‰[‚·‚é		'TorihikisakiMr' => array(
 			'className' => 'TorihikisakiMr',
 			'foreignKey' => 'torihikisaki_mr_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
-		),
+*/		),
 		'ShokushuKbn' => array(
 			'className' => 'ShokushuKbn',
 			'foreignKey' => 'shokushu_kbn_id',
@@ -72,6 +72,13 @@ class User extends AppModel {
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''
+		),
+		'History' => array(
+			'className' => 'History',
+			'foreignKey' => 'id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
 		)
 	);
 
@@ -80,8 +87,8 @@ class User extends AppModel {
  *
  * @var array
  */
-/*	public $hasMany = array(
-		'ShokushuKbn' => array(
+	public $hasMany = array(
+/*		'ShokushuKbn' => array(
 			'className' => 'ShokushuKbn',
 			'foreignKey' => 'user_id',
 			'dependent' => false,
@@ -94,7 +101,7 @@ class User extends AppModel {
 			'finderQuery' => '',
 			'counterQuery' => ''
 		),
-		'TorihikisakiMr' => array(
+*/		'TorihikisakiMr' => array(
 			'className' => 'TorihikisakiMr',
 			'foreignKey' => 'user_id',
 			'dependent' => false,
@@ -108,5 +115,5 @@ class User extends AppModel {
 			'counterQuery' => ''
 		)
 	);
-*/
+
 }

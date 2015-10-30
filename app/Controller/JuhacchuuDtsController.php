@@ -74,6 +74,7 @@ class JuhacchuuDtsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+		$this->write_log('JuhacchuuDt');
 		if ($this->action == 'edit' && !$this->JuhacchuuDt->exists($id)) {
 			throw new NotFoundException(__('Invalid juhacchuu dt'));
 		}

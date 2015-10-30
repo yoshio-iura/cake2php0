@@ -113,4 +113,4 @@ CakeLog::config('error', array(
 	'file' => 'error',
 ));
 //ツイッターブートストラップ追加
-CakePlugin::load('TwitterBootstrap');
+CakePlugin::load(array('TwitterBootstrap', 'Search'));

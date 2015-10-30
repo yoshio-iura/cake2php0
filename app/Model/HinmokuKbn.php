@@ -59,6 +59,19 @@ class HinmokuKbn extends AppModel {
 			'exclusive' => '',
 			'finderQuery' => '',
 			'counterQuery' => ''
+		),
+		'ZaikoFusokuHyoujiVw' => array(
+			'className' => 'ZaikoFusokuHyoujiVw',
+			'foreignKey' => 'hinmoku_kbn_id',
+			'dependent' => false,
+			'conditions' => '',
+			'fields' => '',
+			'order' => '',
+			'limit' => '',
+			'offset' => '',
+			'exclusive' => '',
+			'finderQuery' => '',
+			'counterQuery' => ''
 		)
 	);
 

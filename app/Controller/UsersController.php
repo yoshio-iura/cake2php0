@@ -11,6 +11,13 @@ App::uses('AppController', 'Controller');
 class UsersController extends AppController {
 
 /**
+ *  Layout
+ *
+ * @var string
+ */
+	public $layout = 'bootstrap';
+
+/**
  * Components
  *
  * @var array
@@ -37,6 +44,7 @@ class UsersController extends AppController {
 	public function login() {
 		if ($this->request->is('post')) {
 		    if ($this->Auth->login()) {
+			$this->write_log('User');
 		        return $this->redirect($this->Auth->redirect('../juhacchuu_dts/add'));
 		    } else {
 		        $this->Session->setFlash(__('Username or password is incorrect'), 'default', array(), 'auth');
@@ -45,6 +53,7 @@ class UsersController extends AppController {
 	}
 	
 	public function logout() {
+		$this->write_log('User');
 		$this->redirect($this->Auth->logout());
 	}
 

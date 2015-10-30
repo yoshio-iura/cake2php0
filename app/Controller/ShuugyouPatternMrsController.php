@@ -7,6 +7,13 @@ App::uses('AppController', 'Controller');
 class ShuugyouPatternMrsController extends AppController {
 
 /**
+ *  Layout
+ *
+ * @var string
+ */
+	public $layout = 'bootstrap';
+
+/**
  * Scaffold
  *
  * @var mixed

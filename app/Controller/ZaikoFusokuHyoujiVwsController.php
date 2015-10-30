@@ -28,7 +28,8 @@ class ZaikoFusokuHyoujiVwsController extends AppController {
  *
  * @var array
  */
-	public $components = array('Paginator', 'Flash', 'Session');
+	public $components = array('Paginator', 'Flash', 'Session', 'Search.Prg');
+	public $presetVars = true;
 /**
  * index method
  *
@@ -36,6 +37,14 @@ class ZaikoFusokuHyoujiVwsController extends AppController {
  */
 	public function index() {
 		$this->ZaikoFusokuHyoujiVw->recursive = 0;
+
+		$this->Prg->commonProcess();
+		$this->paginate = array(
+			'conditions' => $this->ZaikoFusokuHyoujiVw->parseCriteria($this->passedArgs),
+		);
+		$hinmokuKbns = $this->ZaikoFusokuHyoujiVw->HinmokuMr->HinmokuKbn->find('list');
+		$this->set(compact('hinmokuKbns'));
+
 		$this->set('zaikoFusokuHyoujiVws', $this->Paginator->paginate());
 	}
 
@@ -54,107 +63,22 @@ class ZaikoFusokuHyoujiVwsController extends AppController {
 	}
 
 /**
- * add method
- *
- * @return void
+ * Popup
  */
-	public function add() {
-		if ($this->request->is('post')) {
-			$this->ZaikoFusokuHyoujiVw->create();
-			if ($this->ZaikoFusokuHyoujiVw->save($this->request->data)) {
-				$this->Session->setFlash(
-					__('The %s has been saved', __('zaiko fusoku hyouji vw')),
-					'alert',
-					array(
-						'plugin' => 'TwitterBootstrap',
-						'class' => 'alert-success'
-					)
-				);
-				$this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(
-					__('The %s could not be saved. Please, try again.', __('zaiko fusoku hyouji vw')),
-					'alert',
-					array(
-						'plugin' => 'TwitterBootstrap',
-						'class' => 'alert-error'
-					)
-				);
-			}
-		}
-	}
+	public function popup() {
+		$this->ZaikoFusokuHyoujiVw->recursive = 0;
 
-/**
- * edit method
- *
- * @param string $id
- * @return void
- */
-	public function edit($id = null) {
-		$this->ZaikoFusokuHyoujiVw->id = $id;
-		if (!$this->ZaikoFusokuHyoujiVw->exists()) {
-			throw new NotFoundException(__('Invalid %s', __('zaiko fusoku hyouji vw')));
-		}
-		if ($this->request->is('post') || $this->request->is('put')) {
-			if ($this->ZaikoFusokuHyoujiVw->save($this->request->data)) {
-				$this->Session->setFlash(
-					__('The %s has been saved', __('zaiko fusoku hyouji vw')),
-					'alert',
-					array(
-						'plugin' => 'TwitterBootstrap',
-						'class' => 'alert-success'
-					)
-				);
-				$this->redirect(array('action' => 'index'));
-			} else {
-				$this->Session->setFlash(
-					__('The %s could not be saved. Please, try again.', __('zaiko fusoku hyouji vw')),
-					'alert',
-					array(
-						'plugin' => 'TwitterBootstrap',
-						'class' => 'alert-error'
-					)
-				);
-			}
-		} else {
-			$this->request->data = $this->ZaikoFusokuHyoujiVw->read(null, $id);
-		}
-	}
-
-/**
- * delete method
- *
- * @param string $id
- * @return void
- */
-	public function delete($id = null) {
-		if (!$this->request->is('post')) {
-			throw new MethodNotAllowedException();
-		}
-		$this->ZaikoFusokuHyoujiVw->id = $id;
-		if (!$this->ZaikoFusokuHyoujiVw->exists()) {
-			throw new NotFoundException(__('Invalid %s', __('zaiko fusoku hyouji vw')));
-		}
-		if ($this->ZaikoFusokuHyoujiVw->delete()) {
-			$this->Session->setFlash(
-				__('The %s deleted', __('zaiko fusoku hyouji vw')),
-				'alert',
-				array(
-					'plugin' => 'TwitterBootstrap',
-					'class' => 'alert-success'
-				)
-			);
-			$this->redirect(array('action' => 'index'));
-		}
-		$this->Session->setFlash(
-			__('The %s was not deleted', __('zaiko fusoku hyouji vw')),
-			'alert',
-			array(
-				'plugin' => 'TwitterBootstrap',
-				'class' => 'alert-error'
-			)
+		$this->Prg->commonProcess();
+		$this->paginate = array(
+			'conditions' => $this->ZaikoFusokuHyoujiVw->parseCriteria($this->passedArgs),
 		);
-		$this->redirect(array('action' => 'index'));
+ 
+		$hinmokuKbns = $this->ZaikoFusokuHyoujiVw->HinmokuMr->HinmokuKbn->find('list');
+		$this->set(compact('hinmokuKbns'));
+
+		$this->set('zaikoFusokuHyoujiVws', $this->Paginator->paginate());
+		$this->Paginator->settings = array('limit' => 10);
+		$this->layout = 'popup';
 	}
 
 }

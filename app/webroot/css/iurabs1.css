@@ -1,16 +1,9 @@
 /* iurabs.css と内容を同じに保つ。popup で別ファイルにしないと透明になるため */
-body {
-	background-image: url("../img/woody/wood.jpg")
-}
 #content{
-	background: #ccc;
-	background-image: url("../img/woody/wood.jpg")
+	background: #fec;
 }
-div.container-fluid {
-	background-image: url("../img/woody/desk.jpg")
-}
-div.control-group {
-/*	float: left;	*/
+.row{
+	background: #fec;
 }
 select {
 	font-size: 101%;
@@ -20,7 +13,7 @@ input, textarea {
 	padding: 0;
 }
 input[type=checkbox] {
-	width: 80px;
+	width: 70px;
 }
 /** Tables **/
 table {

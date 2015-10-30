@@ -1,5 +1,5 @@
 <div class="torihikisaki_mrs index">
-	<h2><?php echo __('TorihikisakiMrs'); ?></h2>
+	<h3><?php echo '一覧表 '.__('取引先'); ?></h3>
 	<?php	echo $this->Form->create('TorihikisakiMr', array('action'=>'popup')); ?>
 	<table cellpadding="0" cellspacing="0"><tr><td>
 	<?php	echo $this->Form->input('search', array('label'=>'コードか名称の一部を入れてください')); ?>

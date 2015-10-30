@@ -41,7 +41,6 @@
 </head>
 
 <body>
-<?php echo $this->Html->script(array('jquery-1.11.3.min','jquery.prettyPopin','jquery-migrate.min','bootstrap.min','jquery-ui/jquery-ui.min','jquery-ui/ui.datepicker-ja','autoNumeric-min')); ?>
 
 <nav class="navbar navbar-inverse navbar-fixed-top">
   <div class="container-fluid">
@@ -80,7 +79,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">データ照会</span></a>
               <ul class="dropdown-menu">
                 <li><?php echo $this->Html->link('在庫', array('controller' => 'zaiko_dts', 'action' => 'index')); ?></li>
-                <li><?php echo $this->Html->link('受発注明細', array('controller' => 'juhachuu_meisai_dts', 'action' => 'index')); ?></li>
+                <li><?php echo $this->Html->link('受発注明細', array('controller' => 'juhacchuu_meisai_dts', 'action' => 'index')); ?></li>
                 <li><?php echo $this->Html->link('仕入売上明細', array('controller' => 'siire_uriage_dts', 'action' => 'index')); ?></li>
                 <li><?php echo $this->Html->link('ジャーナル', array('controller' => 'journal_dts', 'action' => 'index')); ?></li>
               </ul>
@@ -90,7 +89,7 @@
               <ul class="dropdown-menu">
                 <li><?php echo $this->Html->link('取引先', array('controller' => 'torihikisaki_mrs', 'action' => 'index')); ?></li>
                 <li><?php echo $this->Html->link('品目', array('controller' => 'hinmoku_mrs', 'action' => 'index')); ?></li>
-                <li><?php echo $this->Html->link('代替品目', array('controller' => 'daigae_hinmouku_mrs', 'action' => 'index')); ?></li>
+                <li><?php echo $this->Html->link('代替品目', array('controller' => 'daigae_hinmoku_mrs', 'action' => 'index')); ?></li>
               </ul>
             </li>
           </ul>
@@ -151,6 +150,12 @@
                 <li><?php echo $this->Html->link('ジャーナル根源', array('controller' => 'journal_kongen_mrs', 'action' => 'index')); ?></li>
               </ul>
             </li>
+            <li class="dropdown-submenu">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">AdminLog</span></a>
+              <ul class="dropdown-menu">
+                <li><?php echo $this->Html->link('login-out', array('controller' => 'histories', 'action' => 'admin_index')); ?></li>
+              </ul>
+            </li>
           </ul>
         </li>
         <li><?php echo $this->Html->link('ヘルプ', array('controller' => 'helps', 'action' => 'index')); ?></li>
@@ -160,7 +165,9 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-	<div class="container">
+<?php echo $this->Html->script(array('jquery-1.11.3.min','jquery.prettyPopin','jquery-migrate.min','bootstrap.min','jquery-ui/jquery-ui.min','jquery-ui/ui.datepicker-ja','autoNumeric-min')); ?>
+
+	<div class="container-fluid">
 
 	<!--	<h1>Bootstrap starter template</h1>	-->
 

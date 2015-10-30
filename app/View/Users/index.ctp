@@ -5,10 +5,10 @@
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
 			<th><?php echo $this->Paginator->sort('name'); ?></th>
-			<!-- <th><?php echo $this->Paginator->sort('kana_mei'); ?></th>
+			<!-- <th><?php echo $this->Paginator->sort('kana_mei'); ?></th> -->
 			<th><?php echo $this->Paginator->sort('kigou'); ?></th>
 			<th><?php echo $this->Paginator->sort('bumon_mr_id'); ?></th>
-			<th><?php echo $this->Paginator->sort('mail_address'); ?></th> -->
+			<th><?php echo $this->Paginator->sort('mail_address'); ?></th>
 			<th><?php echo $this->Paginator->sort('username'); ?></th>
 			<!-- <th><?php echo $this->Paginator->sort('password'); ?></th>
 			<th><?php echo $this->Paginator->sort('theme_mr_id'); ?></th>
@@ -31,12 +31,12 @@
 	<tr>
 		<td><?php echo h($user['User']['id']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['name']); ?>&nbsp;</td>
-		<!-- <td><?php echo h($user['User']['kana_mei']); ?>&nbsp;</td>
+		<!-- <td><?php echo h($user['User']['kana_mei']); ?>&nbsp;</td> -->
 		<td><?php echo h($user['User']['kigou']); ?>&nbsp;</td>
 		<td>
 			<?php echo $this->Html->link($user['BumonMr']['name'], array('controller' => 'bumon_mrs', 'action' => 'view', $user['BumonMr']['id'])); ?>
 		</td>
-		<td><?php echo h($user['User']['mail_address']); ?>&nbsp;</td> -->
+		<td><?php echo h($user['User']['mail_address']); ?>&nbsp;</td>
 		<td><?php echo h($user['User']['username']); ?>&nbsp;</td>
 		<!-- <td><?php echo h($user['User']['password']); ?>&nbsp;</td>
 		<td>

@@ -1,19 +1,17 @@
+.navbar-inverse{
+	background-image: url("images/desk.jpg")
+}
 body {
-	background-image: url("images/wood.jpg");
+	background-image: url("images/wood.jpg")
 }
-#content{
-	background: #ccc;
-	background-image: url("images/wood.jpg");
-}
-div.container-fluid {
-	background-image: url("images/desk.jpg");
+.row{
+	background: #fec;
+	background-image: url("images/wood.jpg")
 }
 div.form-actions {
-	background-image: url("images/desk.jpg");
 	padding : 5px;
 }
 div.paging {
-	background-image: url("images/desk.jpg");
 	color: #0f0;
 }
 div.row-fluid {
@@ -23,7 +21,7 @@ div.control-group {
 /*	float: left;	*/
 }
 select {
-	font-size: 101%;
+	font-size: 120%;
 	vertical-align:middle
 }
 input, textarea {
@@ -54,6 +52,9 @@ table tr td {
 .tbl1 td {
 	border: 0;
 	padding: 0 1px;
+}
+.tbl1 input{
+	font-size: 120%;
 }
 .tbl1 tr:nth-child(even) {
 	background: transparent;
