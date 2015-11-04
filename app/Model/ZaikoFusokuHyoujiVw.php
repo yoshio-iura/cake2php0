@@ -20,8 +20,8 @@ class ZaikoFusokuHyoujiVw extends AppModel {
  *
  * @var string
  */
-	public $displayField = 'name';
-	public $order = array('ZaikoFusokuHyoujiVw.yoyuu_zaiko');
+	public $displayField = 'HinmokuMr.name';
+	public $order = array('ZaikoFusokuHyoujiVw.yoyuu_zaiko','HinmokuMr.code');
 
 //検索
 	public $actsAs = array('Search.Searchable');

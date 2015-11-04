@@ -18,6 +18,13 @@ class JuhacchuuDtsController extends AppController {
 	public $layout = 'bootstrap';
 
 /**
+ * Scaffold
+ *
+ * @var mixed
+ */
+	public $scaffold;
+
+/**
  * Helpers
  *
  * @var array
@@ -47,7 +54,7 @@ class JuhacchuuDtsController extends AppController {
  * @throws NotFoundException
  * @param string $id
  * @return void
- */
+
 	public function view($id = null) {
 		if (!$this->JuhacchuuDt->exists($id)) {
 			throw new NotFoundException(__('Invalid juhacchuu dt'));
@@ -55,7 +62,7 @@ class JuhacchuuDtsController extends AppController {
 		$options = array('conditions' => array('JuhacchuuDt.' . $this->JuhacchuuDt->primaryKey => $id));
 		$this->set('juhacchuuDt', $this->JuhacchuuDt->find('first', $options));
 	}
-
+*/
 /**
  * add method
  *
@@ -112,7 +119,7 @@ class JuhacchuuDtsController extends AppController {
  * @throws NotFoundException
  * @param string $id
  * @return void
- */
+
 	public function delete($id = null) {
 		$this->JuhacchuuDt->id = $id;
 		if (!$this->JuhacchuuDt->exists()) {
@@ -126,4 +133,5 @@ class JuhacchuuDtsController extends AppController {
 		}
 		return $this->redirect(array('action' => 'index'));
 	}
+*/
 }

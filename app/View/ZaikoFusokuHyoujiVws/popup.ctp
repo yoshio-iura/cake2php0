@@ -58,11 +58,14 @@
 			</tr>
 		<?php endforeach; ?>
 		</table>
-
-		<p>
-			<?php echo $this->BootstrapPaginator->counter(array('format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')));?>
-		</p>
-
-		<?php echo $this->BootstrapPaginator->pagination(); ?>
+		<?php
+			echo '<div class="pagination">';
+				echo $this->Paginator->first('最初', $options = array());
+				echo $this->Paginator->prev('前へ', array(), null, array('class' => 'prev disabled'));
+				echo $this->Paginator->numbers(array('separator' => ''));
+				echo $this->Paginator->next('次へ', array(), null, array('class' => 'next disabled'));
+				echo $this->Paginator->last('最後', $options = array());
+			echo '</div>';
+		?>
 	</div>
 </div>

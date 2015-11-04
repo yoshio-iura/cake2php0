@@ -1,11 +1,15 @@
 <div class="row-fluid">
 	<div class="col-md-9">
 		<h2><?php echo __('一覧表 %s', __('在庫余裕'));?></h2>
-
-		<p>
-			<?php echo $this->BootstrapPaginator->counter(array('format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')));?>
-		</p>
-
+		<?php
+			echo '<div class="pagination">';
+				echo $this->Paginator->first('最初', $options = array());
+				echo $this->Paginator->prev('前へ', array(), null, array('class' => 'prev disabled'));
+				echo $this->Paginator->numbers(array('separator' => ''));
+				echo $this->Paginator->next('次へ', array(), null, array('class' => 'next disabled'));
+				echo $this->Paginator->last('最後', $options = array());
+			echo '</div>';
+		?>
 		<table class="table table-condensed">
 			<tr>
 				<th><?php echo $this->BootstrapPaginator->sort('hinmoku_mr_id','ID');?></th>
@@ -42,8 +46,20 @@
 			</tr>
 		<?php endforeach; ?>
 		</table>
+		<?php
+			echo '<div class="pagination">';
+				echo $this->Paginator->first('最初', $options = array());
+				echo $this->Paginator->prev('前へ', array(), null, array('class' => 'prev disabled'));
+				echo $this->Paginator->numbers(array('separator' => ''));
+				echo $this->Paginator->next('次へ', array(), null, array('class' => 'next disabled'));
+				echo $this->Paginator->last('最後', $options = array());
+			echo '</div>';
+		?>
 
-		<?php echo $this->BootstrapPaginator->pagination(); ?>
+		<p>
+			<?php echo $this->BootstrapPaginator->counter(array('format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')));?>
+		</p>
+
 	</div>
 	<div class="col-md-3">
 		<div class="well" style="margin-top:20px;">

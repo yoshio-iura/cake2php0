@@ -58,18 +58,27 @@ endforeach;
 
 ?>
 </table>
+	<div class="paging">
+	<?php
+
+		echo '<div class="pagination">';
+			echo $this->Paginator->first('<<', $options = array());
+			echo $this->Paginator->prev('<', array(), null, array('class' => 'prev disabled'));
+			echo $this->Paginator->numbers(array('separator' => ''));
+			echo $this->Paginator->next('>', array(), null, array('class' => 'next disabled'));
+			echo $this->Paginator->last('>>', $options = array());
+		echo '</div>';
+
+		//echo $this->Paginator->prev('< ' . __d('cake', 'previous'), array(), null, array('class' => 'prev disabled'));
+		//echo $this->Paginator->numbers(array('separator' => ''));
+		//echo $this->Paginator->next(__d('cake', 'next') .' >', array(), null, array('class' => 'next disabled'));
+	?>
+	</div>
 	<p><?php
 	echo $this->Paginator->counter(array(
 		'format' => __d('cake', 'Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
 	));
 	?></p>
-	<div class="paging">
-	<?php
-		echo $this->Paginator->prev('< ' . __d('cake', 'previous'), array(), null, array('class' => 'prev disabled'));
-		echo $this->Paginator->numbers(array('separator' => ''));
-		echo $this->Paginator->next(__d('cake', 'next') .' >', array(), null, array('class' => 'next disabled'));
-	?>
-	</div>
 </div>
 <div class="actions">
 	<h3><?php echo __d('cake', 'Actions'); ?></h3>

@@ -41,6 +41,7 @@ class ZaikoFusokuHyoujiVwsController extends AppController {
 		$this->Prg->commonProcess();
 		$this->paginate = array(
 			'conditions' => $this->ZaikoFusokuHyoujiVw->parseCriteria($this->passedArgs),
+			//'limit' => 10,
 		);
 		$hinmokuKbns = $this->ZaikoFusokuHyoujiVw->HinmokuMr->HinmokuKbn->find('list');
 		$this->set(compact('hinmokuKbns'));
@@ -71,13 +72,13 @@ class ZaikoFusokuHyoujiVwsController extends AppController {
 		$this->Prg->commonProcess();
 		$this->paginate = array(
 			'conditions' => $this->ZaikoFusokuHyoujiVw->parseCriteria($this->passedArgs),
+			'limit' => 10,
 		);
- 
+
 		$hinmokuKbns = $this->ZaikoFusokuHyoujiVw->HinmokuMr->HinmokuKbn->find('list');
 		$this->set(compact('hinmokuKbns'));
 
 		$this->set('zaikoFusokuHyoujiVws', $this->Paginator->paginate());
-		$this->Paginator->settings = array('limit' => 10);
 		$this->layout = 'popup';
 	}
 

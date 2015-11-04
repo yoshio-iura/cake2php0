@@ -1,4 +1,4 @@
-<div class="torihikisaki_mrs index">
+<div class="row">
 	<h3><?php echo '一覧表 '.__('取引先'); ?></h3>
 	<?php	echo $this->Form->create('TorihikisakiMr', array('action'=>'popup')); ?>
 	<table cellpadding="0" cellspacing="0"><tr><td>
@@ -11,6 +11,7 @@
 	<table class="tbl1">
 	<thead>
 	<tr>
+			<th></th>
 			<th><?php echo $this->Paginator->sort('code'); ?></th>
 			<th><?php echo $this->Paginator->sort('name'); ?></th>
 	</tr>
@@ -34,11 +35,14 @@
 	));
 	?>	</p>
 	<div class="paging">
-	<?php
-		echo $this->Paginator->prev('< ' . __('previous'), array('rel' => 'internal'), null, array('class' => 'prev disabled'));
-		echo $this->Paginator->numbers(array('separator' => '', 'rel' => 'internal'));
-		echo $this->Paginator->next(__('next') . ' >', array('rel' => 'internal'), null, array('class' => 'next disabled'));
-	?>
+		<?php
+			echo '<div class="pagination">';
+				echo $this->Paginator->first('最初', $options = array());
+				echo $this->Paginator->prev('前へ', array(), null, array('class' => 'prev disabled'));
+				echo $this->Paginator->numbers(array('separator' => ''));
+				echo $this->Paginator->next('次へ', array(), null, array('class' => 'next disabled'));
+				echo $this->Paginator->last('最後', $options = array());
+			echo '</div>';
+		?>
 	</div>
-<?php echo $this->Html->css(array('prettyPopin','iurabs1'), array('inline'=>false)) ;?>
 </div>
