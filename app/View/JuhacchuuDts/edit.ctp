@@ -49,6 +49,7 @@
 			$this->BootstrapForm->input('JuhacchuuDt.basho_tana_souko_mr_id',array('label'=>false,'empty' => true, 'onchange'=>'change_basho(this)')),
 			'',$this->BootstrapForm->input('JuhacchuuDt.sikiri_flg',array('label'=>false)),
 			$this->BootstrapForm->input('JuhacchuuDt.zeikeisan_kbn_id',array('label'=>false)),
+			//h($this->number->format($this->request->data('JuhacchuuDt.kingaku_goukei'))),
 			$this->BootstrapForm->input('JuhacchuuDt.kingaku_goukei',array('label'=>false, 'style'=>'text-align:right','readonly'=>'readonly')),
 			$this->BootstrapForm->input('JuhacchuuDt.shouhizei_kingaku',array('label'=>false, 'style'=>'text-align:right','readonly'=>'readonly')),
 		)).'</table>';

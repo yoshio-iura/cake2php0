@@ -29,7 +29,7 @@ class JuhacchuuDtsController extends AppController {
  *
  * @var array
  */
-	public $helpers = array('TwitterBootstrap.BootstrapHtml', 'TwitterBootstrap.BootstrapForm', 'TwitterBootstrap.BootstrapPaginator');
+	public $helpers = array('TwitterBootstrap.BootstrapHtml', 'TwitterBootstrap.BootstrapForm', 'TwitterBootstrap.BootstrapPaginator', 'Js', 'Number');
 
 /**
  * Components
@@ -134,4 +134,15 @@ class JuhacchuuDtsController extends AppController {
 		return $this->redirect(array('action' => 'index'));
 	}
 */
+
+public function excel(){
+    //レイアウトは使わない
+    $this->layout = '';
+    //$this->layout = false; でもOK！
+ 
+   //DBのデータを読み込む
+   $data = $this->JuhacchuuDt->find('all');
+   $this->set('data', $data);
+}
+
 }
