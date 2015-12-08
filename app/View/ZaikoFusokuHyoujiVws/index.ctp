@@ -13,8 +13,8 @@
 		<table class="table table-condensed">
 			<tr>
 				<th><?php echo $this->BootstrapPaginator->sort('hinmoku_mr_id','ID');?></th>
-				<th><?php echo $this->BootstrapPaginator->sort('code');?></th>
-				<th><?php echo $this->BootstrapPaginator->sort('name');?></th>
+				<th><?php echo $this->BootstrapPaginator->sort('コード');?></th>
+				<th><?php echo $this->BootstrapPaginator->sort('品名');?></th>
 				<th><?php echo $this->BootstrapPaginator->sort('hinsitu_kbn_id');?></th>
 				<th><?php echo $this->BootstrapPaginator->sort('shoyuusha_kbn_id');?></th>
 				<th><?php echo $this->BootstrapPaginator->sort('anzen_zaiko_suu');?></th>

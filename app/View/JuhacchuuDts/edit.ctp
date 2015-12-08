@@ -50,8 +50,8 @@
 			'',$this->BootstrapForm->input('JuhacchuuDt.sikiri_flg',array('label'=>false)),
 			$this->BootstrapForm->input('JuhacchuuDt.zeikeisan_kbn_id',array('label'=>false)),
 			//h($this->number->format($this->request->data('JuhacchuuDt.kingaku_goukei'))),
-			$this->BootstrapForm->input('JuhacchuuDt.kingaku_goukei',array('label'=>false, 'style'=>'text-align:right','readonly'=>'readonly')),
-			$this->BootstrapForm->input('JuhacchuuDt.shouhizei_kingaku',array('label'=>false, 'style'=>'text-align:right','readonly'=>'readonly')),
+			$this->BootstrapForm->input('JuhacchuuDt.kingaku_goukei',array('label'=>false,'type'=>'text', 'style'=>'text-align:right','readonly'=>'readonly')),
+			$this->BootstrapForm->input('JuhacchuuDt.shouhizei_kingaku',array('label'=>false,'type'=>'text', 'style'=>'text-align:right','readonly'=>'readonly')),
 		)).'</table>';
 	/*	echo '<table class="tbl1">'.$this->Html->tableHeaders(array('適用開始日','元ID','禁止フラグ','終了日時'))
 			.$this->Html->tableCells(array(
@@ -66,7 +66,7 @@
 
 	<div class='col-md-12'><h3>受発注明細</h3></div>
 	<?php echo $this->Html->link('品目CD', '/zaiko_fusoku_hyouji_vws/popup', array('rel' => 'prettyPopin', 'id'=>'hinmoku_popup', 'style'=>'display:none;')); ?>
-	<table id="mytable" class="tbl1">
+	<table id="mytable" class="tbl1"><tbody>
 	<?php for($i1=-1;$i1<$i1max;$i1++): ?>
 	<?php if($i1<0){
 	  $tbl1="unused";
@@ -75,9 +75,9 @@
 	}else{
 	  $tbl1="JuhacchuuMeisaiDt.".$i1;
 	  $unu1="unused.".$i1;
-	  echo '<tr id="juhacchuu_meisai_dt_'.$i1.'" style="display:inline;">';
+	  echo '<tr id="juhacchuu_meisai_dt_'.$i1.'">';
 	}?>
-		<td width="50" valign="top"><table><tbody><tr><th>行№</th></tr><tr>
+		<td width="50" valign="top"><table><tr><th>行№</th></tr><tr>
 		<td><?php echo $this->BootstrapForm->input($tbl1.'.gyou_bangou'   ,array('label'=>false,'type'=>'number', 'style'=>'width:40px;text-align:right')); ?></td>
 		</tr><tr><th><?php echo $this->BootstrapForm->button('削除',array('id'=>'removeJuhacchuuMeisaiDt0','onclick'=>'removeJuhacchuuMeisaiDt('.$i1.')','type'=>'button','title'=>'ここをクリックするとこの行の明細を削除します。')); ?></th>
 		</tr></table><?php echo $this->BootstrapForm->hidden($tbl1.'.oya_juhacchuu_meisai_dt_id'); ?>
@@ -90,18 +90,18 @@
 		<th>品目名</th>    <td><?php echo $this->BootstrapForm->input($tbl1.'.hinmoku_mei'   ,array('label'=>false,'type'=>'text','size'=>"40")); ?></td>
 		<th>ロット</th>    <td><?php echo $this->BootstrapForm->input($tbl1.'.lot'           ,array('label'=>false,'type'=>'text')); ?></td>
 		</tr></table><table><tr>
-		<th>数量</th>      <td><?php echo $this->BootstrapForm->input($tbl1.'.suu'           ,array('label'=>false,'type'=>'number', 'step'=>'0.01', 'style'=>'text-align:right', 'onchange'=>'change_kingaku(this)')); ?></td>
+		<th>数量</th>      <td><?php echo $this->BootstrapForm->input($tbl1.'.suu'           ,array('label'=>false,'type'=>'text', 'step'=>'0.01', 'style'=>'text-align:right', 'onchange'=>'change_kingaku(this)')); ?></td>
 		<th>単位</th>      <td><?php echo $this->BootstrapForm->input($tbl1.'.tanni_mr_id'   ,array('label'=>false,'type'=>'select','empty' => true)); ?></td>
-		<th>数量2</th>     <td><?php echo $this->BootstrapForm->input($tbl1.'.suu2'          ,array('label'=>false,'type'=>'number', 'step'=>'0.01', 'style'=>'text-align:right', 'onchange'=>'change_kingaku(this)')); ?></td>
+		<th>数量2</th>     <td><?php echo $this->BootstrapForm->input($tbl1.'.suu2'          ,array('label'=>false,'type'=>'text', 'step'=>'0.01', 'style'=>'text-align:right', 'onchange'=>'change_kingaku(this)')); ?></td>
 		<th>単位2</th>     <td><?php echo $this->BootstrapForm->input($tbl1.'.tanni_mr2_id'  ,array('label'=>false,'type'=>'select','empty' => true)); ?></td>
 		<th>単位位置</th>  <td><?php echo $this->BootstrapForm->input($tbl1.'.tanka_iti'     ,array('label'=>false,'type'=>'number', 'size'=>'1', 'style'=>'width:40px;text-align:center', 'onchange'=>'change_kingaku(this)','min'=>1,'max'=>2)); ?></td>
 		</tr></table><table><tr>
-		<th>納品済み数量</th> <td><?php echo $this->BootstrapForm->input($tbl1.'.nouhin_zumi_suu' ,array('label'=>false,'type'=>'number', 'step'=>'0.01', 'style'=>'text-align:right', 'readonly'=>'readonly')); ?></td>
-		<th>納品済み数量2</th><td><?php echo $this->BootstrapForm->input($tbl1.'.nouhin_zumi_suu2',array('label'=>false,'type'=>'number', 'step'=>'0.01', 'style'=>'text-align:right', 'readonly'=>'readonly')); ?></td>
+		<th>納品済み数量</th> <td><?php echo $this->BootstrapForm->input($unu1.'.nouhin_zumi_suu' ,array('label'=>false,'type'=>'text', 'step'=>'0.01', 'style'=>'text-align:right', 'readonly'=>'readonly', 'value'=>($i1<0)?'0':$this->request->data($tbl1.'.nouhin_zumi_suu'))); ?></td>
+		<th>納品済み数量2</th><td><?php echo $this->BootstrapForm->input($unu1.'.nouhin_zumi_suu2',array('label'=>false,'type'=>'text', 'step'=>'0.01', 'style'=>'text-align:right', 'readonly'=>'readonly', 'value'=>($i1<0)?'0':$this->request->data($tbl1.'.nouhin_zumi_suu2'))); ?></td>
 		</tr></table><table><tr>
-		<th>単価</th>      <td><?php echo $this->BootstrapForm->input($tbl1.'.tanka'         ,array('label'=>false,'type'=>'number', 'step'=>'0.01', 'style'=>'text-align:right', 'onchange'=>'change_kingaku(this)')); ?></td>
+		<th>単価</th>      <td><?php echo $this->BootstrapForm->input($tbl1.'.tanka'         ,array('label'=>false,'type'=>'text', 'step'=>'0.01', 'style'=>'text-align:right', 'onchange'=>'change_kingaku(this)')); ?></td>
 		<th>課税区分</th>  <td><?php echo $this->BootstrapForm->input($tbl1.'.kazei_kbn_id'  ,array('label'=>false,'type'=>'select', 'onchange'=>'change_kingaku(this)')); ?></td>
-		<th>金額</th>      <td><?php echo $this->BootstrapForm->input($tbl1.'.kingaku'       ,array('label'=>false,'type'=>'number', 'style'=>'text-align:right','readonly'=>'readonly')); ?></td>
+		<th>金額</th>      <td><?php echo $this->BootstrapForm->input($tbl1.'.kingaku'       ,array('label'=>false,'type'=>'text', 'style'=>'text-align:right','readonly'=>'readonly')); ?></td>
 		</tr></table><table><tr>
 		<th>納期</th>      <td><?php echo $this->BootstrapForm->input($tbl1.'.nouki'         ,array('label'=>false,'type'=>'text', 'size'=>'10','default'=>date('Y-m-d'))); ?></td>
 		<th>備考</th>      <td><?php echo $this->BootstrapForm->input($tbl1.'.bikou'         ,array('label'=>false,'type'=>'text', 'size'=>'40')); ?></td>
@@ -355,21 +355,22 @@ function change_kingaku(this1){
 	var arrayNameData = this1.name.split('\]\[');
 	var gyou=arrayNameData[1];//gyou=''は明細でない。
 	if($("#JuhacchuuMeisaiDt"+gyou+"TankaIti").val()==2){
-		suuryou=$("#JuhacchuuMeisaiDt"+gyou+"Suu2").val();
-	}else{	suuryou=$("#JuhacchuuMeisaiDt"+gyou+"Suu").val();
+		suuryou=$("#JuhacchuuMeisaiDt"+gyou+"Suu2").val().replace(/,/g,'');
+	}else{	suuryou=$("#JuhacchuuMeisaiDt"+gyou+"Suu").val().replace(/,/g,'');
 	}
-	kingaku=Math.round($("#JuhacchuuMeisaiDt"+gyou+"Tanka").val()*suuryou);
-	$("#JuhacchuuMeisaiDt"+gyou+"Kingaku").val(kingaku);
+	kingaku=Math.round($("#JuhacchuuMeisaiDt"+gyou+"Tanka").val().replace(/,/g,'')*suuryou);
+	$("#JuhacchuuMeisaiDt"+gyou+"Kingaku").val(Intl.NumberFormat("ja-JP").format(kingaku));
 	kingaku_goukei=0;
 	shouhizei_kingaku=0;
 	for (var i = 0; i <= lastRow; i++) {
-		kingaku_goukei += 1*($("#JuhacchuuMeisaiDt"+i+"Kingaku").val());
+		kingaku_goukei += 1*($("#JuhacchuuMeisaiDt"+i+"Kingaku").val().replace(/,/g,''));
 		var zeiritu=$("#JuhacchuuMeisaiDt"+i+"KazeiKbnId option:selected").text().split(',');
-		shouhizei_kingaku += Math.round($("#JuhacchuuMeisaiDt"+i+"Kingaku").val() * zeiritu[1] / 100);
-		kingaku_goukei += Math.round($("#JuhacchuuMeisaiDt"+i+"Kingaku").val() * zeiritu[1] / 100);
+		shouhizei_kingaku += Math.round($("#JuhacchuuMeisaiDt"+i+"Kingaku").val().replace(/,/g,'') * zeiritu[1] / 100);
+		kingaku_goukei += Math.round($("#JuhacchuuMeisaiDt"+i+"Kingaku").val().replace(/,/g,'') * zeiritu[1] / 100);
 	}
-	$("#JuhacchuuDtKingakuGoukei").val(kingaku_goukei);
-	$("#JuhacchuuDtShouhizeiKingaku").val(shouhizei_kingaku);
+	$("#JuhacchuuDtKingakuGoukei").val(Intl.NumberFormat("ja-JP").format(kingaku_goukei));
+	$("#JuhacchuuDtShouhizeiKingaku").val(Intl.NumberFormat("ja-JP").format(shouhizei_kingaku));
+	this1.value = Intl.NumberFormat("ja-JP",{minimumFractionDigits:2, maximumFractionDigits:2}).format(this1.value);//カンマ編集
 }
 function change_basho(this1){
 	$("#JuhacchuuMeisaiDt0BashoTanaSoukoMrId").val(this1.value)
@@ -419,8 +420,8 @@ function change_basho(this1){
 		$("#juhacchuu_meisai_dt_"+lastRow+" #unusedSuu2"               ).attr('id','JuhacchuuMeisaiDt'+lastRow+'Suu2'              ).attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][suu2]')         ;
 		$("#juhacchuu_meisai_dt_"+lastRow+" #unusedTanniMr2Id"         ).attr('id','JuhacchuuMeisaiDt'+lastRow+'TanniMr2Id'        ).attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][tanni_mr2_id]') ;
 		$("#juhacchuu_meisai_dt_"+lastRow+" #unusedTankaIti"           ).attr('id','JuhacchuuMeisaiDt'+lastRow+'TankaIti'          ).attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][tanka_iti]')    ;
-		$("#juhacchuu_meisai_dt_"+lastRow+" #unusedNouhinZumiSuu"      ).attr('id','JuhacchuuMeisaiDt'+lastRow+'NouhinZumiSuu'     ).attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][nouhin_zumi_suu]');
-		$("#juhacchuu_meisai_dt_"+lastRow+" #unusedNouhinZumiSuu2"     ).attr('id','JuhacchuuMeisaiDt'+lastRow+'NouhinZumiSuu2'    ).attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][nouhin_zumi_suu2]');
+		$("#juhacchuu_meisai_dt_"+lastRow+" #unusedNouhinZumiSuu"      ).attr('id','unused'           +lastRow+'NouhinZumiSuu'     ).attr('name','data[unused]['+lastRow+'][nouhin_zumi_suu]');
+		$("#juhacchuu_meisai_dt_"+lastRow+" #unusedNouhinZumiSuu2"     ).attr('id','unused'           +lastRow+'NouhinZumiSuu2'    ).attr('name','data[unused]['+lastRow+'][nouhin_zumi_suu2]');
 		$("#juhacchuu_meisai_dt_"+lastRow+" #unusedTanka"              ).attr('id','JuhacchuuMeisaiDt'+lastRow+'Tanka'             ).attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][tanka]')        ;
 		$("#juhacchuu_meisai_dt_"+lastRow+" #unusedKazeiKbnId"         ).attr('id','JuhacchuuMeisaiDt'+lastRow+'KazeiKbnId'        ).attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][kazei_kbn_id]') ;
 		$("#juhacchuu_meisai_dt_"+lastRow+" #unusedKingaku"            ).attr('id','JuhacchuuMeisaiDt'+lastRow+'Kingaku'           ).attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][kingaku]')      ;
@@ -433,8 +434,8 @@ function change_basho(this1){
 		$("#trAddSikyuu_"        +lastRow+" #btnAddSikyuu0"            ).attr('id','btnAddSikyuu_'+lastRow);
 		$("#JuhacchuuMeisaiDt"   +lastRow+"GyouBangou").val(1+lastRow);
 		$("#JuhacchuuMeisaiDt"   +lastRow+"TankaIti").val(1);
-		$("#JuhacchuuMeisaiDt"   +lastRow+"NouhinZumiSuu").val(0);
-		$("#JuhacchuuMeisaiDt"   +lastRow+"NouhinZumiSuu2").val(0);
+	//	$("#JuhacchuuMeisaiDt"   +lastRow+"NouhinZumiSuu").val(0);
+	//	$("#JuhacchuuMeisaiDt"   +lastRow+"NouhinZumiSuu2").val(0);
 		$("#JuhacchuuMeisaiDt"   +lastRow+"BashoTanaSoukoMrId").val($("#JuhacchuuDtBashoTanaSoukoMrId").val());
 		InputCalendar.createOnLoaded('JuhacchuuMeisaiDt'+lastRow+'Nouki', {format: 'yyyy-mm-dd', lang:'ja'});
 		lastRows[lastRow]=-1;
@@ -485,4 +486,30 @@ function change_basho(this1){
 	document.onkeydown = function (e){
 		if(e.keyCode == 113){$("#unused0HinmokuPopin").click();}//F2
 	};
+</script>
+
+
+
+<!-- 検索モーダルウインドウのテスト 参考 https://nakupanda.github.io/bootstrap3-dialog/#loading-remote-page -->
+<input type="button"  value="検索モーダルウインドウのテスト" class="btn btn-info" onclick="showmes();">
+<script type='text/javascript'>
+	function showmes() {
+		BootstrapDialog.show({
+			size: BootstrapDialog.SIZE_WIDE,
+			message: function(dialog) {
+				var $message = $('<div>読込み中</div>');
+				var pageToLoad = dialog.getData('pageToLoad');
+				$message.load(pageToLoad);
+				
+				return $message;
+			},
+			data: {
+				'pageToLoad': '/cake2erp0/torihikisaki_mrs/btpopup'
+			},
+			callback: function(result) {
+				alert('Result is: ' + result);
+				alert('torihikisaki_mr_code : ' + torihikisaki_mr_code);
+			}
+		});
+	}
 </script>

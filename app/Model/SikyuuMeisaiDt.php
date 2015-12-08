@@ -17,6 +17,7 @@ App::uses('AppModel', 'Model');
 class SikyuuMeisaiDt extends AppModel {
 
 	var $useTable = 'juhacchuu_meisai_dts';
+	var $primaryKey = 'id';
 	var $conditions = array('SikyuuMeisaiDt.oya_juhacchuu_meisai_id'=>1);
 /**
  * Display field
@@ -36,7 +37,7 @@ class SikyuuMeisaiDt extends AppModel {
 	public $belongsTo = array(
 		'JuhacchuuDt' => array(
 			'className' => 'JuhacchuuDt',
-			'foreignKey' => 'juhacchuu_dt_id',
+			'foreignKey' => 'oya_juhacchuu_dt_id',
 			'conditions' => '',
 			'fields' => '',
 			'order' => ''

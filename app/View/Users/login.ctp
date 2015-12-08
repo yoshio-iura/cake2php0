@@ -13,6 +13,3 @@
       <td colspan="2" class="center"><?php echo $this->Form->end('ログイン'); ?></td>
   </tr>
 </table>
-<!-- 高密度表示 -->
-<?php echo $this->Html->css(array("iurabs"), array("inline"=>false)) ;?>
-

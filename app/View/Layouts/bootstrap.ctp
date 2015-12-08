@@ -17,7 +17,7 @@
 		padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
 	}
 	</style>
-	<?php echo $this->Html->css('bootstrap-responsive.min'); ?>
+	<?php echo $this->Html->css(array('bootstrap-responsive.min','bootstrap-dialog.min')); ?>
 	<?php echo $this->Html->css(array('prettyPopin','jquery-ui/jquery-ui.min','jquery-ui/jquery-ui.theme.min','jquery-ui/jquery-ui.structure.min')); ?>
 	<?php echo $this->Html->css(array('iurabs','../theme/'.$loginUser['ThemeMr']['code'].'/css/iurabs')); ?>
 
@@ -165,7 +165,7 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<?php echo $this->Html->script(array('jquery-1.11.3.min','jquery.prettyPopin','jquery-migrate.min','bootstrap.min','jquery-ui/jquery-ui.min','jquery-ui/ui.datepicker-ja','autoNumeric-min')); ?>
+<?php echo $this->Html->script(array('jquery-1.11.3.min','jquery.prettyPopin','jquery-migrate.min','bootstrap.min','jquery-ui/jquery-ui.min','jquery-ui/ui.datepicker-ja','autoNumeric-min','bootstrap-dialog.min')); ?>
 
 	<div class="container-fluid">
 

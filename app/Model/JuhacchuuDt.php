@@ -23,6 +23,18 @@ class JuhacchuuDt extends AppModel {
  */
 	public $displayField = 'id';
 
+	public function afterFind($results, $primary = false) {
+		if($primary && !empty($results[0])) {
+			$results[0]['JuhacchuuDt']['kingaku_goukei'] = number_format($results[0]['JuhacchuuDt']['kingaku_goukei']);	//金額合計のカンマ編集
+			$results[0]['JuhacchuuDt']['shouhizei_kingaku'] = number_format($results[0]['JuhacchuuDt']['shouhizei_kingaku']);	//消費税額のカンマ編集
+		}
+		return $results;
+	}
+
+	public function beforeSave($options = array()) {
+		$this->data['JuhacchuuDt']['kingaku_goukei']=str_replace(',','',$this->data['JuhacchuuDt']['kingaku_goukei']);	//金額合計のカンマ編集除去
+		$this->data['JuhacchuuDt']['shouhizei_kingaku']=str_replace(',','',$this->data['JuhacchuuDt']['shouhizei_kingaku']);	//消費税額のカンマ編集除去
+	}
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
