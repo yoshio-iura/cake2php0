@@ -24,7 +24,7 @@ class JuhacchuuDt extends AppModel {
 	public $displayField = 'id';
 
 	public function afterFind($results, $primary = false) {
-		if($primary && !empty($results[0])) {
+		if($primary && !empty($results[0]) && !empty($results[0]['JuhacchuuDt']['kingaku_goukei'])) {
 			$results[0]['JuhacchuuDt']['kingaku_goukei'] = number_format($results[0]['JuhacchuuDt']['kingaku_goukei']);	//金額合計のカンマ編集
 			$results[0]['JuhacchuuDt']['shouhizei_kingaku'] = number_format($results[0]['JuhacchuuDt']['shouhizei_kingaku']);	//消費税額のカンマ編集
 		}

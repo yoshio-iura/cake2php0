@@ -87,7 +87,7 @@ class JuhacchuuDtsController extends AppController {
 			throw new NotFoundException(__('Invalid juhacchuu dt'));
 		}
 		if ($this->request->is(array('post', 'put'))) {
-			if (!empty($this->request->data)) {
+			if (!empty($this->request->data)) {	//pr($this->request->data);
 				unset($this->JuhacchuuDt->JuhacchuuMeisaiDt->validate['JuhacchuuDt_id']);	// バリデーションエラーを出さないため
 				if ($this->JuhacchuuDt->saveAll($this->request->data, array('deep' => true))) {
 					$this->Session->setFlash(__('The juhacchuu dt has been saved.'), 'default', array('class' => 'alert alert-success'));
@@ -97,7 +97,18 @@ class JuhacchuuDtsController extends AppController {
 				}
 			}
 		} else {
-			$options = array('conditions' => array('JuhacchuuDt.' . $this->JuhacchuuDt->primaryKey => $id));
+			$this->JuhacchuuDt->Behaviors->load('Containable');
+			$options = array(
+				'contain' => array('JuhacchuuMeisaiDt' =>
+						array('conditions' => array('JuhacchuuMeisaiDt.oya_juhacchuu_meisai_dt_id' => null,),
+							'order' => array('JuhacchuuMeisaiDt.gyou_bangou'),
+							'HinmokuMr' => array('fields' => array('code'),),
+							'SikyuuMeisaiDt' => array('order' => array('SikyuuMeisaiDt.gyou_bangou'),
+								'HinmokuMr' => array('fields' => array('code'),),),),
+					'TorihikisakiMr' => array('fields' => array('code','name'),),
+					'ShukkaTorihikisakiMr' => array('fields' => array('code','name'),),
+					'KitukeTorihikisakiMr' => array('fields' => array('code','name'),),),
+				'conditions' => array('JuhacchuuDt.' . $this->JuhacchuuDt->primaryKey => $id,),);
 			$this->request->data = $this->JuhacchuuDt->find('first', $options);
 		}
 		//$torihikisakiMrs = $this->JuhacchuuDt->TorihikisakiMr->find('list');

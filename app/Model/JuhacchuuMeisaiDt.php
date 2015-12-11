@@ -46,8 +46,12 @@ class JuhacchuuMeisaiDt extends AppModel {
 		if (!empty($this->data['JuhacchuuMeisaiDt']['nouhin_zumi_suu2'])){
 			$this->data['JuhacchuuMeisaiDt']['nouhin_zumi_suu2']=str_replace(',','',$this->data['JuhacchuuMeisaiDt']['nouhin_zumi_suu2']);	//納品済み数量2のカンマ編集除去
 		}
-		$this->data['JuhacchuuMeisaiDt']['tanka']=str_replace(',','',$this->data['JuhacchuuMeisaiDt']['tanka']);	//単価のカンマ編集除去
-		$this->data['JuhacchuuMeisaiDt']['kingaku']=str_replace(',','',$this->data['JuhacchuuMeisaiDt']['kingaku']);	//金額のカンマ編集除去
+		if (!empty($this->data['JuhacchuuMeisaiDt']['tanka'])){
+			$this->data['JuhacchuuMeisaiDt']['tanka']=str_replace(',','',$this->data['JuhacchuuMeisaiDt']['tanka']);	//単価のカンマ編集除去
+		}
+		if (!empty($this->data['JuhacchuuMeisaiDt']['kingaku'])){
+			$this->data['JuhacchuuMeisaiDt']['kingaku']=str_replace(',','',$this->data['JuhacchuuMeisaiDt']['kingaku']);	//金額のカンマ編集除去
+		}
 	}
 
 /**
@@ -161,9 +165,9 @@ class JuhacchuuMeisaiDt extends AppModel {
 			'finderQuery' => '',
 			'counterQuery' => ''
 		),
-/*		'SikyuuMeisaiDt' => array(
+		'SikyuuMeisaiDt' => array(
 			'className' => 'SikyuuMeisaiDt',
-			'foreignKey' => 'juhacchuu_meisai_dt_id',
+			'foreignKey' => 'oya_juhacchuu_meisai_dt_id',
 			'dependent' => false,
 			'conditions' => '',
 			'fields' => '',
@@ -174,7 +178,7 @@ class JuhacchuuMeisaiDt extends AppModel {
 			'finderQuery' => '',
 			'counterQuery' => ''
 		),
-*/		'ZaikoDt' => array(
+		'ZaikoDt' => array(
 			'className' => 'ZaikoDt',
 			'foreignKey' => 'juhacchuu_meisai_dt_id',
 			'dependent' => false,
