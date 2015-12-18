@@ -90,8 +90,10 @@ class JuhacchuuDtsController extends AppController {
 			if (!empty($this->request->data)) {	//pr($this->request->data);
 				unset($this->JuhacchuuDt->JuhacchuuMeisaiDt->validate['JuhacchuuDt_id']);	// バリデーションエラーを出さないため
 				if ($this->JuhacchuuDt->saveAll($this->request->data, array('deep' => true))) {
-					$this->Session->setFlash(__('The juhacchuu dt has been saved.'), 'default', array('class' => 'alert alert-success'));
-					return $this->redirect(array('action' => ($this->action=='edit')?'index':'add'));
+					if($id==null){$id = $this->JuhacchuuDt->getLastInsertID();}
+					$this->Session->setFlash(__('The juhacchuu dt has been saved.').$id, 'default', array('class' => 'alert alert-success'));
+					$this->Session->setFlash(Router::url(array('action' => 'excel',$id),true), 'default', null, 'download');
+					return $this->redirect(array('action' => 'add'));
 				} else {
 					$this->Session->setFlash(__('The juhacchuu dt could not be saved. Please, try again.'), 'default', array('class' => 'alert alert-danger'));
 				}
@@ -219,7 +221,7 @@ public function excel($id = null){
 	//保存ファイル名
 	$filename = "output.xls";
 	
-	// 保存ファイルパス
+	// 保存ファイルパス = realpath(TMP).DS.'excel'.DS.'output.xls'
 	$upload = realpath( TMP );
 	$upload .= DS . 'excel' . DS;
 	$path = $upload . $filename;
@@ -238,7 +240,6 @@ public function excel($id = null){
 	header("Content-Type: application/vnd.ms-excel");
 	header("Content-Disposition: attachment; filename={$filename}");
 	readfile( $path );
-
 }
 
 }

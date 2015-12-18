@@ -14,85 +14,42 @@ class TorihikisakiMrsController extends AppController {
 	public $layout = 'bootstrap';
 
 /**
+ * Helpers
+ *
+ * @var array
+ */
+	public $helpers = array('TwitterBootstrap.BootstrapHtml', 'TwitterBootstrap.BootstrapForm', 'TwitterBootstrap.BootstrapPaginator');
+/**
+ * Components
+ *
+ * @var array
+ */
+	public $components = array('Paginator', 'Flash', 'Session', 'Search.Prg');
+	public $presetVars = true;
+/**
  * Scaffold
  *
  * @var mixed
  */
 	public $scaffold;
-
-
-	public $components = array('Paginator', 'Flash', 'Session', 'RequestHandler');
-	
 /**
  * Popup
+ *	参考： http://hijiriworld.com/web/cakephp-search-plugin/
  */
 	public function popup() {
-		//リクエストがPOSTで送られたデータが空白で無ければ
-		if($this->request->is('post') && $this->request->data['TorihikisakiMr']['search'] != ''){
-			//Formの値を取得
-			$search = $this->request->data['TorihikisakiMr']['search'];
-			//検索文字を空白（全角又は半角）で区切って配列$keywordsに代入
-			$keywords = preg_split('/  |\\s/',$search);
-			//配列$keywordsの数だけ繰り返して検索条件を$conditionsに代入
-			foreach($keywords as $keyword){
-				$conditions[] = "TorihikisakiMr.name like '%$keyword%'";
-				$conditions[] = "TorihikisakiMr.code like '%$keyword%'";
-			}
-			//POSTされたデータを曖昧検索
-			/*   $data=$this->User->find('all',array(
-			'conditions' => $conditions
-			));
-			$this->set('users',$data);
-			*/
-		}else{
-			//POST以外の場合
-			//一覧表示
-			/*  $data=$this->Post->find('all');
-			$this->set('users',$data);
-			*/
-			$conditions='';
-		}
- 
-		$this->layout = 'popup';
-		$this->Paginator->settings = array('limit' => 10);
 		$this->TorihikisakiMr->recursive = 0;
-		$this->set('torihikisaki_mrs', $this->Paginator->paginate($conditions));
-	}
 
-/**
- * BootstrapDialogPopup
- */
-	public function btpopup() {
-		//リクエストがPOSTで送られたデータが空白で無ければ
-		if($this->request->is('post') && $this->request->data['TorihikisakiMr']['search'] != ''){
-			//Formの値を取得
-			$search = $this->request->data['TorihikisakiMr']['search'];
-			//検索文字を空白（全角又は半角）で区切って配列$keywordsに代入
-			$keywords = preg_split('/  |\\s/',$search);
-			//配列$keywordsの数だけ繰り返して検索条件を$conditionsに代入
-			foreach($keywords as $keyword){
-				$conditions[] = "TorihikisakiMr.name like '%$keyword%'";
-				$conditions[] = "TorihikisakiMr.code like '%$keyword%'";
-			}
-			//POSTされたデータを曖昧検索
-			/*   $data=$this->User->find('all',array(
-			'conditions' => $conditions
-			));
-			$this->set('users',$data);
-			*/
-		}else{
-			//POST以外の場合
-			//一覧表示
-			/*  $data=$this->Post->find('all');
-			$this->set('users',$data);
-			*/
-			$conditions='';
-		}
- 
+		$this->Prg->commonProcess();
+		$this->paginate = array(
+			'conditions' => $this->TorihikisakiMr->parseCriteria($this->passedArgs),
+			'limit' => 10,
+		);
+
+		$torihikisakiBunrui1Kbns = $this->TorihikisakiMr->TorihikisakiBunrui1Kbn->find('list');
+		$this->set(compact('torihikisakiBunrui1Kbns'));
+
+		$this->set('torihikisakiMrs', $this->Paginator->paginate());
 		$this->layout = 'popup';
-		$this->Paginator->settings = array('limit' => 10);
-		$this->TorihikisakiMr->recursive = 0;
-		$this->set('torihikisaki_mrs', $this->Paginator->paginate($conditions));
 	}
 
 /**
@@ -122,7 +79,7 @@ class TorihikisakiMrsController extends AppController {
 //	}
 
 /**
- * ajaxgetid
+ * ajaxgetid 使わない！
  */
 	public function ajaxgetid() {
 		$this->autoRender = false;

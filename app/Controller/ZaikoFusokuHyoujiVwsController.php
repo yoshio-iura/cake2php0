@@ -47,6 +47,7 @@ class ZaikoFusokuHyoujiVwsController extends AppController {
 		$this->set(compact('hinmokuKbns'));
 
 		$this->set('zaikoFusokuHyoujiVws', $this->Paginator->paginate());
+		//参考： http://mawatari.jp/archives/introduction-of-cakedc-search-plugin-for-cakephp
 	}
 
 /**
@@ -65,6 +66,7 @@ class ZaikoFusokuHyoujiVwsController extends AppController {
 
 /**
  * Popup
+ *	参考： http://hijiriworld.com/web/cakephp-search-plugin/
  */
 	public function popup() {
 		$this->ZaikoFusokuHyoujiVw->recursive = 0;

@@ -51,6 +51,13 @@ class TorihikisakiMr extends AppModel {
 	public $displayField = 'name';
 
 
+//ŒŸõ
+	public $actsAs = array('Search.Searchable');
+	public $filterArgs = array(
+		'keyword' => array('type' => 'like', 'field' => array('TorihikisakiMr.code','TorihikisakiMr.name')),
+		'tel' => array('type' => 'like', 'field' => 'TorihikisakiMr.tel'),
+		'bunrui1' => array('type' => 'value', 'field' => 'TorihikisakiMr.torihikisaki_bunrui1_kbn_id'),
+	);
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
 /**

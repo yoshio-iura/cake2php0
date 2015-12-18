@@ -11,7 +11,7 @@
 			echo $this->BootstrapForm->input('id',array('label'=>false,'readonly'=>'readonly'));
 		}
 		echo '<table class="tbl1">'.$this->Html->tableHeaders(array('受注フラグ','日付',
-				$this->Html->link('取引先コード', '/torihikisaki_mrs/popup', array('rel' => 'prettyPopin','title'=>'ここをクリックすると取引先検索画面になります。')),'名称'))
+				$this->Html->link('取引先コード', 'javascript:void(0)', array('onclick'=>'torihikisaki_popup("")','title'=>'ここをクリックすると取引先検索画面になります。')),'名称'))
 			.$this->Html->tableCells(array(
 			$this->BootstrapForm->input('JuhacchuuDt.juchuu_flg',array('label'=>false)),
 			$this->BootstrapForm->input('JuhacchuuDt.bi',array('label'=>false,'type'=>'text','size'=>"10",'default'=>date('Y-m-d'))),
@@ -22,9 +22,9 @@
 		echo $this->BootstrapForm->hidden('JuhacchuuDt.shukka_torihikisaki_mr_id',array('label'=>false,'type'=>'text','size'=>"10"));
 		echo $this->BootstrapForm->hidden('JuhacchuuDt.kituke_torihikisaki_mr_id',array('label'=>false,'type'=>'text','size'=>"10"));
 		echo '<table class="tbl1">'.$this->Html->tableHeaders(array(
-							$this->Html->link('出荷先コード', '/torihikisaki_mrs/popup', array('rel' => 'prettyPopin','title'=>'ここをクリックすると出荷先検索画面になります。')),
+							$this->Html->link('出荷先コード', 'javascript:void(0)', array('onclick'=>'torihikisaki_popup("Shukka")','title'=>'ここをクリックすると出荷先検索画面になります。')),
 							'出荷先名称',
-							$this->Html->link('気付先コード', '/torihikisaki_mrs/popup', array('rel' => 'prettyPopin','title'=>'ここをクリックすると気付先検索画面になります。')),
+							$this->Html->link('気付先コード', 'javascript:void(0)', array('onclick'=>'torihikisaki_popup("Kituke")','title'=>'ここをクリックすると気付先検索画面になります。')),
 							'気付先名称'))
 			.$this->Html->tableCells(array(
 			$this->BootstrapForm->input('unused.shukka_torihikisaki_code',array('label'=>false,'type'=>'text','size'=>"5",'value'=>($this->action == 'edit')?$this->request->data('ShukkaTorihikisakiMr.code'):'','onchange'=>'change_torihikisaki(this)')),
@@ -82,7 +82,7 @@
 		<?php echo $this->BootstrapForm->hidden($tbl1.'.id'); ?>
 		<?php echo $this->BootstrapForm->hidden($tbl1.'.hinmoku_mr_id' ,array('label'=>false,'type'=>'text')); ?>
 		<table><tr>
-		<th><?php echo $this->BootstrapForm->button('品目CD',array('id'=>'hinmoku_prettyPopin0','onclick'=>'hinmoku_prettyPopin('.$i1.')','type'=>'button','title'=>'ここをクリックすると品目検索画面になります。')); ?>
+		<th><?php echo $this->BootstrapForm->button('品目CD',array('id'=>'hinmoku_popup0','onclick'=>'hinmoku_popup('.$i1.')','type'=>'button','title'=>'ここをクリックすると品目検索画面になります。')); ?>
 		</th>		   <td><?php echo $this->BootstrapForm->input($unu1.'.hinmoku_code'  ,array('label'=>false,'type'=>'text','size'=>"10",'value'=>($i1<0)?'':$this->request->data($tbl1.'.HinmokuMr.code'),'onchange'=>'change_hinmoku(this)')); ?></td>
 		<th>品目名</th>    <td><?php echo $this->BootstrapForm->input($tbl1.'.hinmoku_mei'   ,array('label'=>false,'type'=>'text','size'=>"40")); ?></td>
 		<th>ロット</th>    <td><?php echo $this->BootstrapForm->input($tbl1.'.lot'           ,array('label'=>false,'type'=>'text')); ?></td>
@@ -125,7 +125,7 @@
 			<br><?php echo $this->BootstrapForm->button('削除',array('type'=>'button','id'=>$unu2.'btnDelSikyuu','onclick'=>'delSikyuuMeisaiDt(this)','title'=>'ここをクリックするとこの行の支給明細を削除します。')); ?>
 			</th>
 			<td><table><tr>
-			<th><?php echo $this->BootstrapForm->button('支給品CD',array('id'=>'hinmoku_prettyPopin00','type'=>'button','title'=>'ここをクリックすると品目検索画面になります。')); ?>
+			<th><?php echo $this->BootstrapForm->button('支給品CD',array('id'=>'hinmoku_popup00','onclick'=>'hinmoku_popup('.$i1.','.$i2.')','type'=>'button','title'=>'ここをクリックすると品目検索画面になります。')); ?>
 			</th>		   <td><?php echo $this->BootstrapForm->input($unu2.'.hinmoku_code'  ,array('label'=>false,'type'=>'text','size'=>"10",'value'=>($i2<0)?'':$this->request->data($tbl2.'.HinmokuMr.code'),'onchange'=>'change_hinmoku(this)')); ?></td>
 			<th>品目名</th>    <td><?php echo $this->BootstrapForm->input($tbl2.'.hinmoku_mei'   ,array('label'=>false,'type'=>'text','size'=>"33")); ?></td>
 			<th>ロット</th>    <td><?php echo $this->BootstrapForm->input($tbl2.'.lot'           ,array('label'=>false,'type'=>'text','size'=>"15")); ?></td>
@@ -179,6 +179,80 @@
 	});
 </script>
 
+<!-- 取引先検索モーダルウインドウ 参考 http://www.openspc2.org/kouza_js/052/ -->
+<!-- <a href="/cake2erp0/zaiko_fusoku_hyouji_vws/popup" data-toggle="modal" data-target="#torihikisakiModal">検索モーダルウインドウのテスト</a> -->
+<div class="modal fade" id="torihikisakiModal">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content" id="torihikisakiModalin">
+		</div> <!-- /.modal-content -->
+	</div> <!-- /.modal-dialog -->
+</div>
+<script type='text/javascript'>
+function torihikisaki_popup(this1){
+	torihikisaki_popup_gyou = "#JuhacchuuDt"+this1;//取引先:this1='',出荷先:this1='Shukka',気付先:this1='Kituke',とする
+	torihikisaki_popup_unused = "#unused"+this1;//取引先:this1='',出荷先:this1='Shukka',気付先:this1='Kituke',とする
+	returnValue = null;
+	$('#torihikisakiModal').removeData('bs.modal'); //< 毎回新規に読み込み
+	$('#torihikisakiModal').modal({'remote': <?php echo "'".$this->html->url(array('controller'=>'torihikisaki_mrs', 'action'=>'popup'))."'" ?>});
+}
+</script>
+<script type='text/javascript'>
+$(function(){
+	$('#torihikisakiModal').on("hidden.bs.modal",function(e){
+		if(returnValue !== null){
+			$(torihikisaki_popup_gyou+"TorihikisakiMrId").val(returnValue.torihikisaki_mr_id);
+			$(torihikisaki_popup_unused+"TorihikisakiCode").val(returnValue.torihikisaki_mr_code);
+			$(torihikisaki_popup_unused+"TorihikisakiName").val(returnValue.torihikisaki_mr_name);
+		}
+		returnValue = null;
+		$('#torihikisakiModal').removeData('bs.modal');
+	});
+});
+</script>
+
+
+<!-- 品目検索モーダルウインドウ 参考 http://www.openspc2.org/kouza_js/052/ -->
+<!-- <a href="/cake2erp0/zaiko_fusoku_hyouji_vws/popup" data-toggle="modal" data-target="#hinmokuModal">検索モーダルウインドウのテスト</a> -->
+<div class="modal fade" id="hinmokuModal">
+	<div class="modal-dialog modal-lg">
+		<div class="modal-content" id="hinmokuModalin">
+		</div> <!-- /.modal-content -->
+	</div> <!-- /.modal-dialog -->
+</div>
+<script type='text/javascript'>
+function hinmoku_popup(this1, sikyuu){
+	hinmoku_popup_gyou = "#JuhacchuuMeisaiDt"+this1+(sikyuu === undefined ? '' : 'SikyuuMeisaiDt'+sikyuu);
+	hinmoku_popup_code = sikyuu === undefined ? '#unused'+this1 : '#unused_'+this1+'_sikyuu_'+sikyuu+'_';
+	returnValue = null;
+	$('#hinmokuModal').removeData('bs.modal'); //< 毎回新規に読み込み
+	$('#hinmokuModal').modal({'remote': <?php echo "'".$this->html->url(array('controller'=>'zaiko_fusoku_hyouji_vws', 'action'=>'popup'))."'" ?>});
+}
+</script>
+<script type='text/javascript'>
+$(function(){
+	$('#hinmokuModal').on("hidden.bs.modal",function(e){
+		if(returnValue !== null){
+			$(hinmoku_popup_gyou+"HinmokuMrId").val(returnValue.hinmoku_mr_id);
+			$(hinmoku_popup_code+"HinmokuCode").val(returnValue.hinmoku_mr_code);
+			$(hinmoku_popup_gyou+"HinmokuMei").val(returnValue.hinmoku_mr_name);
+			$(hinmoku_popup_gyou+"Lot").val(returnValue.hinmoku_mr_lot);
+			$(hinmoku_popup_gyou+"TanniMrId").val(returnValue.hinmoku_mr_tanni_mr_id);
+			$(hinmoku_popup_gyou+"TanniMr2Id").val(returnValue.hinmoku_mr_tanni_mr2_id);
+			$(hinmoku_popup_gyou+"TanniIti").val(returnValue.hinmoku_mr_tanni_iti);
+			$(hinmoku_popup_gyou+"KazeiKbnId").val(returnValue.hinmoku_mr_kazei_kbn_id);
+			if($("#JuhacchuuDtJuchuuFlg").is(':checked')){
+				$(hinmoku_popup_gyou+"Tanka").val(returnValue.hinmoku_mr_tanka1);
+			}else{	$(hinmoku_popup_gyou+"Tanka").val(returnValue.hinmoku_mr_genka1);
+			}
+		}
+		returnValue = null;
+		$('#hinmokuModal').removeData('bs.modal');
+	});
+});
+</script>
+
+
+
 <!-- 検索ウィンドウを動かすプラグインの記述 -->
 <?php echo $this->Html->css(array('prettyPopin'), array('inline'=>false)) ;?>
 
@@ -193,97 +267,27 @@ hinmoku_mr_code = '';
 hinmoku_mr_name = '';
 hinmoku_popup_gyou = 0;
 hinmoku_popup_sikyuu = "";
-($(function(){
-	$("a[rel^='prettyPopin']:eq(0)").prettyPopin({//取引先検索
-		modal : true,
-		width : 960,
-		height: 780,
-		opacity: 0.5,
-		animationSpeed: '0', 
-		followScroll: false,
-		loader_path: '<?php echo $this->webroot; ?>/img/prettyPopin/loader.gif',
-		callback: function(){
-			if(torihikisaki_mr_code > '') {
-				$("#JuhacchuuDtTorihikisakiMrId").val(torihikisaki_mr_id);
-				$("#unusedTorihikisakiCode").val(torihikisaki_mr_code);
-				$("#unusedTorihikisakiName").val(torihikisaki_mr_name);
-			}
-			torihikisaki_mr_code = '';
-		}
-	});
-	$("a[rel^='prettyPopin']:eq(1)").prettyPopin({//出荷先検索
-		modal : true,
-		width : 960,
-		height: 780,
-		opacity: 0.5,
-		animationSpeed: '0', 
-		followScroll: false,
-		loader_path: '<?php echo $this->webroot; ?>/img/prettyPopin/loader.gif',
-		callback: function(){
-			if(torihikisaki_mr_code > '') {
-				$("#JuhacchuuDtShukkaTorihikisakiMrId").val(torihikisaki_mr_id);
-				$("#unusedShukkaTorihikisakiCode").val(torihikisaki_mr_code);
-				$("#unusedShukkaTorihikisakiName").val(torihikisaki_mr_name);
-			}
-			torihikisaki_mr_code = '';
-		}
-	});
-	$("a[rel^='prettyPopin']:eq(2)").prettyPopin({//気付先検索
-		modal : true,
-		width : 960,
-		height: 780,
-		opacity: 0.5,
-		animationSpeed: '0', 
-		followScroll: false,
-		loader_path: '<?php echo $this->webroot; ?>/img/prettyPopin/loader.gif',
-		callback: function(){
-			if(torihikisaki_mr_code > '') {
-				$("#JuhacchuuDtKitukeTorihikisakiMrId").val(torihikisaki_mr_id);
-				$("#unusedKitukeTorihikisakiCode").val(torihikisaki_mr_code);
-				$("#unusedKitukeTorihikisakiName").val(torihikisaki_mr_name);
-			}
-			torihikisaki_mr_code = '';
-		}
-	});
-	$("a[rel^='prettyPopin']:eq(3)").prettyPopin({//品目検索
-		modal : true,
-		width : 960,
-		height: 780,
-		opacity: 0.5,
-		animationSpeed: '0', 
-		followScroll: false,
-		loader_path: '<?php echo $this->webroot; ?>/img/prettyPopin/loader.gif',
-		callback: function(){
-			if(hinmoku_mr_code > '') {
-				$("#"+hinmoku_popup_sikyuu+"JuhacchuuMeisaiDt"+hinmoku_popup_gyou+"HinmokuMrId").val(hinmoku_mr_id);
-				$("#unused"+hinmoku_popup_sikyuu+hinmoku_popup_gyou+"HinmokuCode").val(hinmoku_mr_code);
-				$("#"+hinmoku_popup_sikyuu+"JuhacchuuMeisaiDt"+hinmoku_popup_gyou+"HinmokuMei").val(hinmoku_mr_name);
-				$("#"+hinmoku_popup_sikyuu+"JuhacchuuMeisaiDt"+hinmoku_popup_gyou+"Lot").val(hinmoku_mr_lot);
-				$("#"+hinmoku_popup_sikyuu+"JuhacchuuMeisaiDt"+hinmoku_popup_gyou+"TanniMrId").val(hinmoku_mr_tanni_mr_id);
-				$("#"+hinmoku_popup_sikyuu+"JuhacchuuMeisaiDt"+hinmoku_popup_gyou+"TanniMr2Id").val(hinmoku_mr_tanni_mr2_id);
-				$("#"+hinmoku_popup_sikyuu+"JuhacchuuMeisaiDt"+hinmoku_popup_gyou+"TanniIti").val(hinmoku_mr_tanni_iti);
-				$("#"+hinmoku_popup_sikyuu+"JuhacchuuMeisaiDt"+hinmoku_popup_gyou+"KazeiKbnId").val(hinmoku_mr_kazei_kbn_id);
-				if($("#JuhacchuuDtJuchuuFlg").is(':checked')){
-					$("#"+hinmoku_popup_sikyuu+"JuhacchuuMeisaiDt"+hinmoku_popup_gyou+"Tanka").val(hinmoku_mr_tanka1);
-				}else{	$("#"+hinmoku_popup_sikyuu+"JuhacchuuMeisaiDt"+hinmoku_popup_gyou+"Tanka").val(hinmoku_mr_genka1);
-				}
-			}
-			hinmoku_mr_code = '';
-		}
-	});
-}));
+
+
 //取引先コードから索引
 function change_torihikisaki(this1){
 	var torihikisaki_code = this1.value;
 	var target_torihikisaki = this1.id.replace("unused","").replace("Code","");
+	$("#unused"+target_torihikisaki+"Name").val('>>>読込み中....');
 	$.ajax({
 		type:"POST",
 		data:{'torihikisaki_code':torihikisaki_code,},
 		async:true,
 		dataType: 'json',
 		success: function (data, textStatus) {
+			if(data==''){
+				$("#unused"+target_torihikisaki+"Name").val('>>エラー:未登録');
+			};
 			$("#JuhacchuuDt"+target_torihikisaki+"MrId").val(data.TorihikisakiMr.id);
 			$("#unused"+target_torihikisaki+"Name").val(data.TorihikisakiMr.name);
+		},
+		error: function(xhr, status, err) {
+			$("#unused"+target_torihikisaki+"Name").val('>エラー'+status+'/'+err);
 		},
 		url:<?php echo "'".$this->Html->url(array('controller' => 'torihikisaki_mrs', 'action' => 'ajaxget'))."'"; ?>
 	});
@@ -300,12 +304,16 @@ function change_hinmoku(this1){
 		hinmoku_popup_sikyuu = "JuhacchuuMeisaiDt"+arrayNameData[1];
 	}else{	hinmoku_popup_sikyuu = "JuhacchuuMeisaiDt"+arrayNameData[1]+"SikyuuMeisaiDt"+arrayNameData[3];
 	}
+	$("#"+hinmoku_popup_sikyuu+"HinmokuMei").val('>>>読込み中....');
 	$.ajax({
 		type:"POST",
 		data:{'hinmoku_code':hinmoku_code,},
 		async:true,
 		dataType: 'json',
 		success: function (data, textStatus) {
+			if(data==''){
+				$("#"+hinmoku_popup_sikyuu+"HinmokuMei").val('>>エラー:未登録');
+			};
 			$("#"+hinmoku_popup_sikyuu+"HinmokuMrId").val(data.HinmokuMr.id);
 			$("#"+hinmoku_popup_sikyuu+"HinmokuMei").val(data.HinmokuMr.name);
 			$("#"+hinmoku_popup_sikyuu+"Lot").val(data.HinmokuMr.lot);
@@ -320,14 +328,12 @@ function change_hinmoku(this1){
 				}
 			}
 		},
+		error: function(xhr, status, err) {
+			$("#"+hinmoku_popup_sikyuu+"HinmokuMei").val('>エラー'+status+'/'+err);
+		},
 		url:<?php echo "'".$this->Html->url(array('controller' => 'hinmoku_mrs', 'action' => 'ajaxget'))."'"; ?>
 	});
 	return false;
-}
-function hinmoku_prettyPopin(this1, sikyuu){
-	hinmoku_popup_gyou = this1;
-	hinmoku_popup_sikyuu = sikyuu === undefined ? '' : sikyuu;
-	document.getElementById('hinmoku_popup').click();
 }
 function change_kingaku(this1){
 	//alert(this1.name);//this1.nameはdata[unused][1][hinmoku_code]の文字列、これを']['で分割した2番目が行番号となる。
@@ -384,7 +390,7 @@ function change_basho(this1){
 		lastRow++;	//alert(lastRow);
 		$("#juhacchuu_meisai_dt0").clone(true).attr('id','juhacchuu_meisai_dt_'+lastRow).removeAttr("style").insertBefore("#trAdd");
 		$("#juhacchuu_meisai_dt_"+lastRow+" #removeJuhacchuuMeisaiDt0" ).attr('onclick','removeJuhacchuuMeisaiDt('+lastRow+')');
-		$("#juhacchuu_meisai_dt_"+lastRow+" #hinmoku_prettyPopin0"     ).attr('onclick','hinmoku_prettyPopin('+lastRow+')').attr('id','unused'           +lastRow+'HinmokuPopin'       );
+		$("#juhacchuu_meisai_dt_"+lastRow+" #hinmoku_popup0"           ).attr('id','unused'           +lastRow+'HinmokuPopup'      ).attr('onclick','hinmoku_popup('+lastRow+')'               );
 		$("#juhacchuu_meisai_dt_"+lastRow+" #unusedGyouBangou"         ).attr('id','JuhacchuuMeisaiDt'+lastRow+'GyouBangou'        ).attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][gyou_bangou]')  ;
 		$("#juhacchuu_meisai_dt_"+lastRow+" #unusedHinmokuMrId"        ).attr('id','JuhacchuuMeisaiDt'+lastRow+'HinmokuMrId'       ).attr('name','data[JuhacchuuMeisaiDt]['+lastRow+'][hinmoku_mr_id]');
 		$("#juhacchuu_meisai_dt_"+lastRow+" #unusedHinmokuCode"        ).attr('id','unused'           +lastRow+'HinmokuCode'       ).attr('name','data[unused]['+lastRow+'][hinmoku_code]')            ;
@@ -426,13 +432,13 @@ function change_basho(this1){
 		var xfrom = "#"+xtotr+" #unused2";
 		var xidto = "JuhacchuuMeisaiDt"+theRow+"SikyuuMeisaiDt"+newRow;
 		var xnameto = "data[JuhacchuuMeisaiDt]["+theRow+"][SikyuuMeisaiDt]["+newRow+"]";
-		var xidxx = xtotr+"_";
-		var xnamexx = "data[meisai]["+theRow+"][sikyuu]["+newRow+"]";
+		var xidxx = "unused_"+theRow+"_sikyuu_"+newRow+"_";//xtotr+"_";
+		var xnamexx = "data[unused]["+theRow+"][sikyuu]["+newRow+"]";
 		$(xfromtr).clone(true).attr("id",xtotr).removeAttr("style").insertBefore("#mytable_"+theRow+" #trAddSikyuu_"+theRow);
-		$(xfrom+"btnDelSikyuu"          ).attr("id",xidxx+"btnDelSikyuu");	//"meisai_9_sikyuu_9_btnDelSikyuu"の形のidになる。
+		$(xfrom+"btnDelSikyuu"          ).attr("id",xidxx+"btnDelSikyuu");	//"unused_9_sikyuu_9_btnDelSikyuu"の形のidになる。
 		$(xfrom+"JuhacchuuDtId"         ).attr("id",xidto+"JuhacchuuDtId"         ).attr("name",xnameto+"[juhacchuu_dt_id]"       );
 		$(xfrom+"GyouBangou"            ).attr("id",xidto+"GyouBangou"            ).attr("name",xnameto+"[gyou_bangou]"           );
-		$(xfrom+"hinmokuPopin"          ).attr('onclick',xidxx+'hinmokuPopin');
+		$("#"+xtotr+" #hinmoku_popup00" ).attr("id",xidxx+"HinmokuPopup"          ).attr('onclick','hinmoku_popup('+theRow+','+newRow+')');
 		$(xfrom+"HinmokuMrId"           ).attr("id",xidto+"HinmokuMrId"           ).attr("name",xnameto+"[hinmoku_mr_id]"         );
 		$(xfrom+"HinmokuCode"           ).attr("id",xidxx+"HinmokuCode"           ).attr("name",xnamexx+"[hinmoku_code]"          );
 		$(xfrom+"HinmokuMei"            ).attr("id",xidto+"HinmokuMei"            ).attr("name",xnameto+"[hinmoku_mei]"           );
@@ -471,30 +477,6 @@ function change_basho(this1){
 	};
 </script>
 
-
-
-<!-- 検索モーダルウインドウのテスト 参考 https://nakupanda.github.io/bootstrap3-dialog/#loading-remote-page -->
-<input type="button"  value="検索モーダルウインドウのテスト" class="btn btn-info" onclick="showmes();">
-<script type='text/javascript'>
-	function showmes() {
-		BootstrapDialog.show({
-			size: BootstrapDialog.SIZE_WIDE,
-			message: function(dialog) {
-				var $message = $('<div>読込み中</div>');
-				var pageToLoad = dialog.getData('pageToLoad');
-				$message.load(pageToLoad);
-				
-				return $message;
-			},
-			data: {
-				'pageToLoad': '/cake2erp0/torihikisaki_mrs/btpopup'
-			},
-			callback: function(result) {
-				alert('Result is: ' + result);
-				alert('torihikisaki_mr_code : ' + torihikisaki_mr_code);
-			}
-		});
-	}
-</script>
-
 <!-- <?php debug($this->request->data); ?> -->
+
+

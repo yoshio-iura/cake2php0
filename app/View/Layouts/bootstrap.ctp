@@ -9,7 +9,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta name="description" content="">
 	<meta name="author" content="">
-
+	<?php
+		$downloadfilepath=$this->Session->flash('download');
+		if(!empty($downloadfilepath)){
+			$downloadfilepath=preg_replace('/<.+?\>/','',$downloadfilepath);
+			echo '<meta http-equiv="Refresh" content="1;URL='.$downloadfilepath.'">';
+		}
+	?>
 	<!-- Le styles -->
 	<?php echo $this->Html->css('bootstrap.min'); ?>
 	<style>
@@ -17,8 +23,8 @@
 		padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
 	}
 	</style>
-	<?php echo $this->Html->css(array('bootstrap-responsive.min','bootstrap-dialog.min')); ?>
-	<?php echo $this->Html->css(array('prettyPopin','jquery-ui/jquery-ui.min','jquery-ui/jquery-ui.theme.min','jquery-ui/jquery-ui.structure.min')); ?>
+	<?php echo $this->Html->css(array('bootstrap-responsive.min')); ?>
+	<?php echo $this->Html->css(array('jquery-ui/jquery-ui.min')); ?>
 	<?php echo $this->Html->css(array('iurabs','../theme/'.$loginUser['ThemeMr']['code'].'/css/iurabs')); ?>
 
 	<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -38,6 +44,7 @@
 	echo $this->fetch('meta');
 	echo $this->fetch('css');
 	?>
+
 </head>
 
 <body>
@@ -165,8 +172,7 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<?php echo $this->Html->script(array('jquery-1.11.3.min','jquery.prettyPopin','jquery-migrate.min','bootstrap.min','jquery-ui/jquery-ui.min','jquery-ui/ui.datepicker-ja','autoNumeric-min','bootstrap-dialog.min')); ?>
-
+<?php echo $this->Html->script(array('jquery-1.11.3.min','bootstrap.min','jquery-ui/jquery-ui.min')); ?>
 	<div class="container-fluid">
 
 	<!--	<h1>Bootstrap starter template</h1>	-->
@@ -181,7 +187,7 @@
     ================================================== -->
 	<!-- Placed at the end of the document so the pages load faster -->
 	<?php echo $this->fetch('script'); ?>
-	<?php echo $this->element('sql_dump'); ?>
+	<?php /* echo $this->element('sql_dump'); */ ?>
 
 </body>
 </html>
